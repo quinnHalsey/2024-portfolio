@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate",
+  "name": "portfolio-2024",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "Halsey Quinn",
   "license": "ISC",
-  "description": "A simple React/Typescript boilerplate",
+  "description": "Personal software development portfolio",
   "devDependencies": {
     "@babel/cli": "^7.24.8",
     "@babel/core": "^7.24.9",
