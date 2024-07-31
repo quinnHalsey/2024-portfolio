@@ -4,6 +4,7 @@ import SectionLayout from 'src/components/SectionLayout';
 import { Laptop } from 'src/graphics';
 
 import './Wyatt.css';
+import Typography from 'src/components/Typography';
 
 const Wyatt = () => {
     return (
@@ -11,21 +12,25 @@ const Wyatt = () => {
             <SectionLayout>
                 <div>
                     <div>
-                        <h1 className='test'>Wyatt</h1>
-                        <h2>
+                        <Typography variant='h1'>Wyatt</Typography>
+                        <Typography variant='h2'>
                             An AI-powered Chatbot Helping Students Complete the
                             FAFSA
-                        </h2>
+                        </Typography>
                     </div>
                     <div>
-                        <h3>The Project</h3>
-                        <h3>Key Deliverables</h3>
-                        <h3>Technologies</h3>
+                        <Typography variant='h3'>The Project</Typography>
+                        <Typography variant='h3'>Key Deliverables</Typography>
+                        <Typography variant='h3'>Technologies</Typography>
                     </div>
                 </div>
                 <div></div>
             </SectionLayout>
-            <SectionLayout className='svg-wrapper laptop__wrapper'>
+            <SectionLayout
+                className='svg-wrapper laptop__wrapper'
+                paddingTop
+                paddingBottom
+            >
                 <Laptop />
             </SectionLayout>
         </PageLayout>

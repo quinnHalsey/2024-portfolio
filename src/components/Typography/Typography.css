@@ -8,9 +8,18 @@ h6 {
     margin: 0;
 }
 
+h1,
+h3 {
+    font-family: var(--font-dazzle-unicase);
+    text-transform: uppercase;
+}
+
 h1 {
-    font-family: 'dazzle-unicase', sans-serif;
     font-size: 180px;
-    text-transform: capitalize;
+    line-height: 150px;
     letter-spacing: 20px;
+}
+
+h2 {
+    font-family: var(--font-roboto);
 }

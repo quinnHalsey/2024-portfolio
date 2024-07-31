@@ -1,4 +1,10 @@
 @import url('https://use.typekit.net/snv4kuk.css');
+@import '@fontsource/roboto';
+
+:root {
+    --font-dazzle-unicase: 'dazzle-unicase', sans-serif;
+    --font-roboto: 'Roboto', Helvetica, Arial, sans-serif;
+}
 
 .theme-light {
     --color-bg: #242424;
