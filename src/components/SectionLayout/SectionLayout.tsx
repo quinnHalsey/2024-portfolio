@@ -1,18 +1,29 @@
-import './SectionLayout.css';
+import classNames from 'classnames';
 
+import './SectionLayout.css';
 interface SectionLayoutProps {
-    flex: boolean;
+    flex?: boolean;
     children: React.ReactNode;
     className?: string;
 }
 
-const SectionLayout = ({ children, className }: SectionLayoutProps) => {
-    // const combinedClassName = className();
-    return <div className={'section-layout ' + className}>{children}</div>;
-};
-
-SectionLayout.defaultProps = {
-    flex: false,
+const SectionLayout = ({
+    flex = false,
+    children,
+    className,
+}: SectionLayoutProps) => {
+    return (
+        <div
+            className={classNames(
+                {
+                    flex,
+                },
+                className
+            )}
+        >
+            {children}
+        </div>
+    );
 };
 
 export default SectionLayout;
