@@ -1,5 +1,24 @@
-@import url("https://use.typekit.net/snv4kuk.css");
+@import url('https://use.typekit.net/snv4kuk.css');
 
-h1 {
-    font-family: "dazzle-unicase", sans-serif;
+.theme-light {
+    --color-bg: #242424;
+    --color-fg: #f5f5f5;
+}
+
+.theme-dark {
+    --color-bg: #f5f5f5;
+    --color-fg: #242424;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    transition: background-color 0.75s ease, color 0.75s ease;
+}
+
+body svg {
+    stroke: var(--color-fg);
+    fill: none;
+    transition: stroke 0.75s ease;
 }
