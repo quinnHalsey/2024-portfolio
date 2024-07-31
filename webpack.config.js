@@ -1,12 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-    entry: "./src/index.tsx",
-    mode: "development",
+    entry: './src/index.tsx',
+    mode: 'development',
     resolve: {
-        modules: [__dirname, "src", "node_modules"],
-        extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],
+        modules: [__dirname, 'src', 'node_modules'],
+        extensions: ['*', '.js', '.jsx', '.tsx', '.ts'],
     },
     module: {
         rules: [
@@ -18,12 +18,12 @@ module.exports = {
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                use: ["style-loader", "css-loader"]
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 exclude: /node_modules/,
-                use: ["file-loader"]
+                use: ['file-loader'],
             },
             {
                 test: /\.ico$/,
@@ -45,9 +45,9 @@ module.exports = {
         }),
     ],
     output: {
-        path: path.resolve(__dirname, "dist/"),
-        publicPath: "/dist/",
-        filename: "bundle.js",
+        path: path.resolve(__dirname, 'dist/'),
+        publicPath: '/dist/',
+        filename: 'bundle.js',
     },
     devServer: {
         static: {

@@ -28,12 +28,8 @@
         "allowSyntheticDefaultImports": true,
         "jsx": "react-jsx",
         "allowJs": true,
-        "checkJs": true,
+        "checkJs": true
     },
-    "include": [
-        "src",
-    ],
-    "exclude": [
-        "node_modules",
-    ],
+    "include": ["src", "images.d.ts"],
+    "exclude": ["node_modules"]
 }
