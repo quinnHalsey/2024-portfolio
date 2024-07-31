@@ -6,8 +6,8 @@ interface SectionLayoutProps {
     className?: string;
 }
 
-const SectionLayout = ({ flex, children, className }: SectionLayoutProps) => {
-    const combinedClassName = className();
+const SectionLayout = ({ children, className }: SectionLayoutProps) => {
+    // const combinedClassName = className();
     return <div className={'section-layout ' + className}>{children}</div>;
 };
 
