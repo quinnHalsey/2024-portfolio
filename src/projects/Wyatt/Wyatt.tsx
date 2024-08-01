@@ -3,7 +3,7 @@ import SectionLayout from 'src/components/SectionLayout';
 import Typography from 'src/components/Typography';
 import IntroAccordions from 'src/components/IntroAccordions';
 
-import { Laptop } from 'src/graphics';
+import { Laptop, Phone } from 'src/graphics';
 
 import './Wyatt.css';
 
@@ -24,7 +24,9 @@ const Wyatt = () => {
                     </div>
                     <IntroAccordions />
                 </div>
-                <div></div>
+                <div className='phone-wrapper'>
+                    <Phone />
+                </div>
             </SectionLayout>
             <SectionLayout
                 className='svg-wrapper laptop__wrapper'

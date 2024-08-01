@@ -10,6 +10,11 @@
     width: 50%;
 }
 
+.phone-wrapper {
+    width: 33%;
+    transform: rotate(10deg);
+}
+
 span.accordion-description__highlight-y {
     color: var(--color-yellow);
     font-weight: 600;

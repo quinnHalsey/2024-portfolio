@@ -15,14 +15,17 @@
 }
 
 .accordion-description {
+    margin-top: 0px;
+    box-sizing: border-box;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.75s ease; /* Smooth transition */
+    transition: all 0.75s ease;
 }
 
 .accordion-item:hover .accordion-description {
-    max-height: 300px; /* Arbitrarily large value */
-    transition: max-height 0.75s ease;
+    margin-top: 24px;
+    max-height: 300px;
+    transition: all 0.75s ease;
 }
 
 .accordion-item:last-of-type {

@@ -1,3 +1,8 @@
+.section-layout.flex {
+    display: flex;
+    gap: 32px;
+}
+
 .section-layout.padding-top {
     padding-top: 80px;
 }
