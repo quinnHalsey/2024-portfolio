@@ -1,3 +1,16 @@
+.project-intro__wrapper {
+    max-width: 66%;
+}
+
+.project-intro__subtitle {
+    margin-top: 32px;
+}
+
 .laptop__wrapper {
     width: 50%;
+}
+
+span.accordion-description__highlight-y {
+    color: var(--color-yellow);
+    font-weight: 600;
 }

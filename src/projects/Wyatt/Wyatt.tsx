@@ -1,28 +1,28 @@
 import PageLayout from 'src/components/PageLayout/PageLayout';
 import SectionLayout from 'src/components/SectionLayout';
+import Typography from 'src/components/Typography';
+import IntroAccordions from 'src/components/IntroAccordions';
 
 import { Laptop } from 'src/graphics';
 
 import './Wyatt.css';
-import Typography from 'src/components/Typography';
 
 const Wyatt = () => {
     return (
         <PageLayout>
-            <SectionLayout>
-                <div>
+            <SectionLayout className='project-intro__section' flex>
+                <div className='project-intro__wrapper'>
                     <div>
                         <Typography variant='h1'>Wyatt</Typography>
-                        <Typography variant='h2'>
+                        <Typography
+                            variant='h2'
+                            className='project-intro__subtitle'
+                        >
                             An AI-powered Chatbot Helping Students Complete the
                             FAFSA
                         </Typography>
                     </div>
-                    <div>
-                        <Typography variant='h3'>The Project</Typography>
-                        <Typography variant='h3'>Key Deliverables</Typography>
-                        <Typography variant='h3'>Technologies</Typography>
-                    </div>
+                    <IntroAccordions />
                 </div>
                 <div></div>
             </SectionLayout>

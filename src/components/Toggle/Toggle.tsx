@@ -2,8 +2,9 @@ import { useState } from 'react';
 
 import { setTheme } from 'src/utils/themes';
 
-//TODO: temporary button component - turn into SVG animation button to match graphics style
+import './Toggle.css';
 
+//TODO: temporary button component - turn into SVG animation button to match graphics style
 const Toggle = () => {
     const handleThemeChange = () => {
         if (localStorage.getItem('theme') === 'theme-dark') {
