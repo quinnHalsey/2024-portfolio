@@ -4,11 +4,11 @@ import Container from 'src/components/Container';
 import Typography from 'src/components/Typography';
 import IntroAccordions from 'src/components/IntroAccordions';
 import Quote from 'src/components/Quote';
+import SquiggleDivider from 'src/components/SquiggleDivider';
 
-import { Laptop, Phone } from 'src/graphics';
+import { Laptop, Phone, CodeWindowSvg } from 'src/graphics';
 
 import './Wyatt.css';
-import SquiggleDivider from 'src/components/SquiggleDivider';
 
 const Wyatt = () => {
     return (
@@ -82,7 +82,15 @@ const Wyatt = () => {
                             matter of minutes.
                         </Typography>
                     </div>
-                    <div></div>
+                    <div>
+                        <CodeWindowSvg>
+                            <div>
+                                <Typography variant='p'>
+                                    TEST TEST TEST
+                                </Typography>
+                            </div>
+                        </CodeWindowSvg>
+                    </div>
                 </Container>
             </SectionLayout>
         </PageLayout>
