@@ -84,13 +84,7 @@ const Wyatt = () => {
                         </Typography>
                     </div>
                     <div>
-                        <CodeWindowSvg>
-                            <div>
-                                <Typography variant='p'>
-                                    TEST TEST TEST
-                                </Typography>
-                            </div>
-                        </CodeWindowSvg>
+                        <CodeWindowSvg />
                     </div>
                 </Container>
             </SectionLayout>

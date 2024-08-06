@@ -1,4 +1,4 @@
-const CodeWindowSvg = ({ children }: { children: React.ReactNode }) => {
+const CodeWindowSvg = () => {
     const textStyle = {
         fontFamily: 'monospace',
         fontWeight: 400,
