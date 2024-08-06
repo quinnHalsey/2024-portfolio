@@ -24,8 +24,10 @@ const Wyatt = () => {
                     </div>
                     <IntroAccordions />
                 </div>
-                <div className='phone-wrapper'>
-                    <Phone />
+                <div className='project-intro__right-col'>
+                    <div className='phone-wrapper'>
+                        <Phone />
+                    </div>
                 </div>
             </SectionLayout>
             <SectionLayout

@@ -16,7 +16,6 @@
 
 .accordion-description {
     margin-top: 0px;
-    box-sizing: border-box;
     max-height: 0;
     overflow: hidden;
     transition: all 0.75s ease;
@@ -24,12 +23,26 @@
 
 .accordion-item:hover .accordion-description {
     margin-top: 24px;
-    max-height: 300px;
+    max-height: 200px;
     transition: all 0.75s ease;
 }
 
 .accordion-item:last-of-type {
     margin-bottom: 0;
+}
+
+.accordion-item.highlight-y .accordion-title:hover,
+.accordion-item.highlight-y strong {
+    color: var(--color-yellow);
+}
+
+.accordion-item.highlight-b .accordion-title:hover,
+.accordion-item.highlight-b strong {
+    color: var(--color-blue);
+}
+
+.accordion-item.highlight-p .accordion-title:hover {
+    color: var(--color-pink);
 }
 
 .underline {
