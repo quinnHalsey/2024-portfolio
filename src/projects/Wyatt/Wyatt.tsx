@@ -40,7 +40,18 @@ const Wyatt = () => {
                 <Laptop />
             </SectionLayout>
             <SectionLayout>
-                <Quote />
+                <Quote attribution='Manager Review, Q3 2023'>
+                    <Typography variant='blockquote'>
+                        This was a major undertaking on a seriously{' '}
+                        <span className='highlight-y'>compressed timeline</span>
+                        , requiring Halsey to build from scratch on a completely
+                        separate platform from the main BDT site. […] Halsey’s{' '}
+                        <span className='highlight-p'>
+                            performance under pressure
+                        </span>{' '}
+                        was stellar.
+                    </Typography>
+                </Quote>
             </SectionLayout>
         </PageLayout>
     );
