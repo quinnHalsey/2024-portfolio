@@ -2,6 +2,7 @@ import PageLayout from 'src/components/PageLayout/PageLayout';
 import SectionLayout from 'src/components/SectionLayout';
 import Typography from 'src/components/Typography';
 import IntroAccordions from 'src/components/IntroAccordions';
+import Quote from 'src/components/Quote';
 
 import { Laptop, Phone } from 'src/graphics';
 
@@ -32,10 +33,14 @@ const Wyatt = () => {
             </SectionLayout>
             <SectionLayout
                 className='svg-wrapper laptop__wrapper'
+                flex
                 paddingTop
                 paddingBottom
             >
                 <Laptop />
+            </SectionLayout>
+            <SectionLayout>
+                <Quote />
             </SectionLayout>
         </PageLayout>
     );
