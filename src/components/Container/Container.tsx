@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import './Container.css';
 
 interface ContainerProps {
+    alignItemsCenter?: boolean;
     flex?: boolean;
     paddingTop?: boolean;
     paddingBottom?: boolean;
@@ -11,6 +12,7 @@ interface ContainerProps {
 }
 
 const Container = ({
+    alignItemsCenter,
     flex,
     paddingTop,
     paddingBottom,
@@ -21,6 +23,7 @@ const Container = ({
         <div
             className={classNames(
                 {
+                    'align-items-center': alignItemsCenter,
                     flex,
                     'padding-top': paddingTop,
                     'padding-bottom': paddingBottom,

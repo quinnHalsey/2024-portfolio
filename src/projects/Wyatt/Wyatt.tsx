@@ -33,25 +33,26 @@ const Wyatt = () => {
                     </div>
                 </div>
             </SectionLayout>
-            <SectionLayout
-                className='svg-wrapper laptop__wrapper'
-                flex
-                paddingTop
-                paddingBottom
-            >
-                <Laptop />
+            <SectionLayout paddingTop paddingBottom>
+                <Typography variant='h2' className='section-header right-align'>
+                    INCREASING CONVERSION RATE WITH A{' '}
+                    <span className='highlight-p'>WEBCHAT WIDGET</span>
+                </Typography>
+                <Container flex>
+                    <div className='laptop__wrapper'>
+                        <Laptop />
+                    </div>
+                </Container>
             </SectionLayout>
             <SectionLayout>
-                <Quote attribution='Manager Review, Q3 2023'>
+                <Quote attribution='Product Manager' direction='right'>
                     <Typography variant='blockquote'>
-                        This was a major undertaking on a seriously{' '}
-                        <span className='highlight-y'>compressed timeline</span>
-                        , requiring Halsey to build from scratch on a completely
-                        separate platform from the main BDT site. […] Halsey’s{' '}
-                        <span className='highlight-p'>
-                            performance under pressure
-                        </span>{' '}
-                        was stellar.
+                        You have been so wonderful to work with -{' '}
+                        <span className='highlight-u'>
+                            organized, diplomatic, professional, and kind
+                        </span>
+                        . Thank you for all of the work you’ve done to improve
+                        Wyatt and for your dedication to doing the work well.
                     </Typography>
                 </Quote>
             </SectionLayout>
@@ -62,7 +63,7 @@ const Wyatt = () => {
                     <span className='highlight-b'>CUSTOMIZABLE</span> OPT-IN
                     FORM
                 </Typography>
-                <Container flex className='opt-in__section'>
+                <Container flex alignItemsCenter className='opt-in__section'>
                     <div>
                         <Typography variant='p'>
                             One of the biggest challenges of the Wyatt project
@@ -94,14 +95,16 @@ const Wyatt = () => {
                 </Container>
             </SectionLayout>
             <SectionLayout paddingTop paddingBottom>
-                <Quote attribution='Manager Review, Q3 2023' direction='right'>
+                <Quote attribution='Manager Review, Q3 2023'>
                     <Typography variant='blockquote'>
-                        You have been so wonderful to work with -{' '}
-                        <span className='highlight-u'>
-                            organized, diplomatic, professional, and kind
-                        </span>
-                        . Thank you for all of the work you’ve done to improve
-                        Wyatt and for your dedication to doing the work well.
+                        This was a major undertaking on a seriously{' '}
+                        <span className='highlight-y'>compressed timeline</span>
+                        , requiring Halsey to build from scratch on a completely
+                        separate platform from the main BDT site. […] Halsey’s{' '}
+                        <span className='highlight-p'>
+                            performance under pressure
+                        </span>{' '}
+                        was stellar.
                     </Typography>
                 </Quote>
             </SectionLayout>

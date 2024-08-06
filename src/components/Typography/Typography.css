@@ -51,6 +51,7 @@ h2.section-header {
 
 h2.section-header.right-align {
     text-align: right;
+    margin-left: auto;
 }
 
 h3 {
