@@ -5,13 +5,15 @@ import { QuotationMark } from 'src/graphics';
 
 const Quote = ({
     children,
+    direction = 'left',
     attribution,
 }: {
     children: React.ReactNode;
+    direction?: 'right' | 'left';
     attribution: string;
 }) => {
     return (
-        <div className='quote__wrapper'>
+        <div className={'quote__wrapper ' + direction}>
             <div className='quotation-mark__wrapper'>
                 <QuotationMark />
             </div>

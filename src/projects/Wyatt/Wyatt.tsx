@@ -93,6 +93,18 @@ const Wyatt = () => {
                     </div>
                 </Container>
             </SectionLayout>
+            <SectionLayout paddingTop paddingBottom>
+                <Quote attribution='Manager Review, Q3 2023' direction='right'>
+                    <Typography variant='blockquote'>
+                        You have been so wonderful to work with -{' '}
+                        <span className='highlight-u'>
+                            organized, diplomatic, professional, and kind
+                        </span>
+                        . Thank you for all of the work you’ve done to improve
+                        Wyatt and for your dedication to doing the work well.
+                    </Typography>
+                </Quote>
+            </SectionLayout>
         </PageLayout>
     );
 };
