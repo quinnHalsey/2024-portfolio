@@ -1,3 +1,7 @@
+.section-layout {
+    max-width: 1312px;
+    margin: 0 auto;
+}
 .section-layout.flex {
     display: flex;
     gap: 32px;

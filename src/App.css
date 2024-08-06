@@ -27,6 +27,8 @@ body {
 
 body svg {
     stroke: var(--color-fg);
+    stroke-width: 5px;
+    stroke-miterlimit: 10;
     fill: none;
     transition: stroke 0.75s ease;
 }

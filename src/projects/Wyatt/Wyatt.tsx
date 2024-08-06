@@ -1,5 +1,6 @@
 import PageLayout from 'src/components/PageLayout/PageLayout';
 import SectionLayout from 'src/components/SectionLayout';
+import Container from 'src/components/Container';
 import Typography from 'src/components/Typography';
 import IntroAccordions from 'src/components/IntroAccordions';
 import Quote from 'src/components/Quote';
@@ -7,6 +8,7 @@ import Quote from 'src/components/Quote';
 import { Laptop, Phone } from 'src/graphics';
 
 import './Wyatt.css';
+import SquiggleDivider from 'src/components/SquiggleDivider';
 
 const Wyatt = () => {
     return (
@@ -52,6 +54,36 @@ const Wyatt = () => {
                         was stellar.
                     </Typography>
                 </Quote>
+            </SectionLayout>
+            <SquiggleDivider />
+            <SectionLayout>
+                <Typography variant='h2' className='section-header'>
+                    BUILDING A <span className='highlight-b'>SCALABLE</span>,{' '}
+                    <span className='highlight-b'>CUSTOMIZABLE</span> OPT-IN
+                    FORM
+                </Typography>
+                <Container flex className='opt-in__section'>
+                    <div>
+                        <Typography variant='p'>
+                            One of the biggest challenges of the Wyatt project
+                            was overhauling a simple legacy form to opt-in users
+                            for SMS chatbot messages. The new form required
+                            pagination, branching logic, and a newly branded UI.
+                        </Typography>
+                        <Typography variant='p'>
+                            After the initial rebuild, I revisited the form
+                            system design to add customization options, allowing
+                            different questions for specific Wyatt customers,
+                            such as the state of Louisiana.
+                        </Typography>
+                        <Typography variant='p'>
+                            Once I created the scalable design, implementing new
+                            customer homepages and forms could be done in a
+                            matter of minutes.
+                        </Typography>
+                    </div>
+                    <div></div>
+                </Container>
             </SectionLayout>
         </PageLayout>
     );

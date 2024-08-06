@@ -19,3 +19,7 @@
 .laptop__wrapper {
     width: 50%;
 }
+
+.opt-in__section > div {
+    flex: 1;
+}
