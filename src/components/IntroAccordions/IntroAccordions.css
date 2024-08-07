@@ -2,7 +2,7 @@
     margin-top: 64px;
     position: relative;
     /* TODO: ADJUST HEIGHT WITH RESPONSIVITY */
-    height: 425px;
+    min-height: 425px;
 }
 
 .accordion-item {
@@ -18,46 +18,35 @@
     transition: all 0.75s ease;
 }
 
+.accordion-item:focus-visible {
+    outline: 2px dashed var(--color-fg);
+    outline-offset: 16px;
+}
+
 .accordion-item:hover .accordion-description,
-.accordion-item.open .accordion-description {
+.accordion-item:focus-visible .accordion-description {
     margin-top: 24px;
     max-height: 200px;
     transition: all 0.75s ease;
-}
-
-.accordion-wrapper.open .accordion-item:hover .accordion-description {
-    /* Remove hover animations from non-selected accordions when one is selected */
-    max-height: 0;
-    margin-top: 0;
-}
-
-.accordion-wrapper.open .accordion-item.open:hover .accordion-description {
-    /* Maintain open state for selected accordion */
-    max-height: 200px;
-    margin-top: 24px;
 }
 
 .accordion-item:last-of-type {
     margin-bottom: 0;
 }
 
+.accordion-item.highlight-y:focus-visible .accordion-title,
 .accordion-item.highlight-y:hover .accordion-title,
-.accordion-item.highlight-y.open .accordion-title,
 .accordion-item.highlight-y strong {
     color: var(--color-yellow);
 }
 
+.accordion-item.highlight-b:focus-visible .accordion-title,
 .accordion-item.highlight-b:hover .accordion-title,
-.accordion-item.highlight-b.open .accordion-title,
 .accordion-item.highlight-b strong {
     color: var(--color-blue);
 }
 
-.accordion-item.highlight-p:hover .accordion-title,
-.accordion-item.highlight-p.open .accordion-title {
+.accordion-item.highlight-p:focus-visible .accordion-title,
+.accordion-item.highlight-p:hover .accordion-title {
     color: var(--color-pink);
-}
-
-[class*='highlight-'].accordion-item .accordion-title {
-    transition: color 0.5s ease;
 }

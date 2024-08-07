@@ -10,26 +10,16 @@ interface accordionItem {
 }
 
 const IntroAccordions = () => {
-    const [open, setOpen] = useState(-1);
-
-    // TODO: document function
-    const handleAccordionClick = (i: number) => {
-        if (open === i) setOpen(-1);
-        else setOpen(i);
-    };
-
     return (
         <div className='accordion-section'>
-            <div className={`accordion-wrapper ${open >= 0 ? 'open' : ''}`}>
-                {items.map((item: accordionItem, i) => {
+            <div className='accordion-wrapper'>
+                {items.map((item: accordionItem) => {
                     const { title, description, highlight } = item;
                     return (
                         <div
-                            className={`accordion-item highlight-${highlight} ${
-                                open === i ? 'open' : ''
-                            }`}
+                            className={`accordion-item highlight-${highlight}`}
                             key={title}
-                            onClick={() => handleAccordionClick(i)}
+                            tabIndex={0}
                         >
                             <Typography
                                 variant='h3'
