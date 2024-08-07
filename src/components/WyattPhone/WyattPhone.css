@@ -1,9 +1,32 @@
 .phone-wrapper {
     transform: rotate(5deg);
-    transform-origin: top left;
+    transform-origin: center;
 }
+
+.phone-wrapper.hovered {
+    transform: rotate(8deg);
+    transition: transform 0.25s ease;
+}
+
+svg image.wyatt-phone__true-image {
+    transform: translate(32px, 55px) scale(1.3);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.phone-wrapper.hovered svg image.wyatt-phone__true-image {
+    opacity: 1;
+    transition: opacity 0.25s ease;
+}
+
 svg #wonky-wyatt {
     transform: translate(150px, 300px) scale(1.1);
+    opacity: 1;
+    transition: opacity 0.25s ease;
+}
+
+.phone-wrapper.hovered svg #wonky-wyatt {
+    opacity: 0;
 }
 
 svg #wonky-wyatt .svg-filled {

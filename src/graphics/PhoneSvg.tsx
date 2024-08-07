@@ -3,6 +3,7 @@ const PhoneSvg = ({ children }: { children?: React.ReactNode }) => {
         strokeMiterlimit: 10,
         strokeWidth: '5px',
     };
+    const inset = 2;
     return (
         <svg
             id='Phone'
@@ -12,10 +13,10 @@ const PhoneSvg = ({ children }: { children?: React.ReactNode }) => {
             <defs>
                 <clipPath id='screenClip'>
                     <rect
-                        x='28.5'
-                        y='54.62'
-                        width='877'
-                        height='1547.06'
+                        x={28.5 + inset}
+                        y={54.62 + inset}
+                        width={877 - 2 * inset}
+                        height={1547.06 - 2 * inset}
                         rx='51.06'
                         ry='51.06'
                     />
