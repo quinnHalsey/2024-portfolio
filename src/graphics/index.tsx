@@ -1,8 +1,8 @@
 import CodeWindowSvg from './CodeWindowSvg';
 import Laptop from './Laptop';
-import Phone from './Phone';
+import PhoneSvg from './PhoneSvg';
 import QuotationMark from './QuotationMark';
 import Squiggle from './Squiggle';
 import WonkyWyatt from './WonkyWyatt';
 
-export { CodeWindowSvg, Laptop, Phone, QuotationMark, Squiggle, WonkyWyatt };
+export { CodeWindowSvg, Laptop, PhoneSvg, QuotationMark, Squiggle, WonkyWyatt };

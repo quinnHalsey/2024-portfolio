@@ -7,11 +7,6 @@
     padding-left: 64px;
 }
 
-.phone-wrapper {
-    transform: rotate(5deg);
-    transform-origin: top left;
-}
-
 .project-intro__subtitle {
     margin-top: 32px;
 }

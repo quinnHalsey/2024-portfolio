@@ -1,0 +1,11 @@
+.phone-wrapper {
+    transform: rotate(5deg);
+    transform-origin: top left;
+}
+svg #wonky-wyatt {
+    transform: translate(150px, 300px) scale(1.1);
+}
+
+svg #wonky-wyatt .svg-filled {
+    fill: #242424;
+}

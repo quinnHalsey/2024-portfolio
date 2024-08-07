@@ -33,8 +33,7 @@ body svg {
     transition: stroke 0.75s ease;
 }
 
-svg tspan,
-svg .svg-filled {
+svg tspan {
     stroke: none;
     fill: var(--color-fg);
 }

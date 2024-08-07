@@ -5,17 +5,15 @@ import Typography from 'src/components/Typography';
 import IntroAccordions from 'src/components/IntroAccordions';
 import Quote from 'src/components/Quote';
 import SquiggleDivider from 'src/components/SquiggleDivider';
+import WyattPhone from 'src/components/WyattPhone';
 
-import { CodeWindowSvg, Laptop, Phone, WonkyWyatt } from 'src/graphics';
+import { CodeWindowSvg, Laptop } from 'src/graphics';
 
 import './Wyatt.css';
 
 const Wyatt = () => {
     return (
         <PageLayout>
-            <SectionLayout>
-                <WonkyWyatt />
-            </SectionLayout>
             <SectionLayout className='project-intro__section' flex>
                 <div className='project-intro__wrapper'>
                     <div>
@@ -31,9 +29,7 @@ const Wyatt = () => {
                     <IntroAccordions />
                 </div>
                 <div className='project-intro__right-col'>
-                    <div className='phone-wrapper'>
-                        <Phone />
-                    </div>
+                    <WyattPhone />
                 </div>
             </SectionLayout>
             <SectionLayout paddingTop paddingBottom>
