@@ -80,3 +80,23 @@ cite {
     font-family: var(--font-roboto-condensed);
     font-style: normal;
 }
+
+span.highlight-y {
+    color: var(--color-yellow);
+}
+
+span.highlight-p {
+    color: var(--color-pink);
+}
+
+span.highlight-b {
+    color: var(--color-blue);
+}
+
+span.highlight-u {
+    color: var(--color-purple);
+}
+
+span[class^='highlight-'] {
+    font-weight: 700;
+}

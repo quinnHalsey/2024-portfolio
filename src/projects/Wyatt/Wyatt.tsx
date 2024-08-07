@@ -6,13 +6,16 @@ import IntroAccordions from 'src/components/IntroAccordions';
 import Quote from 'src/components/Quote';
 import SquiggleDivider from 'src/components/SquiggleDivider';
 
-import { Laptop, Phone, CodeWindowSvg } from 'src/graphics';
+import { CodeWindowSvg, Laptop, Phone, WonkyWyatt } from 'src/graphics';
 
 import './Wyatt.css';
 
 const Wyatt = () => {
     return (
         <PageLayout>
+            <SectionLayout>
+                <WonkyWyatt />
+            </SectionLayout>
             <SectionLayout className='project-intro__section' flex>
                 <div className='project-intro__wrapper'>
                     <div>

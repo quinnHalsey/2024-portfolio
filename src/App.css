@@ -33,27 +33,8 @@ body svg {
     transition: stroke 0.75s ease;
 }
 
-svg tspan {
+svg tspan,
+svg .svg-filled {
     stroke: none;
     fill: var(--color-fg);
-}
-
-span.highlight-y {
-    color: var(--color-yellow);
-}
-
-span.highlight-p {
-    color: var(--color-pink);
-}
-
-span.highlight-b {
-    color: var(--color-blue);
-}
-
-span.highlight-u {
-    color: var(--color-purple);
-}
-
-span[class^='highlight-'] {
-    font-weight: 700;
 }
