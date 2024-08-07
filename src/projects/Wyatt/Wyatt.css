@@ -1,5 +1,15 @@
 .project-intro__wrapper {
-    max-width: 66%;
+    flex: 2;
+}
+
+.project-intro__right-col {
+    flex: 1;
+    padding-left: 64px;
+}
+
+.phone-wrapper {
+    transform: rotate(5deg);
+    transform-origin: top left;
 }
 
 .project-intro__subtitle {
@@ -10,12 +20,6 @@
     width: 50%;
 }
 
-.phone-wrapper {
-    width: 33%;
-    transform: rotate(10deg);
-}
-
-span.accordion-description__highlight-y {
-    color: var(--color-yellow);
-    font-weight: 600;
+.opt-in__section > div {
+    flex: 1;
 }

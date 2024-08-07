@@ -1,0 +1,16 @@
+.container.align-items-center {
+    align-items: center;
+}
+
+.container.padding-top {
+    padding-top: 64px;
+}
+
+.container.padding-bottom {
+    padding-bottom: 64px;
+}
+
+.container.flex {
+    display: flex;
+    gap: 24px;
+}

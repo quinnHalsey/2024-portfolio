@@ -1,0 +1,34 @@
+.quote__wrapper {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: start;
+    gap: 24px;
+}
+
+.quote__wrapper.right {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.quote__wrapper.right .quotation-mark__wrapper {
+    transform: scale(-100%);
+}
+
+.quote__wrapper.right .quote-text__wrapper blockquote {
+    margin-top: 16px;
+}
+
+.quotation-mark__wrapper {
+    flex: 1;
+}
+
+.quote-text__wrapper {
+    flex: 2;
+}
+
+.quote-text__wrapper blockquote {
+    margin: 0;
+    margin-bottom: 16px;
+}
