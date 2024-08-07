@@ -1,17 +1,14 @@
 .accordion-section {
     margin-top: 64px;
     position: relative;
+    /* TODO: ADJUST HEIGHT WITH RESPONSIVITY */
+    height: 425px;
 }
 
 .accordion-item {
     position: relative;
     cursor: pointer;
     margin-bottom: 32px;
-}
-
-.accordion-title__yellow:hover {
-    color: var(--color-yellow);
-    transition: color 1s ease;
 }
 
 .accordion-description {
@@ -21,35 +18,46 @@
     transition: all 0.75s ease;
 }
 
-.accordion-item:hover .accordion-description {
+.accordion-item:hover .accordion-description,
+.accordion-item.open .accordion-description {
     margin-top: 24px;
     max-height: 200px;
     transition: all 0.75s ease;
+}
+
+.accordion-wrapper.open .accordion-item:hover .accordion-description {
+    /* Remove hover animations from non-selected accordions when one is selected */
+    max-height: 0;
+    margin-top: 0;
+}
+
+.accordion-wrapper.open .accordion-item.open:hover .accordion-description {
+    /* Maintain open state for selected accordion */
+    max-height: 200px;
+    margin-top: 24px;
 }
 
 .accordion-item:last-of-type {
     margin-bottom: 0;
 }
 
-.accordion-item.highlight-y .accordion-title:hover,
+.accordion-item.highlight-y:hover .accordion-title,
+.accordion-item.highlight-y.open .accordion-title,
 .accordion-item.highlight-y strong {
     color: var(--color-yellow);
 }
 
-.accordion-item.highlight-b .accordion-title:hover,
+.accordion-item.highlight-b:hover .accordion-title,
+.accordion-item.highlight-b.open .accordion-title,
 .accordion-item.highlight-b strong {
     color: var(--color-blue);
 }
 
-.accordion-item.highlight-p .accordion-title:hover {
+.accordion-item.highlight-p:hover .accordion-title,
+.accordion-item.highlight-p.open .accordion-title {
     color: var(--color-pink);
 }
 
-.underline {
-    position: absolute;
-    height: 6px;
-    background: var(--color-yellow);
-    width: 100%;
-    transition: top 0.3s ease;
-    left: 0;
+[class*='highlight-'].accordion-item .accordion-title {
+    transition: color 0.5s ease;
 }

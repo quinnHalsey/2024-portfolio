@@ -33,7 +33,7 @@ const Wyatt = () => {
                     </div>
                 </div>
             </SectionLayout>
-            <SectionLayout paddingTop paddingBottom>
+            <SectionLayout paddingBottom>
                 <Typography variant='h2' className='section-header right-align'>
                     INCREASING CONVERSION RATE WITH A{' '}
                     <span className='highlight-p'>WEBCHAT WIDGET</span>
