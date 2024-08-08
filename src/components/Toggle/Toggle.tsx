@@ -1,14 +1,18 @@
-import { setTheme } from 'src/utils/themes';
+import { useState } from 'react';
 
 import './Toggle.css';
 
 // TODO: temporary button component - turn into SVG animation button to match graphics style
 const Toggle = () => {
+    const [theme, setTheme] = useState('theme-dark');
+
     const handleThemeChange = () => {
-        if (localStorage.getItem('theme') === 'theme-dark') {
+        if (theme === 'theme-dark') {
             setTheme('theme-light');
+            document.documentElement.className = 'theme-light';
         } else {
             setTheme('theme-dark');
+            document.documentElement.className = 'theme-dark';
         }
     };
 
