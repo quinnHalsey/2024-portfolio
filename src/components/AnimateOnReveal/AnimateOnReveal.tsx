@@ -3,9 +3,11 @@ import { useEffect, useRef, useState } from 'react';
 const AnimateOnReveal = ({
     children,
     className,
+    threshold = 1,
 }: {
     children: React.ReactNode;
     className?: string;
+    threshold?: number;
 }) => {
     const [isVisible, setIsVisible] = useState(false);
     const animateRef = useRef(null);
@@ -24,7 +26,7 @@ const AnimateOnReveal = ({
             {
                 root: null,
                 rootMargin: '0px',
-                threshold: 1.0,
+                threshold: threshold,
             }
         );
 

@@ -34,7 +34,7 @@ const Wyatt = () => {
                 </div>
             </SectionLayout>
             <SectionLayout paddingTop paddingBottom>
-                <SectionHeader rightAlign>
+                <SectionHeader>
                     <Typography variant='h2'>
                         INCREASING CONVERSION RATE WITH A{' '}
                         <span className='highlight-p'>WEBCHAT WIDGET</span>
@@ -60,7 +60,7 @@ const Wyatt = () => {
             </SectionLayout>
             <SquiggleDivider />
             <SectionLayout>
-                <SectionHeader>
+                <SectionHeader rightAlign>
                     <Typography variant='h2'>
                         BUILDING A <span className='highlight-b'>SCALABLE</span>
                         , <span className='highlight-b'>CUSTOMIZABLE</span>{' '}

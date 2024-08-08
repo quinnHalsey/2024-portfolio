@@ -15,6 +15,7 @@ const SectionHeader = ({
             className={classNames('section-header', {
                 'right-align': rightAlign,
             })}
+            threshold={0.5}
         >
             {children}
         </AnimateOnReveal>
