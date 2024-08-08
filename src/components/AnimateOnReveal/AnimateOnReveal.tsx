@@ -1,6 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 
-const AnimateOnReveal = ({ children }: { children: React.ReactNode }) => {
+const AnimateOnReveal = ({
+    children,
+    className,
+}: {
+    children: React.ReactNode;
+    className?: string;
+}) => {
     const [isVisible, setIsVisible] = useState(false);
     const animateRef = useRef(null);
 
@@ -34,7 +40,10 @@ const AnimateOnReveal = ({ children }: { children: React.ReactNode }) => {
     }, [animateRef]);
 
     return (
-        <div ref={animateRef} className={isVisible ? 'visible' : ''}>
+        <div
+            ref={animateRef}
+            className={`${isVisible ? 'visible' : ''} ${className}`}
+        >
             {children}
         </div>
     );

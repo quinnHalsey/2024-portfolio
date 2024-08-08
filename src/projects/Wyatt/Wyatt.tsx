@@ -6,6 +6,7 @@ import IntroAccordions from 'src/components/IntroAccordions';
 import Quote from 'src/components/Quote';
 import SquiggleDivider from 'src/components/SquiggleDivider';
 import WyattPhone from 'src/components/WyattPhone';
+import SectionHeader from 'src/components/SectionHeader';
 
 import { CodeWindowSvg, Laptop } from 'src/graphics';
 
@@ -33,10 +34,12 @@ const Wyatt = () => {
                 </div>
             </SectionLayout>
             <SectionLayout paddingTop paddingBottom>
-                <Typography variant='h2' className='section-header right-align'>
-                    INCREASING CONVERSION RATE WITH A{' '}
-                    <span className='highlight-p'>WEBCHAT WIDGET</span>
-                </Typography>
+                <SectionHeader rightAlign>
+                    <Typography variant='h2'>
+                        INCREASING CONVERSION RATE WITH A{' '}
+                        <span className='highlight-p'>WEBCHAT WIDGET</span>
+                    </Typography>
+                </SectionHeader>
                 <Container flex>
                     <div className='laptop__wrapper'>
                         <Laptop />
@@ -57,11 +60,13 @@ const Wyatt = () => {
             </SectionLayout>
             <SquiggleDivider />
             <SectionLayout>
-                <Typography variant='h2' className='section-header'>
-                    BUILDING A <span className='highlight-b'>SCALABLE</span>,{' '}
-                    <span className='highlight-b'>CUSTOMIZABLE</span> OPT-IN
-                    FORM
-                </Typography>
+                <SectionHeader>
+                    <Typography variant='h2'>
+                        BUILDING A <span className='highlight-b'>SCALABLE</span>
+                        , <span className='highlight-b'>CUSTOMIZABLE</span>{' '}
+                        OPT-IN FORM
+                    </Typography>
+                </SectionHeader>
                 <Container flex alignItemsCenter className='opt-in__section'>
                     <div>
                         <Typography variant='p'>
