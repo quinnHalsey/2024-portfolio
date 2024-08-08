@@ -7,19 +7,6 @@
     gap: 24px;
 }
 
-.quote__wrapper.right {
-    flex-direction: row-reverse;
-    text-align: right;
-}
-
-.quote__wrapper.right .quotation-mark__wrapper {
-    transform: scale(-100%);
-}
-
-.quote__wrapper.right .quote-text__wrapper blockquote {
-    margin-top: 16px;
-}
-
 .quotation-mark__wrapper {
     flex: 1;
 }
@@ -31,4 +18,17 @@
 .quote-text__wrapper blockquote {
     margin: 0;
     margin-bottom: 16px;
+}
+
+.quote__wrapper.right {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.quote__wrapper.right .quotation-mark__wrapper {
+    transform: scale(-100%);
+}
+
+.quote__wrapper.right .quote-text__wrapper blockquote {
+    margin-top: 16px;
 }

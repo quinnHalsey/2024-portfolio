@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const AnimateOnReveal = ({
     children,
-    className,
+    className = '',
     threshold = 1,
 }: {
     children: React.ReactNode;

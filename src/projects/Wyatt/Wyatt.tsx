@@ -34,13 +34,13 @@ const Wyatt = () => {
                 </div>
             </SectionLayout>
             <SectionLayout paddingTop paddingBottom>
-                <SectionHeader>
+                <SectionHeader rightAlign>
                     <Typography variant='h2'>
                         INCREASING CONVERSION RATE WITH A{' '}
                         <span className='highlight-p'>WEBCHAT WIDGET</span>
                     </Typography>
                 </SectionHeader>
-                <Container flex>
+                <Container flex animateIn>
                     <div className='laptop__wrapper'>
                         <Laptop />
                     </div>
@@ -60,14 +60,19 @@ const Wyatt = () => {
             </SectionLayout>
             <SquiggleDivider />
             <SectionLayout>
-                <SectionHeader rightAlign>
+                <SectionHeader>
                     <Typography variant='h2'>
                         BUILDING A <span className='highlight-b'>SCALABLE</span>
                         , <span className='highlight-b'>CUSTOMIZABLE</span>{' '}
                         OPT-IN FORM
                     </Typography>
                 </SectionHeader>
-                <Container flex alignItemsCenter className='opt-in__section'>
+                <Container
+                    animateIn
+                    flex
+                    alignItemsCenter
+                    className='opt-in__section'
+                >
                     <div>
                         <Typography variant='p'>
                             One of the biggest challenges of the Wyatt project
@@ -93,18 +98,23 @@ const Wyatt = () => {
                 </Container>
             </SectionLayout>
             <SectionLayout paddingTop paddingBottom>
-                <Quote attribution='Manager Review, Q3 2023'>
-                    <Typography variant='blockquote'>
-                        This was a major undertaking on a seriously{' '}
-                        <span className='highlight-y'>compressed timeline</span>
-                        , requiring Halsey to build from scratch on a completely
-                        separate platform from the main BDT site. […] Halsey’s{' '}
-                        <span className='highlight-p'>
-                            performance under pressure
-                        </span>{' '}
-                        was stellar.
-                    </Typography>
-                </Quote>
+                <Container animateIn>
+                    <Quote attribution='Manager Review, Q3 2023'>
+                        <Typography variant='blockquote'>
+                            This was a major undertaking on a seriously{' '}
+                            <span className='highlight-y'>
+                                compressed timeline
+                            </span>
+                            , requiring Halsey to build from scratch on a
+                            completely separate platform from the main BDT site.
+                            […] Halsey’s{' '}
+                            <span className='highlight-p'>
+                                performance under pressure
+                            </span>{' '}
+                            was stellar.
+                        </Typography>
+                    </Quote>
+                </Container>
             </SectionLayout>
         </PageLayout>
     );
