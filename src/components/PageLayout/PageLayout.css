@@ -1,3 +1,6 @@
 .page-layout {
     padding: 128px 64px;
+    padding-left: 164px;
+    display: flex;
+    flex-direction: column;
 }
