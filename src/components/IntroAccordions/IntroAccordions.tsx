@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Typography from '../Typography';
 
 import './IntroAccordions.css';

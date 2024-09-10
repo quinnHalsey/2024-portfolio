@@ -67,7 +67,7 @@ const CodeWindowSvg = () => {
                     </tspan>
                     <tspan x='0' y='748.8' xmlSpace='preserve'>
                         {' '}
-                        income: [],v
+                        income: [],
                     </tspan>
                     <tspan x='0' y='806.4' xmlSpace='preserve'>
                         {' '}
