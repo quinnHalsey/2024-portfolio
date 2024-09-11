@@ -1,17 +1,25 @@
 import CodeWindowSvg from './CodeWindowSvg';
 import mobileGetFafsaHelp from './images/mobile-get-fafsa-help.png';
+import HomeIcon from './HomeIcon';
 import Laptop from './Laptop';
 import PhoneSvg from './PhoneSvg';
+import PlayIcon from './PlayIcon';
 import QuotationMark from './QuotationMark';
 import Squiggle from './Squiggle';
+import ToggleMoon from './ToggleMoon';
+import ToggleSun from './ToggleSun';
 import WonkyWyatt from './WonkyWyatt';
 
 export {
     CodeWindowSvg,
     mobileGetFafsaHelp,
+    HomeIcon,
     Laptop,
     PhoneSvg,
+    PlayIcon,
     QuotationMark,
     Squiggle,
+    ToggleMoon,
+    ToggleSun,
     WonkyWyatt,
 };

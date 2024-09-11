@@ -101,7 +101,7 @@ const Wyatt = () => {
                     </div>
                 </Container>
             </SectionLayout>
-            <SectionLayout paddingTop paddingBottom>
+            <SectionLayout paddingTop>
                 <Container animateIn>
                     <Quote attribution='Manager Review, Q3 2023'>
                         <Typography variant='blockquote'>
