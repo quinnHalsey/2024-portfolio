@@ -1,9 +1,12 @@
 import classNames from 'classnames';
 
+import AnimateOnReveal from '../AnimateOnReveal';
+
 import './Container.css';
 
 interface ContainerProps {
     alignItemsCenter?: boolean;
+    animateIn?: boolean;
     flex?: boolean;
     paddingTop?: boolean;
     paddingBottom?: boolean;
@@ -13,13 +16,14 @@ interface ContainerProps {
 
 const Container = ({
     alignItemsCenter,
+    animateIn = false,
     flex,
     paddingTop,
     paddingBottom,
     children,
     className,
 }: ContainerProps) => {
-    return (
+    const content = (
         <div
             className={classNames(
                 {
@@ -34,6 +38,13 @@ const Container = ({
         >
             {children}
         </div>
+    );
+    return animateIn ? (
+        <AnimateOnReveal className='container__animated' threshold={0.5}>
+            {content}
+        </AnimateOnReveal>
+    ) : (
+        content
     );
 };
 

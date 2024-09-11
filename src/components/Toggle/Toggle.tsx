@@ -1,22 +1,27 @@
 import { useState } from 'react';
 
-import { setTheme } from 'src/utils/themes';
+import { ToggleMoon, ToggleSun } from 'src/graphics';
 
 import './Toggle.css';
 
-//TODO: temporary button component - turn into SVG animation button to match graphics style
+//TODO:  animation between sun/moon icons
+
 const Toggle = () => {
+    const [theme, setTheme] = useState('theme-dark');
+
     const handleThemeChange = () => {
-        if (localStorage.getItem('theme') === 'theme-dark') {
+        if (theme === 'theme-dark') {
             setTheme('theme-light');
+            document.documentElement.className = 'theme-light';
         } else {
             setTheme('theme-dark');
+            document.documentElement.className = 'theme-dark';
         }
     };
 
     return (
         <button className='theme-toggle' onClick={handleThemeChange}>
-            Dark/Light Mode
+            {theme === 'theme-dark' ? <ToggleSun /> : <ToggleMoon />}
         </button>
     );
 };

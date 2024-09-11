@@ -14,3 +14,14 @@
     display: flex;
     gap: 24px;
 }
+
+.container__animated {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.visible.container__animated {
+    transform: translateY(0);
+    opacity: 1;
+}

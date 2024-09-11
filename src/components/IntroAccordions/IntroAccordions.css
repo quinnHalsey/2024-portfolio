@@ -18,11 +18,6 @@
     transition: all 0.75s ease;
 }
 
-.accordion-item:focus-visible {
-    outline: 2px dashed var(--color-fg);
-    outline-offset: 16px;
-}
-
 .accordion-item:hover .accordion-description,
 .accordion-item:focus-visible .accordion-description {
     margin-top: 24px;

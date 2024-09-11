@@ -2,19 +2,19 @@
     --color-blue: #007bff;
 }
 
-.theme-light {
+.theme-dark {
     --color-bg: #242424;
     --color-fg: #f5f5f5;
-    --color-yellow: #ffa412;
-    --color-purple: #6f42c1;
+    --color-yellow: #ffc107;
+    --color-purple: #af83ff;
     --color-pink: #ff4888;
 }
 
-.theme-dark {
+.theme-light {
     --color-bg: #f5f5f5;
     --color-fg: #242424;
-    --color-yellow: #ffc107;
-    --color-purple: #af83ff;
+    --color-purple: #6f42c1;
+    --color-yellow: #ffa412;
     --color-pink: #ff0059;
 }
 
@@ -38,22 +38,8 @@ svg tspan {
     fill: var(--color-fg);
 }
 
-span.highlight-y {
-    color: var(--color-yellow);
-}
-
-span.highlight-p {
-    color: var(--color-pink);
-}
-
-span.highlight-b {
-    color: var(--color-blue);
-}
-
-span.highlight-u {
-    color: var(--color-purple);
-}
-
-span[class^='highlight-'] {
-    font-weight: 700;
+div:focus-visible {
+    outline: 2px dashed var(--color-purple);
+    outline-offset: 16px;
+    border-radius: 8px;
 }

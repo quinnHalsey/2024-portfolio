@@ -42,14 +42,14 @@ h2 {
     font-size: 64px;
 }
 
-h2.section-header {
+.section-header h2 {
     font-family: var(--font-dazzle-unicase);
     line-height: 72px;
     padding-bottom: 80px;
     max-width: 1024px;
 }
 
-h2.section-header.right-align {
+.section-header.right-align h2 {
     text-align: right;
     margin-left: auto;
 }
@@ -79,4 +79,24 @@ cite {
     font-size: 20px;
     font-family: var(--font-roboto-condensed);
     font-style: normal;
+}
+
+span.highlight-y {
+    color: var(--color-yellow);
+}
+
+span.highlight-p {
+    color: var(--color-pink);
+}
+
+span.highlight-b {
+    color: var(--color-blue);
+}
+
+span.highlight-u {
+    color: var(--color-purple);
+}
+
+span[class^='highlight-'] {
+    font-weight: 700;
 }

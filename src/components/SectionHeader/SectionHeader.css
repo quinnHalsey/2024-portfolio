@@ -1,0 +1,16 @@
+.section-header {
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: all 1s ease;
+}
+
+.section-header.right-align {
+    transform: translateX(200px);
+}
+
+.section-header.visible,
+.section-header.right-align.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s ease;
+}

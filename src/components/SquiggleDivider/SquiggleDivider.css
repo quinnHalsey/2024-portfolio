@@ -7,7 +7,7 @@
     stroke-dashoffset: 5000;
 }
 
-.squiggle__path.animate {
+.visible .squiggle__path {
     animation: draw 5s ease-in-out forwards;
 }
 
