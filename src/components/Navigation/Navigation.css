@@ -12,6 +12,22 @@
     justify-content: flex-end;
     gap: 8px;
     z-index: 100;
+    overflow: hidden;
+}
+
+.navigation-wrapper:hover {
+    width: fit-content;
+}
+
+.navigation-wrapper ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.navigation-wrapper li.nav-item__wrapper {
+    display: flex;
+    gap: 8px;
 }
 
 .navigation-wrapper button {
@@ -20,7 +36,8 @@
     border: none;
     padding: 0;
     cursor: pointer;
-    width: 100%;
+    min-width: 48px;
+    width: 48px;
     transition: rotate 0.5s ease;
 }
 
@@ -29,9 +46,10 @@
     transition: rotate 0.5s ease;
 }
 
-.navigation-wrapper button:focus-visible svg,
-.navigation-wrapper button:focus svg {
+.navigation-wrapper button:focus-visible svg {
     outline: #cdb1ff 2px dashed;
+    outline-offset: 2px;
+    border-radius: 50%;
     rotate: 0deg;
     position: relative;
     z-index: 1;

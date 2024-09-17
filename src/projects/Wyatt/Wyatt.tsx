@@ -1,5 +1,4 @@
-import PageLayout from 'src/components/PageLayout/PageLayout';
-import Navigation from 'src/components/Navigation';
+import PageLayout from 'src/components/PageLayout';
 import SectionLayout from 'src/components/SectionLayout';
 import Container from 'src/components/Container';
 import Typography from 'src/components/Typography';
