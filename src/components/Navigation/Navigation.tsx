@@ -1,16 +1,29 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Toggle from '../Toggle';
 import Typography from '../Typography';
 
-import { PlayIcon, HomeIcon } from 'src/graphics';
+import { PlayIcon, HomeIcon, ToggleMoon, ToggleSun } from 'src/graphics';
 
 import './Navigation.css';
 
 //TODO: onClick callback function for Play Video
+//TODO:  animation between sun/moon icons
 
 const Navigation = () => {
     const navigate = useNavigate();
+
+    const [theme, setTheme] = useState('theme-dark');
+
+    const handleThemeChange = () => {
+        if (theme === 'theme-dark') {
+            setTheme('theme-light');
+            document.documentElement.className = 'theme-light';
+        } else {
+            setTheme('theme-dark');
+            document.documentElement.className = 'theme-dark';
+        }
+    };
 
     return (
         <nav className='navigation-wrapper'>
@@ -29,10 +42,13 @@ const Navigation = () => {
                 >
                     <PlayIcon />
                 </NavButton>
-                <li className='nav-item__wrapper'>
-                    <Toggle />
-                    <Typography variant='p'>Theme</Typography>
-                </li>
+                <NavButton
+                    onClick={handleThemeChange}
+                    label='Theme'
+                    ariaLabel='Change Theme'
+                >
+                    {theme === 'theme-dark' ? <ToggleSun /> : <ToggleMoon />}
+                </NavButton>
             </ul>
         </nav>
     );
@@ -57,10 +73,10 @@ const NavButton = ({
                 aria-label={ariaLabel}
             >
                 {children}
+                <div>
+                    <Typography variant='p'>{label}</Typography>
+                </div>
             </button>
-            <div>
-                <Typography variant='p'>{label}</Typography>
-            </div>
         </li>
     );
 };

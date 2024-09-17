@@ -9,13 +9,13 @@
     top: 0;
     z-index: 100;
     overflow: hidden;
-    transition: width 0.75s ease;
+    transition: all 0.75s ease;
     align-content: end;
-    color: #f5f5f5;
 }
 
 .navigation-wrapper:hover {
     width: 180px;
+    box-shadow: 2px -1px 10px #242424;
 }
 
 .navigation-wrapper ul {
@@ -28,25 +28,33 @@
     gap: 8px;
 }
 
-.navigation-wrapper li.nav-item__wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-wrap: nowrap;
-}
-
-.navigation-wrapper button {
+.navigation-wrapper li.nav-item__wrapper button {
     background: none;
     outline: none;
     border: none;
     padding: 0;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-wrap: nowrap;
+    color: #f5f5f5;
+    transition: font-weight 0.75s ease;
+}
+
+.navigation-wrapper button svg {
+    stroke-width: 10;
+    stroke: #f5f5f5;
     min-width: 48px;
     width: 48px;
     transition: rotate 0.5s ease;
 }
 
-.navigation-wrapper button:hover {
+.navigation-wrapper li.nav-item__wrapper button:hover p {
+    font-weight: 500;
+}
+
+.navigation-wrapper li.nav-item__wrapper button:hover svg {
     rotate: 20deg;
     transition: rotate 0.5s ease;
 }
@@ -58,9 +66,4 @@
     rotate: 0deg;
     position: relative;
     z-index: 1;
-}
-
-.navigation-wrapper button svg {
-    stroke-width: 10;
-    stroke: #f5f5f5;
 }
