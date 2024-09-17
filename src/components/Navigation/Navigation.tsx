@@ -7,10 +7,11 @@ import { PlayIcon, HomeIcon } from 'src/graphics';
 
 import './Navigation.css';
 
-//TODO: onClick callback functions for Home and Play Video
+//TODO: onClick callback function for Play Video
 
 const Navigation = () => {
     const navigate = useNavigate();
+
     return (
         <nav className='navigation-wrapper'>
             <ul>
@@ -30,7 +31,7 @@ const Navigation = () => {
                 </NavButton>
                 <li className='nav-item__wrapper'>
                     <Toggle />
-                    <Typography variant='p'>Change Theme</Typography>
+                    <Typography variant='p'>Theme</Typography>
                 </li>
             </ul>
         </nav>
