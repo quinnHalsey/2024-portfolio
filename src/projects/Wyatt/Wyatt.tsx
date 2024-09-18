@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import PageLayout from 'src/components/PageLayout';
 import SectionLayout from 'src/components/SectionLayout';
 import Container from 'src/components/Container';
@@ -65,9 +67,8 @@ const Wyatt = () => {
             <SectionLayout>
                 <SectionHeader>
                     <Typography variant='h2'>
-                        BUILDING A <span className='highlight-b'>SCALABLE</span>
-                        , <span className='highlight-b'>CUSTOMIZABLE</span>{' '}
-                        OPT-IN FORM
+                        BUILDING A <ScalableInteractive />{' '}
+                        <CustomizableInteractive /> OPT-IN FORM
                     </Typography>
                 </SectionHeader>
                 <Container
@@ -120,6 +121,105 @@ const Wyatt = () => {
                 </Container>
             </SectionLayout>
         </PageLayout>
+    );
+};
+
+//TODO: make themed SVG slider
+const ScalableInteractive = () => {
+    const [fontSize, setFontSize] = useState(64);
+    const [hovered, setHovered] = useState<boolean>(false);
+
+    let removeHoverTimeout: ReturnType<typeof setTimeout>;
+
+    const handleScale = (size: number) => {
+        setFontSize(size);
+    };
+
+    const handleMouseLeave = () => {
+        removeHoverTimeout = setTimeout(() => {
+            setHovered(false);
+        }, 500);
+    };
+
+    const handleMouseEnter = () => {
+        setHovered(true);
+        clearTimeout(removeHoverTimeout);
+    };
+
+    return (
+        <div
+            className='scalable-interactive__wrapper interactive-text'
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
+            <span className='highlight-b' style={{ fontSize: `${fontSize}px` }}>
+                SCALABLE
+            </span>
+            ,
+            <div className='scale-slider__wrapper'>
+                <input
+                    className={
+                        'scale-slider interactive-text__control' +
+                        (hovered ? ' visible' : '')
+                    }
+                    type='range'
+                    onChange={(e) => handleScale(Number(e.target.value))}
+                    max={82}
+                    min={64}
+                    value={fontSize}
+                />
+            </div>
+        </div>
+    );
+};
+
+//TODO: replace with themed SVG color picker
+const CustomizableInteractive = () => {
+    const [fontColor, setFontColor] = useState<string>('#007bff');
+    const [hovered, setHovered] = useState<boolean>(true);
+
+    let removeHoverTimeout: ReturnType<typeof setTimeout>;
+
+    const handleMouseLeave = () => {
+        removeHoverTimeout = setTimeout(() => {
+            setHovered(false);
+        }, 500);
+    };
+
+    const handleMouseEnter = () => {
+        setHovered(true);
+        clearTimeout(removeHoverTimeout);
+    };
+
+    const isValidHexCode = (code: string): code is string => {
+        const hexPattern = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
+        return hexPattern.test(code);
+    };
+
+    const handleColorChange = (hexCode: string) => {
+        console.log(hexCode, 'hex code');
+        if (isValidHexCode(hexCode)) setFontColor(hexCode);
+    };
+
+    return (
+        <div
+            className='interactive-text'
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
+            <span className='highlight-b' style={{ color: `${fontColor}` }}>
+                CUSTOMIZABLE
+            </span>
+            <input
+                className={
+                    'color-picker interactive-text__control' +
+                    (hovered ? ' visible' : '')
+                }
+                type='color'
+                onChange={(e) => handleColorChange(e.target.value)}
+                value={fontColor}
+            />
+        </div>
     );
 };
 
