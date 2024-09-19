@@ -10,6 +10,8 @@ import SquiggleDivider from 'src/components/SquiggleDivider';
 import WyattPhone from 'src/components/WyattPhone';
 import SectionHeader from 'src/components/SectionHeader';
 
+import useHover from 'src/utils/useHover';
+
 import { CodeWindowSvg, Laptop } from 'src/graphics';
 
 import './Wyatt.css';
@@ -126,24 +128,11 @@ const Wyatt = () => {
 
 //TODO: make themed SVG slider
 const ScalableInteractive = () => {
+    const { hovered, handleMouseEnter, handleMouseLeave } = useHover();
     const [fontSize, setFontSize] = useState(64);
-    const [hovered, setHovered] = useState<boolean>(false);
-
-    let removeHoverTimeout: ReturnType<typeof setTimeout>;
 
     const handleScale = (size: number) => {
         setFontSize(size);
-    };
-
-    const handleMouseLeave = () => {
-        removeHoverTimeout = setTimeout(() => {
-            setHovered(false);
-        }, 500);
-    };
-
-    const handleMouseEnter = () => {
-        setHovered(true);
-        clearTimeout(removeHoverTimeout);
     };
 
     return (
@@ -175,21 +164,22 @@ const ScalableInteractive = () => {
 
 //TODO: replace with themed SVG color picker
 const CustomizableInteractive = () => {
+    const { hovered, handleMouseEnter, handleMouseLeave } = useHover();
+
     const [fontColor, setFontColor] = useState<string>('#007bff');
-    const [hovered, setHovered] = useState<boolean>(true);
 
-    let removeHoverTimeout: ReturnType<typeof setTimeout>;
+    // let removeHoverTimeout: ReturnType<typeof setTimeout>;
 
-    const handleMouseLeave = () => {
-        removeHoverTimeout = setTimeout(() => {
-            setHovered(false);
-        }, 500);
-    };
+    // const handleMouseLeave = () => {
+    //     removeHoverTimeout = setTimeout(() => {
+    //         setHovered(false);
+    //     }, 500);
+    // };
 
-    const handleMouseEnter = () => {
-        setHovered(true);
-        clearTimeout(removeHoverTimeout);
-    };
+    // const handleMouseEnter = () => {
+    //     setHovered(true);
+    //     clearTimeout(removeHoverTimeout);
+    // };
 
     const isValidHexCode = (code: string): code is string => {
         const hexPattern = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
@@ -197,7 +187,6 @@ const CustomizableInteractive = () => {
     };
 
     const handleColorChange = (hexCode: string) => {
-        console.log(hexCode, 'hex code');
         if (isValidHexCode(hexCode)) setFontColor(hexCode);
     };
 
