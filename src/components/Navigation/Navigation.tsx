@@ -31,17 +31,20 @@ const Navigation = () => {
 
     useEffect(() => {
         if (location.pathname !== '/') {
-            // If user is not on home page
             const currProj = getProjectFromPath(location.pathname);
             if (currProj?.videoSrc) {
                 setVideoSrc(currProj.videoSrc);
             }
+        } else {
+            // If user is on homepage
+            setVideoSrc('');
+            setVideoOpen(false);
         }
     }, [location.pathname]);
 
     return (
         <>
-            {videoOpen && videoSrc.length > 0 && (
+            {videoOpen && videoSrc?.length > 0 && (
                 <VideoLightbox src={videoSrc} />
             )}
             <nav className='navigation-wrapper'>
