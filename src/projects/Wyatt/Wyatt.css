@@ -47,7 +47,8 @@ div.interactive-text {
     bottom: 0;
 }
 
-.color-picker.visible {
+.color-picker.visible,
+.color-picker:focus-visible {
     opacity: 1;
     bottom: -24px;
     cursor: pointer;

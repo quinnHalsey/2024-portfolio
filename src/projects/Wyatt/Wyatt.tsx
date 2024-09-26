@@ -129,6 +129,7 @@ const Wyatt = () => {
 //TODO: make themed SVG slider
 const ScalableInteractive = () => {
     const { hovered, handleMouseEnter, handleMouseLeave } = useHover();
+
     const [fontSize, setFontSize] = useState(64);
 
     const handleScale = (size: number) => {
@@ -167,19 +168,6 @@ const CustomizableInteractive = () => {
     const { hovered, handleMouseEnter, handleMouseLeave } = useHover();
 
     const [fontColor, setFontColor] = useState<string>('#007bff');
-
-    // let removeHoverTimeout: ReturnType<typeof setTimeout>;
-
-    // const handleMouseLeave = () => {
-    //     removeHoverTimeout = setTimeout(() => {
-    //         setHovered(false);
-    //     }, 500);
-    // };
-
-    // const handleMouseEnter = () => {
-    //     setHovered(true);
-    //     clearTimeout(removeHoverTimeout);
-    // };
 
     const isValidHexCode = (code: string): code is string => {
         const hexPattern = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
