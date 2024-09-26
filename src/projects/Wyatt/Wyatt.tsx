@@ -1,3 +1,5 @@
+import { useRef, useEffect, useState } from 'react';
+
 import PageLayout from 'src/components/PageLayout';
 import SectionLayout from 'src/components/SectionLayout';
 import Container from 'src/components/Container';
@@ -48,11 +50,12 @@ const Wyatt = () => {
                         animateIn
                         alignItemsCenter
                         className='webchat-section'
+                        paddingBottom
                     >
                         <div className='laptop__wrapper'>
                             <Laptop />
                         </div>
-                        <div>
+                        <div className='webchat-section__text'>
                             <Typography variant='p'>
                                 Prior to the overhaul initiative, Wyatt
                                 consisted of a simple website and an SMS
@@ -62,8 +65,8 @@ const Wyatt = () => {
                                 version of Wyatt. We initially implemented a
                                 third-party embedded widget, but encountered
                                 significant limitations in both design and
-                                functionality, including the inability to track
-                                usage.
+                                functionality, including a limited ability to
+                                track usage.
                             </Typography>
                             <Typography variant='p'>
                                 Working closely with the UI/UX team and AI
@@ -73,8 +76,15 @@ const Wyatt = () => {
                                 designing an intuitive interface that would
                                 encourage user interaction while maintaining a
                                 sleek appearance that was well-aligned with
-                                Wyatt's brand identity. When implementing{' '}
-                                {/* TODO: add sentence about implementing the new widget with the AI engineer, connecting it to his middleware and utilizing platform integration/GA4 API for tracking - critical for product team */}
+                                Wyatt's brand identity. When implementing the
+                                new widget, I collaborated closely with our AI
+                                engineer to seamlessly integrate it with our
+                                middleware in between the front-end and the
+                                OpenAI API. I integrated Google Analytics 4
+                                (GA4), sending event data through the GA4 API
+                                for comprehensive usage tracking, providing
+                                critical data for our product team to analyze
+                                and optimize user engagement.
                             </Typography>
                             <Typography variant='p'>
                                 The outcome of our cross-functional
