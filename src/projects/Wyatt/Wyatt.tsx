@@ -43,12 +43,55 @@ const Wyatt = () => {
                         INCREASING CONVERSION RATE WITH A{' '}
                         <span className='highlight-p'>WEBCHAT WIDGET</span>
                     </Typography>
+                    <Container
+                        flex
+                        animateIn
+                        alignItemsCenter
+                        className='webchat-section'
+                    >
+                        <div className='laptop__wrapper'>
+                            <Laptop />
+                        </div>
+                        <div>
+                            <Typography variant='p'>
+                                Prior to the overhaul initiative, Wyatt
+                                consisted of a simple website and an SMS
+                                chatbot. During the later stages of the
+                                redesign, the Emerging Technology team advocated
+                                for the addition of an OpenAI-powered, web-based
+                                version of Wyatt. We initially implemented a
+                                third-party embedded widget, but encountered
+                                significant limitations in both design and
+                                functionality, including the inability to track
+                                usage.
+                            </Typography>
+                            <Typography variant='p'>
+                                Working closely with the UI/UX team and AI
+                                engineers, we developed a fully branded,
+                                in-house solution that was eye-catching,
+                                accessible and user-friendly. We focused on
+                                designing an intuitive interface that would
+                                encourage user interaction while maintaining a
+                                sleek appearance that was well-aligned with
+                                Wyatt's brand identity. When implementing{' '}
+                                {/* TODO: add sentence about implementing the new widget with the AI engineer, connecting it to his middleware and utilizing platform integration/GA4 API for tracking - critical for product team */}
+                            </Typography>
+                            <Typography variant='p'>
+                                The outcome of our cross-functional
+                                collaboration was remarkable. The new widget not
+                                only enhanced the user experience but also
+                                significantly increased user engagement. We
+                                observed{' '}
+                                <strong>
+                                    a staggering increase in webchat usage, from
+                                    431 to 2,270 unique users per month
+                                </strong>{' '}
+                                - a testament to the power of thoughtful and
+                                seamless design.
+                            </Typography>
+                        </div>
+                    </Container>
                 </SectionHeader>
-                <Container flex animateIn>
-                    <div className='laptop__wrapper'>
-                        <Laptop />
-                    </div>
-                </Container>
             </SectionLayout>
             <SectionLayout>
                 <Container animateIn>
