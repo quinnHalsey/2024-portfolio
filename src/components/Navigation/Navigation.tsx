@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { getProjectFromPath } from 'src/utils/routeHelpers';
+import { getProjectFromPath } from 'src/utils';
 
 import Typography from '../Typography';
 import VideoLightbox from '../VideoLightbox';

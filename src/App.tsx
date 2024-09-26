@@ -5,7 +5,6 @@ import Wyatt from './projects/Wyatt';
 import Navigation from './components/Navigation';
 
 import './App.css';
-import { getProjectFromPath } from './utils/routeHelpers';
 
 const App = () => {
     return (
