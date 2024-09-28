@@ -1,17 +1,15 @@
-import { useRef, useState, useEffect } from 'react';
-
-import SectionLayout from 'src/components/SectionLayout';
-import SectionHeader from 'src/components/SectionHeader';
-import Typography from 'src/components/Typography';
+import AnimateOnReveal from '../AnimateOnReveal';
 import Container from 'src/components/Container';
 import Laptop from 'src/graphics/Laptop';
+import SectionHeader from 'src/components/SectionHeader';
+import SectionLayout from 'src/components/SectionLayout';
+import Typography from 'src/components/Typography';
 
 import './WyattWebchatSection.css';
-import AnimateOnReveal from '../AnimateOnReveal';
 
 const WyattWebchatSection = () => {
     return (
-        <SectionLayout paddingTop paddingBottom>
+        <SectionLayout paddingTop paddingBottom className='webchat-section'>
             <SectionHeader rightAlign>
                 <Typography variant='h2'>
                     INCREASING CONVERSION RATE WITH A{' '}
@@ -26,6 +24,7 @@ const WyattWebchatSection = () => {
                     <AnimateOnReveal
                         className='webchat-section__paragraph-wrapper'
                         threshold={0.8}
+                        reverse
                     >
                         <Typography variant='p'>
                             Prior to the overhaul initiative, Wyatt consisted of
@@ -42,6 +41,7 @@ const WyattWebchatSection = () => {
                     <AnimateOnReveal
                         className='webchat-section__paragraph-wrapper'
                         threshold={0.8}
+                        reverse
                     >
                         <Typography variant='p'>
                             Working closely with the UI/UX team, we developed a
@@ -56,6 +56,7 @@ const WyattWebchatSection = () => {
                     <AnimateOnReveal
                         className='webchat-section__paragraph-wrapper'
                         threshold={0.8}
+                        reverse
                     >
                         <Typography variant='p'>
                             When implementing the new widget, I collaborated
@@ -71,6 +72,7 @@ const WyattWebchatSection = () => {
                     <AnimateOnReveal
                         className='webchat-section__paragraph-wrapper'
                         threshold={0.8}
+                        reverse
                     >
                         <Typography variant='p'>
                             The outcome of our cross-functional collaboration

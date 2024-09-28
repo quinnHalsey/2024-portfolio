@@ -4,6 +4,10 @@
     position: relative;
 }
 
+.webchat-section .section-header h2 {
+    padding-bottom: 0;
+}
+
 .laptop__wrapper {
     position: sticky;
     top: 64px;
@@ -32,15 +36,15 @@
 }
 
 .webchat-section__paragraph-wrapper {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     opacity: 0;
     transition: opacity 0.75s ease;
 }
 
-.webchat-section__paragraph-wrapper:first-of-type {
-    height: 60vh;
+.webchat-section__paragraph-wrapper:last-of-type {
+    height: 100vh;
 }
 
 .webchat-section__paragraph-wrapper.visible {
