@@ -11,40 +11,6 @@
     margin-top: 32px;
 }
 
-.laptop__wrapper {
-    width: 50%;
-}
-
 .opt-in__section > div {
     flex: 1;
-}
-
-.webchat-section {
-    position: relative;
-}
-
-.laptop__wrapper {
-    position: absolute;
-    left: -20%; /* Laptop left edge bleeding over left container bound */
-    width: 80%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.webchat-section__text {
-    width: 40%;
-    margin-left: auto;
-    padding-left: 20px;
-}
-
-.animated-paragraph {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.animated-paragraph.active {
-    opacity: 1;
-    transform: translateY(0);
 }
