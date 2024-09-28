@@ -8,6 +8,7 @@ import Typography from 'src/components/Typography';
 import './WyattWebchatSection.css';
 
 const WyattWebchatSection = () => {
+    const visibilityThreshold = 0.8;
     return (
         <SectionLayout paddingTop paddingBottom className='webchat-section'>
             <SectionHeader rightAlign>
@@ -23,7 +24,7 @@ const WyattWebchatSection = () => {
                 <div className='webchat-section__text'>
                     <AnimateOnReveal
                         className='webchat-section__paragraph-wrapper'
-                        threshold={0.8}
+                        threshold={visibilityThreshold}
                         reverse
                     >
                         <Typography variant='p'>
@@ -40,7 +41,7 @@ const WyattWebchatSection = () => {
                     </AnimateOnReveal>
                     <AnimateOnReveal
                         className='webchat-section__paragraph-wrapper'
-                        threshold={0.8}
+                        threshold={visibilityThreshold}
                         reverse
                     >
                         <Typography variant='p'>
@@ -55,7 +56,7 @@ const WyattWebchatSection = () => {
                     </AnimateOnReveal>
                     <AnimateOnReveal
                         className='webchat-section__paragraph-wrapper'
-                        threshold={0.8}
+                        threshold={visibilityThreshold}
                         reverse
                     >
                         <Typography variant='p'>
@@ -71,7 +72,7 @@ const WyattWebchatSection = () => {
                     </AnimateOnReveal>
                     <AnimateOnReveal
                         className='webchat-section__paragraph-wrapper'
-                        threshold={0.8}
+                        threshold={visibilityThreshold}
                         reverse
                     >
                         <Typography variant='p'>
