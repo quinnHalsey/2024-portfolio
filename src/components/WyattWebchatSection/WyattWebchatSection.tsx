@@ -8,13 +8,13 @@ import Typography from 'src/components/Typography';
 import './WyattWebchatSection.css';
 
 const WyattWebchatSection = () => {
-    const visibilityThreshold = 0.8;
+    const visibilityThreshold = 0.7;
     return (
         <SectionLayout paddingTop paddingBottom className='webchat-section'>
             <SectionHeader rightAlign>
                 <Typography variant='h2'>
-                    INCREASING CONVERSION RATE WITH A{' '}
-                    <span className='highlight-p'>WEBCHAT WIDGET</span>
+                    <span className='highlight-p'>425%</span> CONVERSION BOOST
+                    WITH A <span className='highlight-p'>WEBCHAT WIDGET</span>
                 </Typography>
             </SectionHeader>
             <Container flex className='webchat-container'>

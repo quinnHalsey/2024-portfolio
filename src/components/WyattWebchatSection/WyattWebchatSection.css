@@ -25,7 +25,6 @@
 .webchat-section__text {
     width: 60%;
     margin-left: auto;
-    z-index: 10;
 }
 
 /* Makes text scroll away at same time as laptop */
