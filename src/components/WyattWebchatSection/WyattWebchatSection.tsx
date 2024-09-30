@@ -7,14 +7,15 @@ import Typography from 'src/components/Typography';
 
 import './WyattWebchatSection.css';
 
+// TODO: Add blurb about the challenge of maintaining chat history across multiplate pages of an SSG site
 const WyattWebchatSection = () => {
     const visibilityThreshold = 0.7;
     return (
         <SectionLayout paddingTop paddingBottom className='webchat-section'>
             <SectionHeader rightAlign>
                 <Typography variant='h2'>
-                    <span className='highlight-p'>425%</span> CONVERSION BOOST
-                    WITH A <span className='highlight-p'>WEBCHAT WIDGET</span>
+                    INCREASING CONVERSION RATE WITH A{' '}
+                    <span className='highlight-p'>WEBCHAT WIDGET</span>
                 </Typography>
             </SectionHeader>
             <Container flex className='webchat-container'>
@@ -64,10 +65,10 @@ const WyattWebchatSection = () => {
                             closely with our AI engineer to seamlessly integrate
                             it with our middleware in between the front-end and
                             the OpenAI API. I integrated Google Analytics 4
-                            (GA4), sending event data through the GA4 API for
-                            comprehensive usage tracking, providing critical
-                            data for our product team to analyze and optimize
-                            user engagement.
+                            (GA4), sending event data for comprehensive usage
+                            tracking, providing critical information for our
+                            product team to analyze and optimize user
+                            engagement.
                         </Typography>
                     </AnimateOnReveal>
                     <AnimateOnReveal

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Typography from '../Typography';
 
 import './IntroAccordions.css';
@@ -9,24 +10,47 @@ interface accordionItem {
 }
 
 const IntroAccordions = () => {
+    const [openItem, setOpenItem] = useState(0);
+
+    const toggleAccordion = (index: number) => {
+        setOpenItem(index === openItem ? -1 : index);
+    };
+
     return (
         <div className='accordion-section'>
             <div className='accordion-wrapper'>
-                {items.map((item: accordionItem) => {
+                {items.map((item: accordionItem, index: number) => {
                     const { title, description, highlight } = item;
+                    const isOpen = index === openItem;
+                    console.log(isOpen, 'open', index, 'index');
                     return (
                         <div
-                            className={`accordion-item highlight-${highlight}`}
+                            className={`accordion-item highlight-${highlight} ${
+                                isOpen ? 'open' : ''
+                            }`}
                             key={title}
                             tabIndex={0}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault();
+                                    toggleAccordion(index);
+                                }
+                            }}
                         >
-                            <Typography
-                                variant='h3'
-                                className='accordion-title'
+                            <div
+                                className='accordion-title-wrapper'
+                                onClick={() => toggleAccordion(index)}
                             >
-                                {title}
-                            </Typography>
-                            {description}
+                                <Typography
+                                    variant='h3'
+                                    className='accordion-title'
+                                >
+                                    {title}
+                                </Typography>
+                            </div>
+                            <div className='accordion-content'>
+                                {description}
+                            </div>
                         </div>
                     );
                 })}
@@ -103,7 +127,7 @@ const items: accordionItem[] = [
                 </li>
                 <li>
                     <Typography variant='p'>
-                        <strong>DevOps:</strong> Netlify • Browserstack • Google
+                        <strong>Tools:</strong> Netlify • Browserstack • Google
                         Analytics 4 • Hotjar
                     </Typography>
                 </li>
