@@ -1,0 +1,39 @@
+.video-lightbox__overlay {
+    height: 100%;
+    width: calc(100% - 64px);
+    padding-left: 64px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.video-lightbox__wrapper {
+    width: calc(80% - 64px);
+    max-width: 1024px;
+    position: relative;
+}
+
+.video-lightbox {
+    width: 100%;
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.video-lightbox iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}

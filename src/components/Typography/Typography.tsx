@@ -1,6 +1,7 @@
 import './Typography.css';
 
 type TypographyVariant = 'h1' | 'h2' | 'h3' | 'p' | 'blockquote' | 'cite';
+
 interface TypographyProps {
     variant: TypographyVariant;
     children: React.ReactNode;

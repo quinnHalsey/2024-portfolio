@@ -1,0 +1,56 @@
+.webchat-container {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.webchat-section .section-header h2 {
+    padding-bottom: 0;
+}
+
+.laptop__wrapper {
+    position: sticky;
+    top: 64px;
+    width: 80%;
+    height: 100vh;
+}
+
+.laptop__wrapper svg {
+    width: 150%;
+    position: relative;
+    left: -30%;
+    top: 5%;
+}
+
+.webchat-section__text {
+    width: 60%;
+    margin-left: auto;
+}
+
+/* Makes text scroll away at same time as laptop */
+.webchat-section__text::after {
+    content: '';
+    display: block;
+    height: 20vh;
+}
+
+.webchat-section__paragraph-wrapper {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.75s ease;
+}
+
+.webchat-section__paragraph-wrapper:first-of-type {
+    height: 70vh;
+}
+
+.webchat-section__paragraph-wrapper:last-of-type {
+    height: 100vh;
+}
+
+.webchat-section__paragraph-wrapper.visible {
+    opacity: 1;
+    transition: opacity 0.75s ease;
+}

@@ -1,14 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 
+interface AnimateOnRevealProps {
+    children: React.ReactNode;
+    className?: string;
+    threshold?: number;
+    reverse?: boolean;
+}
+
 const AnimateOnReveal = ({
     children,
     className = '',
     threshold = 1,
-}: {
-    children: React.ReactNode;
-    className?: string;
-    threshold?: number;
-}) => {
+    reverse = false,
+}: AnimateOnRevealProps) => {
     const [isVisible, setIsVisible] = useState(false);
     const animateRef = useRef(null);
 
@@ -18,7 +22,8 @@ const AnimateOnReveal = ({
         }
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
+                if (reverse) setIsVisible(entry.isIntersecting);
+                else if (entry.isIntersecting) {
                     setIsVisible(true);
                     observer.unobserve(entry.target);
                 }

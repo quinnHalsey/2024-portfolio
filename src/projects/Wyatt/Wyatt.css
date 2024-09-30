@@ -11,44 +11,6 @@
     margin-top: 32px;
 }
 
-.laptop__wrapper {
-    width: 50%;
-}
-
 .opt-in__section > div {
     flex: 1;
-}
-
-div.interactive-text {
-    display: inline;
-    position: relative;
-}
-
-.interactive-text .interactive-text__control {
-    position: absolute;
-    left: 0;
-    opacity: 0;
-    transition: top 0.75s ease, bottom 0.75s ease, opacity 0.75s ease;
-}
-
-.scale-slider {
-    top: 0px;
-}
-
-.scale-slider.visible,
-.scale-slider:focus-visible {
-    position: absolute;
-    top: -20px;
-    opacity: 1;
-    cursor: pointer;
-}
-
-.color-picker {
-    bottom: 0;
-}
-
-.color-picker.visible {
-    opacity: 1;
-    bottom: -24px;
-    cursor: pointer;
 }

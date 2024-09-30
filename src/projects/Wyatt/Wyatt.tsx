@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import PageLayout from 'src/components/PageLayout';
 import SectionLayout from 'src/components/SectionLayout';
 import Container from 'src/components/Container';
@@ -9,10 +7,13 @@ import Quote from 'src/components/Quote';
 import SquiggleDivider from 'src/components/SquiggleDivider';
 import WyattPhone from 'src/components/WyattPhone';
 import SectionHeader from 'src/components/SectionHeader';
+import {
+    CustomizableInteractiveText,
+    ScalableInteractiveText,
+} from 'src/components/InteractiveText';
+import WyattWebchatSection from 'src/components/WyattWebchatSection';
 
-import useHover from 'src/utils/useHover';
-
-import { CodeWindowSvg, Laptop } from 'src/graphics';
+import { CodeWindowSvg } from 'src/graphics';
 
 import './Wyatt.css';
 
@@ -37,19 +38,7 @@ const Wyatt = () => {
                     <WyattPhone />
                 </div>
             </SectionLayout>
-            <SectionLayout paddingTop paddingBottom>
-                <SectionHeader rightAlign>
-                    <Typography variant='h2'>
-                        INCREASING CONVERSION RATE WITH A{' '}
-                        <span className='highlight-p'>WEBCHAT WIDGET</span>
-                    </Typography>
-                </SectionHeader>
-                <Container flex animateIn>
-                    <div className='laptop__wrapper'>
-                        <Laptop />
-                    </div>
-                </Container>
-            </SectionLayout>
+            <WyattWebchatSection />
             <SectionLayout>
                 <Container animateIn>
                     <Quote attribution='Product Manager' direction='right'>
@@ -69,8 +58,8 @@ const Wyatt = () => {
             <SectionLayout>
                 <SectionHeader>
                     <Typography variant='h2'>
-                        BUILDING A <ScalableInteractive />{' '}
-                        <CustomizableInteractive /> OPT-IN FORM
+                        BUILDING A <ScalableInteractiveText />{' '}
+                        <CustomizableInteractiveText /> OPT-IN FORM
                     </Typography>
                 </SectionHeader>
                 <Container
@@ -123,92 +112,6 @@ const Wyatt = () => {
                 </Container>
             </SectionLayout>
         </PageLayout>
-    );
-};
-
-//TODO: make themed SVG slider
-const ScalableInteractive = () => {
-    const { hovered, handleMouseEnter, handleMouseLeave } = useHover();
-    const [fontSize, setFontSize] = useState(64);
-
-    const handleScale = (size: number) => {
-        setFontSize(size);
-    };
-
-    return (
-        <div
-            className='scalable-interactive__wrapper interactive-text'
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-            <span className='highlight-b' style={{ fontSize: `${fontSize}px` }}>
-                SCALABLE
-            </span>
-            ,
-            <div className='scale-slider__wrapper'>
-                <input
-                    className={
-                        'scale-slider interactive-text__control' +
-                        (hovered ? ' visible' : '')
-                    }
-                    type='range'
-                    onChange={(e) => handleScale(Number(e.target.value))}
-                    max={82}
-                    min={64}
-                    value={fontSize}
-                />
-            </div>
-        </div>
-    );
-};
-
-//TODO: replace with themed SVG color picker
-const CustomizableInteractive = () => {
-    const { hovered, handleMouseEnter, handleMouseLeave } = useHover();
-
-    const [fontColor, setFontColor] = useState<string>('#007bff');
-
-    // let removeHoverTimeout: ReturnType<typeof setTimeout>;
-
-    // const handleMouseLeave = () => {
-    //     removeHoverTimeout = setTimeout(() => {
-    //         setHovered(false);
-    //     }, 500);
-    // };
-
-    // const handleMouseEnter = () => {
-    //     setHovered(true);
-    //     clearTimeout(removeHoverTimeout);
-    // };
-
-    const isValidHexCode = (code: string): code is string => {
-        const hexPattern = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
-        return hexPattern.test(code);
-    };
-
-    const handleColorChange = (hexCode: string) => {
-        if (isValidHexCode(hexCode)) setFontColor(hexCode);
-    };
-
-    return (
-        <div
-            className='interactive-text'
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-            <span className='highlight-b' style={{ color: `${fontColor}` }}>
-                CUSTOMIZABLE
-            </span>
-            <input
-                className={
-                    'color-picker interactive-text__control' +
-                    (hovered ? ' visible' : '')
-                }
-                type='color'
-                onChange={(e) => handleColorChange(e.target.value)}
-                value={fontColor}
-            />
-        </div>
     );
 };
 
