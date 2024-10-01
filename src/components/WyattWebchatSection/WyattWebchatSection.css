@@ -22,6 +22,59 @@
     top: 5%;
 }
 
+@keyframes bubbleAppearFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(75%) translateY(20%) scale(0.3);
+    }
+    90% {
+        opacity: 1;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+}
+
+@keyframes bubbleAppearFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-75%) translateY(75%) scale(0.3);
+    }
+    90% {
+        opacity: 1;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+}
+
+.speech-bubble {
+    animation-fill-mode: both;
+    transform: translate(-75%, 20%);
+}
+
+.speech-bubble__right {
+    animation: bubbleAppearFromRight 2s cubic-bezier(0.165, 0.84, 0.44, 1)
+        alternate infinite;
+}
+
+.speech-bubble__left {
+    animation: bubbleAppearFromLeft 2s cubic-bezier(0.165, 0.84, 0.44, 1)
+        alternate infinite;
+}
+
+#bubble1 {
+    animation-delay: 0s;
+}
+
+#bubble2 {
+    animation-delay: 0.5s;
+}
+
 .webchat-section__text {
     width: 60%;
     margin-left: auto;

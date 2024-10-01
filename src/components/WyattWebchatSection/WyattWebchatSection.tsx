@@ -1,9 +1,10 @@
 import AnimateOnReveal from '../AnimateOnReveal';
 import Container from 'src/components/Container';
-import Laptop from 'src/graphics/Laptop';
 import SectionHeader from 'src/components/SectionHeader';
 import SectionLayout from 'src/components/SectionLayout';
 import Typography from 'src/components/Typography';
+
+import { Laptop, SpeechBubbles } from 'src/graphics';
 
 import './WyattWebchatSection.css';
 
@@ -20,7 +21,7 @@ const WyattWebchatSection = () => {
             </SectionHeader>
             <Container flex className='webchat-container'>
                 <div className='laptop__wrapper'>
-                    <Laptop />
+                    <Laptop display={<SpeechBubbles />} />
                 </div>
                 <div className='webchat-section__text'>
                     <AnimateOnReveal
