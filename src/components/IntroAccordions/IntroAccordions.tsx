@@ -12,17 +12,16 @@ interface accordionItem {
 const IntroAccordions = () => {
     const [openItem, setOpenItem] = useState(0);
 
-    const toggleAccordion = (index: number) => {
-        setOpenItem(index === openItem ? -1 : index);
+    const toggleAccordion = (i: number) => {
+        setOpenItem(i === openItem ? -1 : i);
     };
 
     return (
         <div className='accordion-section'>
             <div className='accordion-wrapper'>
-                {items.map((item: accordionItem, index: number) => {
+                {items.map((item: accordionItem, i: number) => {
                     const { title, description, highlight } = item;
-                    const isOpen = index === openItem;
-                    console.log(isOpen, 'open', index, 'index');
+                    const isOpen = i === openItem;
                     return (
                         <div
                             className={`accordion-item highlight-${highlight} ${
@@ -33,13 +32,13 @@ const IntroAccordions = () => {
                             onKeyDown={(e) => {
                                 if (e.key === 'Enter' || e.key === ' ') {
                                     e.preventDefault();
-                                    toggleAccordion(index);
+                                    toggleAccordion(i);
                                 }
                             }}
                         >
                             <div
                                 className='accordion-title-wrapper'
-                                onClick={() => toggleAccordion(index)}
+                                onClick={() => toggleAccordion(i)}
                             >
                                 <Typography
                                     variant='h3'

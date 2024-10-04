@@ -1,8 +1,30 @@
+import { useEffect, useRef } from 'react';
+
 import './VideoLightbox.css';
 
-const VideoLightbox = ({ src }: { src: string }) => {
+interface VideoLightboxProps {
+    src: string;
+    onClose: () => void;
+}
+
+const VideoLightbox = ({ src, onClose }: VideoLightboxProps) => {
+    const overlayRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (overlayRef.current && event.target === overlayRef.current) {
+                onClose();
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [onClose]);
+
     return (
-        <div className='video-lightbox__overlay'>
+        <div className='video-lightbox__overlay' ref={overlayRef}>
             <div className='video-lightbox__wrapper'>
                 <div className='video-lightbox'>
                     <iframe

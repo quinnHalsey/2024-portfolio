@@ -9,6 +9,7 @@ import Squiggle from './Squiggle';
 import SpeechBubbles from './SpeechBubbles';
 import ToggleMoon from './ToggleMoon';
 import ToggleSun from './ToggleSun';
+import WebchatUserGrowthChart from './WebchatUserGrowthChart';
 import WonkyWyatt from './WonkyWyatt';
 
 export {
@@ -23,5 +24,6 @@ export {
     SpeechBubbles,
     ToggleMoon,
     ToggleSun,
+    WebchatUserGrowthChart,
     WonkyWyatt,
 };

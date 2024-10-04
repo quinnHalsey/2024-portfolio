@@ -1,6 +1,6 @@
 const SpeechBubbles = () => {
     return (
-        <g id='speech-bubbles' clipPath='url(#screen-clip)'>
+        <g id='speech-bubbles'>
             <g id='bubbles'>
                 <path
                     id='bubble1'

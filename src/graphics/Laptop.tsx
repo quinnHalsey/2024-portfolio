@@ -107,7 +107,11 @@ const Laptop = ({ display = <></> }: { display?: React.ReactNode }) => {
                     </g>
                 </g>
             </g>
-            {display}
+            {display && (
+                <g className='screen-content' clipPath='url(#screen-clip)'>
+                    {display}
+                </g>
+            )}
         </svg>
     );
 };

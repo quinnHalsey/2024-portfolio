@@ -8,6 +8,57 @@
     padding-bottom: 0;
 }
 
+/* PARAGRAPHS */
+
+.webchat-section__text {
+    width: 60%;
+    margin-left: auto;
+}
+
+/* Makes text scroll away at same time as laptop */
+.webchat-section__text::after {
+    content: '';
+    display: block;
+    height: 20vh;
+}
+
+.webchat-section__paragraph-wrapper {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.75s ease;
+}
+
+.webchat-section__paragraph-wrapper:first-of-type {
+    height: 70vh;
+}
+
+.webchat-section__paragraph-wrapper:last-of-type {
+    height: 100vh;
+}
+
+.webchat-section__paragraph-wrapper.visible {
+    opacity: 1;
+    transition: opacity 0.75s ease;
+}
+
+/* LAPTOP */
+
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.laptop__wrapper svg .screen-content__element {
+    opacity: 0;
+    animation: fadeInContent 1s cubic-bezier(0.32, 0, 0.67, 0) forwards;
+}
+
 .laptop__wrapper {
     position: sticky;
     top: 64px;
@@ -21,6 +72,8 @@
     left: -30%;
     top: 5%;
 }
+
+/* SPEECH BUBBLES */
 
 @keyframes bubbleAppearFromRight {
     0% {
@@ -75,35 +128,26 @@
     animation-delay: 0.5s;
 }
 
-.webchat-section__text {
-    width: 60%;
-    margin-left: auto;
+/* GROWTH CHART */
+
+.laptop__wrapper svg .chart-point {
+    stroke: none;
+    fill: var(--color-fg);
 }
 
-/* Makes text scroll away at same time as laptop */
-.webchat-section__text::after {
-    content: '';
-    display: block;
-    height: 20vh;
+@keyframes drawLine {
+    0% {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+    }
 }
 
-.webchat-section__paragraph-wrapper {
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.75s ease;
-}
-
-.webchat-section__paragraph-wrapper:first-of-type {
-    height: 70vh;
-}
-
-.webchat-section__paragraph-wrapper:last-of-type {
-    height: 100vh;
-}
-
-.webchat-section__paragraph-wrapper.visible {
-    opacity: 1;
-    transition: opacity 0.75s ease;
+.laptop__wrapper svg #line {
+    animation: drawLine 5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
 }
