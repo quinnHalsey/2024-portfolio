@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
+import LoadingAnimation from '../LoadingAnimation';
 
 import './VideoLightbox.css';
 
@@ -9,6 +11,7 @@ interface VideoLightboxProps {
 
 const VideoLightbox = ({ src, onClose }: VideoLightboxProps) => {
     const overlayRef = useRef<HTMLDivElement>(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -23,16 +26,28 @@ const VideoLightbox = ({ src, onClose }: VideoLightboxProps) => {
         };
     }, [onClose]);
 
+    const handleVideoLoad = () => {
+        setIsLoading(false);
+    };
+
     return (
         <div className='video-lightbox__overlay' ref={overlayRef}>
             <div className='video-lightbox__wrapper'>
-                <div className='video-lightbox'>
+                {isLoading && (
+                    <div className='video-lightbox__loading'>
+                        <LoadingAnimation />
+                    </div>
+                )}
+                <div
+                    className={`video-lightbox ${!isLoading ? 'visible' : ''}`}
+                >
                     <iframe
                         allow='autoplay'
                         src={src}
                         width='100%'
                         height='100%'
                         allowFullScreen
+                        onLoad={handleVideoLoad}
                     ></iframe>
                 </div>
             </div>

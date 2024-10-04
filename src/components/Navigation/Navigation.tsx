@@ -33,8 +33,7 @@ const Navigation = () => {
                 ? getProjectFromPath(location.pathname)
                 : null;
         setVideoSrc(currProj?.videoSrc || '');
-        setVideoOpen(false);
-    });
+    }, [location.pathname]);
 
     return (
         <>

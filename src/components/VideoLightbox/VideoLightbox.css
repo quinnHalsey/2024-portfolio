@@ -18,9 +18,15 @@
 }
 
 .video-lightbox {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.video-lightbox.visible {
     width: 100%;
     position: relative;
     height: 0;
+    opacity: 1;
     padding-top: 56.25%;
     box-shadow: 0 0 100px rgba(255, 255, 255, 0.2);
     border-radius: 8px;
@@ -32,8 +38,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 0;
     border: none;
     outline: none;
+}
+
+.video-lightbox.visible iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.video-lightbox__loading div {
+    margin: 0 auto;
 }
