@@ -6,8 +6,10 @@ import PhoneSvg from './PhoneSvg';
 import PlayIcon from './PlayIcon';
 import QuotationMark from './QuotationMark';
 import Squiggle from './Squiggle';
+import SpeechBubbles from './SpeechBubbles';
 import ToggleMoon from './ToggleMoon';
 import ToggleSun from './ToggleSun';
+import WebchatUserGrowthChart from './WebchatUserGrowthChart';
 import WonkyWyatt from './WonkyWyatt';
 
 export {
@@ -19,7 +21,9 @@ export {
     PlayIcon,
     QuotationMark,
     Squiggle,
+    SpeechBubbles,
     ToggleMoon,
     ToggleSun,
+    WebchatUserGrowthChart,
     WonkyWyatt,
 };

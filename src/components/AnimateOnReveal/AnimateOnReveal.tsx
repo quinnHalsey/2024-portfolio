@@ -5,6 +5,7 @@ interface AnimateOnRevealProps {
     className?: string;
     threshold?: number;
     reverse?: boolean;
+    handleVisibilityChange?: (isVisible: boolean) => void;
 }
 
 const AnimateOnReveal = ({
@@ -12,6 +13,7 @@ const AnimateOnReveal = ({
     className = '',
     threshold = 1,
     reverse = false,
+    handleVisibilityChange,
 }: AnimateOnRevealProps) => {
     const [isVisible, setIsVisible] = useState(false);
     const animateRef = useRef(null);
@@ -22,9 +24,12 @@ const AnimateOnReveal = ({
         }
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (reverse) setIsVisible(entry.isIntersecting);
-                else if (entry.isIntersecting) {
+                if (reverse) {
+                    setIsVisible(entry.isIntersecting);
+                    handleVisibilityChange?.(entry.isIntersecting);
+                } else if (entry.isIntersecting) {
                     setIsVisible(true);
+                    handleVisibilityChange?.(true);
                     observer.unobserve(entry.target);
                 }
             },

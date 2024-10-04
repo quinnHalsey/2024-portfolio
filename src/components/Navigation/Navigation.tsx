@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getProjectFromPath } from 'src/utils';
 
-import Typography from '../Typography';
+import NavButton from './NavButton';
 import VideoLightbox from '../VideoLightbox';
 
 import { PlayIcon, HomeIcon, ToggleMoon, ToggleSun } from 'src/graphics';
@@ -19,33 +19,26 @@ const Navigation = () => {
     const [videoOpen, setVideoOpen] = useState(false);
     const [videoSrc, setVideoSrc] = useState('');
 
+    const handleCloseVideo = () => setVideoOpen(false);
+
     const handleThemeChange = () => {
-        if (theme === 'theme-dark') {
-            setTheme('theme-light');
-            document.documentElement.className = 'theme-light';
-        } else {
-            setTheme('theme-dark');
-            document.documentElement.className = 'theme-dark';
-        }
+        const newTheme = theme === 'theme-dark' ? 'theme-light' : 'theme-dark';
+        setTheme(newTheme);
+        document.documentElement.className = newTheme;
     };
 
     useEffect(() => {
-        if (location.pathname !== '/') {
-            const currProj = getProjectFromPath(location.pathname);
-            if (currProj?.videoSrc) {
-                setVideoSrc(currProj.videoSrc);
-            }
-        } else {
-            // If user is on homepage
-            setVideoSrc('');
-            setVideoOpen(false);
-        }
+        const currProj =
+            location.pathname !== '/'
+                ? getProjectFromPath(location.pathname)
+                : null;
+        setVideoSrc(currProj?.videoSrc || '');
     }, [location.pathname]);
 
     return (
         <>
-            {videoOpen && videoSrc?.length > 0 && (
-                <VideoLightbox src={videoSrc} />
+            {videoOpen && videoSrc && (
+                <VideoLightbox src={videoSrc} onClose={handleCloseVideo} />
             )}
             <nav className='navigation-wrapper'>
                 <ul>
@@ -79,33 +72,6 @@ const Navigation = () => {
                 </ul>
             </nav>
         </>
-    );
-};
-
-const NavButton = ({
-    ariaLabel = '',
-    children,
-    label,
-    onClick,
-}: {
-    ariaLabel?: string;
-    children: React.ReactNode;
-    label: string;
-    onClick?: () => void;
-}) => {
-    return (
-        <li className='nav-item__wrapper'>
-            <button
-                className='navigation-button'
-                onClick={onClick}
-                aria-label={ariaLabel}
-            >
-                {children}
-                <div>
-                    <Typography variant='p'>{label}</Typography>
-                </div>
-            </button>
-        </li>
     );
 };
 

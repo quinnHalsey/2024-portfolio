@@ -7,22 +7,24 @@
 
 .accordion-item {
     position: relative;
-    cursor: pointer;
     margin-bottom: 32px;
 }
 
-.accordion-description {
-    margin-top: 0px;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.75s ease;
+.accordion-title-wrapper {
+    cursor: pointer;
 }
 
-.accordion-item:hover .accordion-description,
-.accordion-item:focus-visible .accordion-description {
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.75s ease-out, margin-top 0.75s ease-out;
+}
+
+.accordion-item.open .accordion-content,
+.accordion-item:focus-visible .accordion-content {
     margin-top: 24px;
     max-height: 200px;
-    transition: all 0.75s ease;
+    transition: max-height 0.75s ease-out, margin-top 0.75s ease-out;
 }
 
 .accordion-item:last-of-type {
@@ -31,17 +33,20 @@
 
 .accordion-item.highlight-y:focus-visible .accordion-title,
 .accordion-item.highlight-y:hover .accordion-title,
+.accordion-item.highlight-y.open .accordion-title,
 .accordion-item.highlight-y strong {
     color: var(--color-yellow);
 }
 
 .accordion-item.highlight-b:focus-visible .accordion-title,
 .accordion-item.highlight-b:hover .accordion-title,
+.accordion-item.highlight-b.open .accordion-title,
 .accordion-item.highlight-b strong {
     color: var(--color-blue);
 }
 
 .accordion-item.highlight-p:focus-visible .accordion-title,
-.accordion-item.highlight-p:hover .accordion-title {
+.accordion-item.highlight-p:hover .accordion-title,
+.accordion-item.highlight-p.open .accordion-title {
     color: var(--color-pink);
 }

@@ -8,19 +8,7 @@
     padding-bottom: 0;
 }
 
-.laptop__wrapper {
-    position: sticky;
-    top: 64px;
-    width: 80%;
-    height: 100vh;
-}
-
-.laptop__wrapper svg {
-    width: 150%;
-    position: relative;
-    left: -30%;
-    top: 5%;
-}
+/* PARAGRAPHS */
 
 .webchat-section__text {
     width: 60%;
@@ -53,4 +41,113 @@
 .webchat-section__paragraph-wrapper.visible {
     opacity: 1;
     transition: opacity 0.75s ease;
+}
+
+/* LAPTOP */
+
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.laptop__wrapper svg .screen-content__element {
+    opacity: 0;
+    animation: fadeInContent 1s cubic-bezier(0.32, 0, 0.67, 0) forwards;
+}
+
+.laptop__wrapper {
+    position: sticky;
+    top: 64px;
+    width: 80%;
+    height: 100vh;
+}
+
+.laptop__wrapper svg {
+    width: 150%;
+    position: relative;
+    left: -30%;
+    top: 5%;
+}
+
+/* SPEECH BUBBLES */
+
+@keyframes bubbleAppearFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(75%) translateY(20%) scale(0.3);
+    }
+    90% {
+        opacity: 1;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+}
+
+@keyframes bubbleAppearFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-75%) translateY(75%) scale(0.3);
+    }
+    90% {
+        opacity: 1;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+}
+
+.speech-bubble {
+    animation-fill-mode: both;
+    transform: translate(-75%, 20%);
+}
+
+.speech-bubble__right {
+    animation: bubbleAppearFromRight 2s cubic-bezier(0.165, 0.84, 0.44, 1)
+        alternate infinite;
+}
+
+.speech-bubble__left {
+    animation: bubbleAppearFromLeft 2s cubic-bezier(0.165, 0.84, 0.44, 1)
+        alternate infinite;
+}
+
+#bubble1 {
+    animation-delay: 0s;
+}
+
+#bubble2 {
+    animation-delay: 0.5s;
+}
+
+/* GROWTH CHART */
+
+.laptop__wrapper svg .chart-point {
+    stroke: none;
+    fill: var(--color-fg);
+}
+
+@keyframes drawLine {
+    0% {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+    }
+}
+
+.laptop__wrapper svg #line {
+    animation: drawLine 5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
 }
