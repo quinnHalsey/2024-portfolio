@@ -4,6 +4,8 @@ import LoadingAnimation from '../LoadingAnimation';
 
 import './VideoLightbox.css';
 
+//TODO: uncomment iframe - commented out for testing without third-party related errors
+
 interface VideoLightboxProps {
     src: string;
     onClose: () => void;
@@ -41,14 +43,14 @@ const VideoLightbox = ({ src, onClose }: VideoLightboxProps) => {
                 <div
                     className={`video-lightbox ${!isLoading ? 'visible' : ''}`}
                 >
-                    <iframe
+                    {/* <iframe
                         allow='autoplay'
                         src={src}
                         width='100%'
                         height='100%'
                         allowFullScreen
                         onLoad={handleVideoLoad}
-                    ></iframe>
+                    /> */}
                 </div>
             </div>
         </div>
