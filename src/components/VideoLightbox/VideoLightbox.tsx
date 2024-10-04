@@ -43,14 +43,14 @@ const VideoLightbox = ({ src, onClose }: VideoLightboxProps) => {
                 <div
                     className={`video-lightbox ${!isLoading ? 'visible' : ''}`}
                 >
-                    {/* <iframe
+                    <iframe
                         allow='autoplay'
                         src={src}
                         width='100%'
                         height='100%'
                         allowFullScreen
                         onLoad={handleVideoLoad}
-                    /> */}
+                    />
                 </div>
             </div>
         </div>
