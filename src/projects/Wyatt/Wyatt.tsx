@@ -2,16 +2,16 @@ import PageLayout from 'src/components/PageLayout';
 import SectionLayout from 'src/components/SectionLayout';
 import Container from 'src/components/Container';
 import Typography from 'src/components/Typography';
-import IntroAccordions from 'src/components/IntroAccordions';
+import SectionHeader from 'src/components/SectionHeader';
 import Quote from 'src/components/Quote';
+import IntroAccordions from 'src/components/IntroAccordions';
 import SquiggleDivider from 'src/components/SquiggleDivider';
 import WyattPhone from 'src/components/WyattPhone';
-import SectionHeader from 'src/components/SectionHeader';
+import WyattWebchatSection from 'src/components/WyattWebchatSection';
 import {
     CustomizableInteractiveText,
     ScalableInteractiveText,
 } from 'src/components/InteractiveText';
-import WyattWebchatSection from 'src/components/WyattWebchatSection';
 
 import { CodeWindowSvg } from 'src/graphics';
 
@@ -87,7 +87,7 @@ const Wyatt = () => {
                             matter of minutes.
                         </Typography>
                     </div>
-                    <div>
+                    <div className='opt-in__code-window__wrapper'>
                         <CodeWindowSvg />
                     </div>
                 </Container>

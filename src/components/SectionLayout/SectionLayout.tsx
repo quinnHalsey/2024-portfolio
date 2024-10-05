@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 
 import './SectionLayout.css';
+
 interface SectionLayoutProps {
     flex?: boolean;
     paddingTop?: boolean;
@@ -17,7 +18,7 @@ const SectionLayout = ({
     className,
 }: SectionLayoutProps) => {
     return (
-        <div
+        <section
             className={classNames(
                 {
                     flex,
@@ -29,7 +30,7 @@ const SectionLayout = ({
             )}
         >
             {children}
-        </div>
+        </section>
     );
 };
 

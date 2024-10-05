@@ -14,3 +14,7 @@
 .opt-in__section > div {
     flex: 1;
 }
+
+.opt-in__code-window__wrapper {
+    width: 50%;
+}
