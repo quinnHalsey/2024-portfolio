@@ -1,3 +1,4 @@
+import Arrow from './Arrow';
 import CodeWindowSvg from './CodeWindowSvg';
 import mobileGetFafsaHelp from './images/mobile-get-fafsa-help.png';
 import HomeIcon from './HomeIcon';
@@ -13,6 +14,7 @@ import WebchatUserGrowthChart from './WebchatUserGrowthChart';
 import WonkyWyatt from './WonkyWyatt';
 
 export {
+    Arrow,
     CodeWindowSvg,
     mobileGetFafsaHelp,
     HomeIcon,

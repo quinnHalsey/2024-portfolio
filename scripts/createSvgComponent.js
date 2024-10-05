@@ -1,6 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 
+const rootDir = path.resolve(__dirname, '..');
+
 const cleanSvgContent = (content) => {
     return content
         .replace(/<\?xml.*?\?>\s*/, '') // Remove XML declaration
@@ -28,8 +30,37 @@ export default ${componentName};
 `;
 };
 
+const updateGraphicsIndex = (componentName) => {
+    const indexPath = path.join(rootDir, 'src', 'graphics', 'index.tsx');
+
+    let indexContent = fs.readFileSync(indexPath, 'utf-8');
+
+    // Add import statement
+    const importStatement = `import ${componentName} from './${componentName}';\n`;
+    indexContent = importStatement + indexContent;
+
+    // Add to export statement
+    const exportRegex = /export\s*{([^}]*)}/;
+    const exportMatch = indexContent.match(exportRegex);
+
+    if (exportMatch) {
+        const currentExports = exportMatch[1].trim();
+        const newExports = currentExports
+            ? `${currentExports}\n    ${componentName}`
+            : componentName;
+        indexContent = indexContent.replace(
+            exportRegex,
+            `export {\n    ${newExports}\n}`
+        );
+    } else {
+        indexContent += `\nexport { ${componentName} };\n`;
+    }
+
+    fs.writeFileSync(indexPath, indexContent);
+    console.log(`Updated src/graphics/index.tsx with ${componentName}`);
+};
+
 const createSvgComponent = (componentName, originalSvgFile) => {
-    const rootDir = path.resolve(__dirname, '..');
     const svgDir = path.join(rootDir, 'src', 'graphics');
 
     // Read and clean SVG content
@@ -45,6 +76,7 @@ const createSvgComponent = (componentName, originalSvgFile) => {
 
     // Write the new component file
     fs.writeFileSync(path.join(svgDir, `${componentName}.tsx`), fileContent);
+    updateGraphicsIndex(componentName);
 
     console.log(`SVG component ${componentName} created successfully.`);
 };
