@@ -1,0 +1,18 @@
+.homepage-about-me__container {
+    max-width: 724px;
+}
+
+.homepage-about-me__more-about {
+    margin-top: 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.75s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.homepage-about-me__more-about.visible {
+    max-height: 124px;
+}
+
+.homepage-about-me__container button.button {
+    margin-top: 24px;
+}

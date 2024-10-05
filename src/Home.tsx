@@ -1,17 +1,75 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import PageLayout from './components/PageLayout';
 import SectionLayout from './components/SectionLayout';
+import Container from './components/Container';
 import Typography from './components/Typography';
+import Button from './components/Button';
+
+import './Home.css';
 
 const Home = () => {
     const navigate = useNavigate();
+    const [showMoreAbout, setShowMoreAbout] = useState(false);
 
     return (
         <PageLayout>
-            <SectionLayout>
-                <Typography variant='h2'>PLACEHOLDER HOMEPAGE</Typography>
-                <button onClick={() => navigate('/wyatt')}>Go to Wyatt</button>
+            <SectionLayout className='homepage-title__section'>
+                <Typography variant='h1'>Halsey Quinn</Typography>
+                <Typography variant='h2'>
+                    Full-stack Software Engineer
+                </Typography>
+            </SectionLayout>
+            <SectionLayout paddingTop className='homepage-about-me__section'>
+                <Container className='homepage-about-me__container'>
+                    <Typography variant='p'>
+                        Hi! I'm Halsey, a software engineer with strong
+                        proficiency in JavaScript, React, and Node.js. I'm a
+                        versatile contributor across the development process,
+                        with experience in design, CI/CD, hosting, and
+                        analytics.
+                    </Typography>
+                    <Container
+                        className={`homepage-about-me__more-about ${
+                            showMoreAbout ? 'visible' : ''
+                        }`}
+                    >
+                        <Typography variant='p'>
+                            While I was trained in the PERN (PostgreSQL,
+                            Express, React, Node.js) stack at Fullstack Academy,
+                            I continuously pick up new technologies, libraries,
+                            and tools—most recently, I learned TypeScript and
+                            used it to build this portfolio. Currently, I'm
+                            studying for my AWS Cloud Practitioner certification
+                            to deepen my cloud computing skills.
+                        </Typography>
+                        <Typography variant='p'>
+                            With a background in motion graphics design, I bring
+                            a creative edge to front-end development, while my
+                            love for data, puzzles, and problem-solving drives
+                            my work on the back end. Whether I'm designing user
+                            interfaces or diving into complex systems, I'm
+                            always focused on creating impactful, intuitive
+                            products that make a difference in people's lives.
+                        </Typography>
+                    </Container>
+                    <Button onClick={() => setShowMoreAbout(!showMoreAbout)}>
+                        <Typography variant='p'>
+                            {showMoreAbout
+                                ? 'Enough about me'
+                                : 'More about me'}
+                        </Typography>
+                    </Button>
+                </Container>
+            </SectionLayout>
+            <SectionLayout
+                paddingTop
+                className='homepage-featured-work__section'
+            >
+                <Button onClick={() => navigate('/wyatt')}>
+                    <Typography variant='p'>Go to Wyatt</Typography>
+                </Button>
             </SectionLayout>
         </PageLayout>
     );

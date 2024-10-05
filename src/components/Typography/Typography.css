@@ -34,8 +34,9 @@ blockquote {
 
 h1 {
     font-size: 152px;
-    line-height: 124px;
+    line-height: 142px;
     letter-spacing: 20px;
+    margin-bottom: 24px;
 }
 
 h2 {

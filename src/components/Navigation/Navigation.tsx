@@ -5,7 +5,13 @@ import { getProjectFromPath } from 'src/utils';
 import NavButton from './NavButton';
 import VideoLightbox from '../VideoLightbox';
 
-import { PlayIcon, HomeIcon, ToggleMoon, ToggleSun } from 'src/graphics';
+import {
+    PlayIcon,
+    HomeIcon,
+    ToggleMoon,
+    ToggleSun,
+    DownloadIcon,
+} from 'src/graphics';
 
 import './Navigation.css';
 
@@ -58,6 +64,13 @@ const Navigation = () => {
                             <PlayIcon />
                         </NavButton>
                     )}
+                    <NavButton
+                        href='/Halsey-Quinn_Resume-2024_4.1.pdf'
+                        label='Resume'
+                        ariaLabel='Download Resume'
+                    >
+                        <DownloadIcon />
+                    </NavButton>
                     <NavButton
                         onClick={handleThemeChange}
                         label='Theme'
