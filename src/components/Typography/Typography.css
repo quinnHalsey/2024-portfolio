@@ -60,6 +60,10 @@ h3 {
     line-height: 34px;
 }
 
+.theme-light p {
+    font-weight: 300;
+}
+
 p {
     font-size: 20px;
     line-height: 28px;

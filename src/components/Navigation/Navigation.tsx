@@ -39,6 +39,8 @@ const Navigation = () => {
                 ? getProjectFromPath(location.pathname)
                 : null;
         setVideoSrc(currProj?.videoSrc || '');
+
+        window.scrollTo(0, 0);
     }, [location.pathname]);
 
     return (

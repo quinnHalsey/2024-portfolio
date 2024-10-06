@@ -1,3 +1,4 @@
+import Crossword from './Crossword';
 import Arrow from './Arrow';
 import CodeWindowSvg from './CodeWindowSvg';
 import DownloadIcon from './DownloadIcon';
@@ -30,4 +31,5 @@ export {
     ToggleSun,
     WebchatUserGrowthChart,
     WonkyWyatt,
+    Crossword
 };

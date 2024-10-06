@@ -1,16 +1,58 @@
+.homepage-title__section {
+    display: flex;
+}
+
+.homepage-title__text {
+    flex: 2;
+}
+
+.crossword__wrapper {
+    flex: 1;
+}
+
+.crossword__wrapper {
+    position: relative;
+    overflow: visible;
+    z-index: -1;
+}
+
+.crossword__wrapper svg {
+    width: 180%;
+    position: absolute;
+    top: -20%;
+    right: 0;
+}
+
+.crossword__wrapper::after {
+    content: '';
+    position: absolute;
+    width: 180%;
+    height: 180%;
+    bottom: -40%;
+    left: -80%;
+    background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0) 0%,
+        var(--color-bg) 75%,
+        var(--color-bg) 100%
+    );
+}
+
 .homepage-about-me__container {
     max-width: 724px;
 }
 
 .homepage-about-me__more-about {
-    margin-top: 16px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.75s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: max-height 0.75s cubic-bezier(0.25, 0.1, 0.25, 0.95),
+        margin-top 0.75s cubic-bezier(0.25, 0.1, 0.25, 0.95);
 }
 
 .homepage-about-me__more-about.visible {
-    max-height: 124px;
+    margin-top: 16px;
+    /* TODO: responsivity */
+    max-height: 300px;
 }
 
 .homepage-about-me__container button.button {

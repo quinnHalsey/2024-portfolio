@@ -22,7 +22,6 @@ body {
     margin: 0;
     background-color: var(--color-bg);
     color: var(--color-fg);
-    transition: background-color 0.75s ease, color 0.75s ease;
 }
 
 body svg {
@@ -30,7 +29,6 @@ body svg {
     stroke-width: 5px;
     stroke-miterlimit: 10;
     fill: none;
-    transition: stroke 0.75s ease;
 }
 
 svg tspan {
