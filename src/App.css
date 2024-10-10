@@ -8,6 +8,7 @@
     --color-yellow: #ffc107;
     --color-purple: #af83ff;
     --color-pink: #ff4888;
+    --bg-color-yellow: #ffa412;
 }
 
 .theme-light {
@@ -16,6 +17,7 @@
     --color-purple: #6f42c1;
     --color-yellow: #ffa412;
     --color-pink: #ff0059;
+    --bg-color-yellow: #ffc107;
 }
 
 body {
@@ -44,4 +46,12 @@ div:focus-visible {
     outline: 2px dashed var(--color-purple);
     outline-offset: 16px;
     border-radius: 8px;
+}
+
+button {
+    background: transparent;
+    outline: none;
+    border: none;
+    color: inherit;
+    padding: 0;
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getProjectFromPath } from 'src/utils';
+import { useTheme } from 'src/contexts/ThemeContext';
 
 import NavButton from './NavButton';
 import VideoLightbox from '../VideoLightbox';
@@ -20,8 +21,8 @@ import './Navigation.css';
 const Navigation = () => {
     const navigate = useNavigate();
     const location = useLocation();
+    const { theme, setTheme } = useTheme();
 
-    const [theme, setTheme] = useState('theme-dark');
     const [videoOpen, setVideoOpen] = useState(false);
     const [videoSrc, setVideoSrc] = useState('');
 

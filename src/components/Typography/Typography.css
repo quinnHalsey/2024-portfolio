@@ -102,6 +102,6 @@ span.highlight-u {
     color: var(--color-purple);
 }
 
-span[class^='highlight-'] {
+span[class^='highlight'] {
     font-weight: 700;
 }

@@ -3,14 +3,22 @@ import { useNavigate } from 'react-router-dom';
 
 import PageLayout from './components/PageLayout';
 import SectionLayout from './components/SectionLayout';
+import SectionHeader from './components/SectionHeader';
 import Container from './components/Container';
 import Typography from './components/Typography';
 import Button from './components/Button';
 import SquiggleDivider from './components/SquiggleDivider';
-
+import { ProjectCardContainer } from './components/ProjectCard';
 import { Crossword } from './graphics';
 
+import { FeaturedProject } from './types';
+
 import './Home.css';
+
+//TODO: add featured projects card(s)
+//TODO: add skills section
+//TODO: add timeline section
+//TODO: navigation between pages animation (right-align homepage)
 
 const Home = () => {
     const navigate = useNavigate();
@@ -29,7 +37,11 @@ const Home = () => {
                     <Crossword />
                 </Container>
             </SectionLayout>
-            <SectionLayout paddingTop className='homepage-about-me__section'>
+            <SectionLayout
+                paddingTop
+                paddingBottom
+                className='homepage-about-me__section'
+            >
                 <Container className='homepage-about-me__container'>
                     <Typography variant='p'>
                         Hi! I'm Halsey, a self-starting and organized software
@@ -76,7 +88,17 @@ const Home = () => {
                     </Button>
                 </Container>
             </SectionLayout>
-            <SquiggleDivider />
+            <SectionLayout
+                paddingTop
+                className='homepage-featured-work__section'
+            >
+                <SectionHeader rightAlign>
+                    <Typography variant='h2'>
+                        <span className='highlight'>FEATURED PROJECTS</span>
+                    </Typography>
+                </SectionHeader>
+                <ProjectCardContainer projects={featuredProjects} />
+            </SectionLayout>
             <SectionLayout
                 paddingTop
                 className='homepage-featured-work__section'
@@ -85,8 +107,29 @@ const Home = () => {
                     <Typography variant='p'>Go to Wyatt</Typography>
                 </Button>
             </SectionLayout>
+            <SquiggleDivider />
         </PageLayout>
     );
 };
+
+const featuredProjects: FeaturedProject[] = [
+    {
+        title: 'Wyatt',
+        description:
+            'An AI-powered chatbot that helps students complete the FAFSA',
+        tech: ['React', 'JavaScript', 'Gatsby', 'OpenAI API'],
+        href: '/wyatt',
+    },
+    {
+        title: 'Impact Report',
+        description: 'Description of the project',
+        tech: ['React', 'JavaScript', 'Gatsby', 'OpenAI API'],
+    },
+    {
+        title: 'Marketing Website & CMS',
+        description: 'Description of the project',
+        tech: ['React', 'JavaScript', 'Gatsby', 'OpenAI API'],
+    },
+];
 
 export default Home;
