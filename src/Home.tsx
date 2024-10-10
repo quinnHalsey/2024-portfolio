@@ -4,21 +4,23 @@ import { useNavigate } from 'react-router-dom';
 import PageLayout from './components/PageLayout';
 import SectionLayout from './components/SectionLayout';
 import SectionHeader from './components/SectionHeader';
+import AnimateOnReveal from './components/AnimateOnReveal';
 import Container from './components/Container';
 import Typography from './components/Typography';
 import Button from './components/Button';
 import SquiggleDivider from './components/SquiggleDivider';
 import { ProjectCardContainer } from './components/ProjectCard';
+
 import { Crossword } from './graphics';
 
 import { FeaturedProject } from './types';
 
 import './Home.css';
-import AnimateOnReveal from './components/AnimateOnReveal';
 
 //TODO: add skills section
 //TODO: add timeline section
 //TODO: navigation between pages animation (right-align homepage)
+//TODO: make to pay the bills an easter egg
 
 const Home = () => {
     const navigate = useNavigate();
@@ -127,6 +129,16 @@ const Home = () => {
                 </AnimateOnReveal>
             </SectionLayout>
             <SquiggleDivider />
+            <SectionLayout>
+                <SectionHeader>
+                    <Typography variant='h2'>
+                        <span className='highlight'>SKILLS</span>{' '}
+                        <span className='homepage-skills__subtitle'>
+                            TO PAY THE BILLS
+                        </span>
+                    </Typography>
+                </SectionHeader>
+            </SectionLayout>
         </PageLayout>
     );
 };
