@@ -14,6 +14,7 @@ import { Crossword } from './graphics';
 import { FeaturedProject } from './types';
 
 import './Home.css';
+import AnimateOnReveal from './components/AnimateOnReveal';
 
 //TODO: add skills section
 //TODO: add timeline section
@@ -27,20 +28,24 @@ const Home = () => {
         {
             title: 'Wyatt',
             description:
-                'An AI-powered chatbot that helps students complete the FAFSA',
-            tech: ['React', 'JavaScript', 'Gatsby', 'OpenAI API'],
+                'AI-powered chatbot and marketing site to assist students with the FAFSA',
+            tech: ['React', 'JavaScript', 'OpenAI API'],
             callback: () => navigate('/wyatt'),
+            ariaLabel: 'View Wyatt project page',
         },
         {
             title: 'Impact Report',
-            description: 'Description of the project',
-            tech: ['React', 'JavaScript', 'Gatsby', 'OpenAI API'],
+            description: 'Immersive digital report for non-profit organization',
+            tech: ['React', 'JavaScript', 'Gatsby'],
             callback: () => navigate('/bdt-impact-report'),
+            ariaLabel: 'View Impact Report project page',
         },
         {
             title: 'Asteroids',
-            description: '',
+            description: `Interactive visualization of the closest and largest asteroids to Earth on any given day`,
             tech: ['React', 'Redux', 'Three.js'],
+            href: 'https://asteroids-ghp.vercel.app/',
+            ariaLabel: 'Open Asteroids project in new tab',
         },
     ];
 
@@ -117,7 +122,9 @@ const Home = () => {
                         <span className='highlight'>FEATURED PROJECTS</span>
                     </Typography>
                 </SectionHeader>
-                <ProjectCardContainer projects={featuredProjects} />
+                <AnimateOnReveal className='homepage-featured-work__project-container'>
+                    <ProjectCardContainer projects={featuredProjects} />
+                </AnimateOnReveal>
             </SectionLayout>
             <SquiggleDivider />
         </PageLayout>

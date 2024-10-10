@@ -9,15 +9,29 @@ interface ProjectCardProps {
     project: FeaturedProject;
 }
 
+//TODO: fix card design layout
+
 const ProjectCard = ({ backgroundImage, project }: ProjectCardProps) => {
+    const ProjectButton = project.href ? 'a' : 'button';
+    const buttonProps = project.href
+        ? {
+              href: project.href,
+              target: '_blank',
+              'aria-label': project.ariaLabel,
+          }
+        : {
+              onClick: project.callback ? project.callback : undefined,
+              'aria-label': project.ariaLabel,
+          };
+
     return (
         <div className='project-card__wrapper'>
-            <button
+            <ProjectButton
                 className='project-card'
                 style={{
                     backgroundImage: `url(${backgroundImage})`,
                 }}
-                onClick={project.callback ? project.callback : undefined}
+                {...buttonProps}
             >
                 <div className='project-card__content'>
                     <div className='project-card__title-description'>
@@ -35,7 +49,7 @@ const ProjectCard = ({ backgroundImage, project }: ProjectCardProps) => {
                         </Typography>
                     </div>
                 </div>
-            </button>
+            </ProjectButton>
         </div>
     );
 };
