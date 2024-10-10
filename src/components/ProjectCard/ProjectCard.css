@@ -47,8 +47,25 @@
 
 .project-card__content {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card__title-description {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card h3 {
     line-height: 40px;
+}
+
+.project-card p.project-card__description {
+    font-weight: 500;
+    margin-top: 16px;
+}
+
+.project-card__technologies {
+    margin-top: auto;
 }

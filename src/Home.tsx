@@ -15,7 +15,6 @@ import { FeaturedProject } from './types';
 
 import './Home.css';
 
-//TODO: add featured projects card(s)
 //TODO: add skills section
 //TODO: add timeline section
 //TODO: navigation between pages animation (right-align homepage)
@@ -23,6 +22,27 @@ import './Home.css';
 const Home = () => {
     const navigate = useNavigate();
     const [showMoreAbout, setShowMoreAbout] = useState(false);
+
+    const featuredProjects: FeaturedProject[] = [
+        {
+            title: 'Wyatt',
+            description:
+                'An AI-powered chatbot that helps students complete the FAFSA',
+            tech: ['React', 'JavaScript', 'Gatsby', 'OpenAI API'],
+            callback: () => navigate('/wyatt'),
+        },
+        {
+            title: 'Impact Report',
+            description: 'Description of the project',
+            tech: ['React', 'JavaScript', 'Gatsby', 'OpenAI API'],
+            callback: () => navigate('/bdt-impact-report'),
+        },
+        {
+            title: 'Asteroids',
+            description: '',
+            tech: ['React', 'Redux', 'Three.js'],
+        },
+    ];
 
     return (
         <PageLayout>
@@ -99,37 +119,9 @@ const Home = () => {
                 </SectionHeader>
                 <ProjectCardContainer projects={featuredProjects} />
             </SectionLayout>
-            <SectionLayout
-                paddingTop
-                className='homepage-featured-work__section'
-            >
-                <Button onClick={() => navigate('/wyatt')}>
-                    <Typography variant='p'>Go to Wyatt</Typography>
-                </Button>
-            </SectionLayout>
             <SquiggleDivider />
         </PageLayout>
     );
 };
-
-const featuredProjects: FeaturedProject[] = [
-    {
-        title: 'Wyatt',
-        description:
-            'An AI-powered chatbot that helps students complete the FAFSA',
-        tech: ['React', 'JavaScript', 'Gatsby', 'OpenAI API'],
-        href: '/wyatt',
-    },
-    {
-        title: 'Impact Report',
-        description: 'Description of the project',
-        tech: ['React', 'JavaScript', 'Gatsby', 'OpenAI API'],
-    },
-    {
-        title: 'Marketing Website & CMS',
-        description: 'Description of the project',
-        tech: ['React', 'JavaScript', 'Gatsby', 'OpenAI API'],
-    },
-];
 
 export default Home;

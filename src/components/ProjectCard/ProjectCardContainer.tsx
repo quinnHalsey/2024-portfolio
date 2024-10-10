@@ -20,6 +20,7 @@ const ProjectCardContainer = ({
     projects: FeaturedProject[];
 }) => {
     const { theme } = useTheme();
+
     const cardImages = [
         { dark: card1Dark, light: card1Light },
         { dark: card2Dark, light: card2Light },
@@ -34,16 +35,13 @@ const ProjectCardContainer = ({
                     cardImages[cardBackgroundIndex][
                         theme === 'theme-dark' ? 'light' : 'dark'
                     ];
+
                 return (
                     <ProjectCard
                         key={`${project.title}-${i}`}
                         backgroundImage={cardBackground}
-                    >
-                        <Typography variant='h3'>{project.title}</Typography>
-                        <Typography variant='p'>
-                            {project.description}
-                        </Typography>
-                    </ProjectCard>
+                        project={project}
+                    />
                 );
             })}
         </div>
