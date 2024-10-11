@@ -6,6 +6,8 @@ import { CodeFile } from 'src/utils/constants';
 
 import './CodeWindow.css';
 
+//TODO: refactor so that referenced files in the code samples can be clicked to change currFile
+
 const CodeWindow = ({ files }: { files: CodeFile[] }) => {
     const [currFileIdx, setCurrFileIdx] = useState(0);
 

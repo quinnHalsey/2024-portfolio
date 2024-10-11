@@ -1,6 +1,13 @@
 import './Typography.css';
 
-type TypographyVariant = 'h1' | 'h2' | 'h3' | 'p' | 'blockquote' | 'cite';
+type TypographyVariant =
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'p'
+    | 'blockquote'
+    | 'cite'
+    | 'pre';
 
 interface TypographyProps {
     variant: TypographyVariant;

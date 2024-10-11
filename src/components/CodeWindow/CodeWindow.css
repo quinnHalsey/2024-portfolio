@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 32px;
-    max-height: 600px;
+    max-height: 524px;
 }
 
 .code-window,
@@ -29,7 +29,7 @@
 
 .code-window__tab {
     border-radius: 32px;
-    padding: 8px 20px;
+    padding: 4px 20px;
     text-align: center;
     border: 2px solid var(--color-fg);
     cursor: pointer;
@@ -50,5 +50,13 @@
 
 .code-window p {
     font-family: monospace;
-    font-size: 16px;
+    font-size: 14px;
+}
+
+.theme-light .code-window pre .highlight-y {
+    color: var(--color-blue);
+}
+
+.theme-light .code-window pre .highlight-b {
+    color: var(--color-yellow);
 }

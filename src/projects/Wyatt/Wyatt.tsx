@@ -13,8 +13,11 @@ import {
     CustomizableInteractiveText,
     ScalableInteractiveText,
 } from 'src/components/InteractiveText';
-
-import { CodeWindowSvg } from 'src/graphics';
+import {
+    stepOneCode,
+    questionNameCode,
+    formGroupTextCode,
+} from './WyattCodeSamples';
 
 import { CodeFile } from 'src/utils/constants';
 
@@ -119,8 +122,12 @@ const Wyatt = () => {
 };
 
 const codeFiles: CodeFile[] = [
-    { name: 'WyattForm.jsx', content: <div>TEST</div> },
-    { name: 'WyattForm.css', content: <div>TEST 2</div> },
+    {
+        name: 'StepOne.js',
+        content: stepOneCode,
+    },
+    { name: 'QuestionName.js', content: questionNameCode },
+    { name: 'FormGroupText.js', content: formGroupTextCode },
 ];
 
 export default Wyatt;
