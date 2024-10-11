@@ -16,9 +16,10 @@ import { Crossword } from './graphics';
 import { FeaturedProject } from './types';
 
 import './Home.css';
+import Quote from './components/Quote';
 
-//TODO: add skills section
 //TODO: add timeline section
+//TODO: skills section?
 //TODO: navigation between pages animation (right-align homepage)
 //TODO: make to pay the bills an easter egg
 
@@ -39,8 +40,11 @@ const Home = () => {
             title: 'Impact Report',
             description: 'Immersive digital report for non-profit organization',
             tech: ['React', 'JavaScript', 'Gatsby'],
-            callback: () => navigate('/bdt-impact-report'),
-            ariaLabel: 'View Impact Report project page',
+            //TODO: TEMP HREF before project page is built; reinstate callback
+            href: 'https://drive.google.com/file/d/19-TT6i9onud3NU4xXmJ2k3yiFeeUD1R8/view',
+            ariaLabel: 'Watch screen recording of Impact Report',
+            // callback: () => navigate('/bdt-impact-report'),
+            // ariaLabel: 'View Impact Report project page',
         },
         {
             title: 'Asteroids',
@@ -96,6 +100,10 @@ const Home = () => {
                             to deepen my cloud computing skills.
                         </Typography>
                         <Typography variant='p'>
+                            For the last two years, front-end web engineer at
+                            non-profit Benefits Data Trust, a non-profit
+                        </Typography>
+                        <Typography variant='p'>
                             With a background in motion graphics design,{' '}
                             <span className='highlight-b'>
                                 I bring a creative edge to front-end development
@@ -124,12 +132,33 @@ const Home = () => {
                         <span className='highlight'>FEATURED PROJECTS</span>
                     </Typography>
                 </SectionHeader>
-                <AnimateOnReveal className='homepage-featured-work__project-container'>
-                    <ProjectCardContainer projects={featuredProjects} />
-                </AnimateOnReveal>
+                <Container paddingBottom>
+                    <AnimateOnReveal className='homepage-featured-work__project-container'>
+                        <ProjectCardContainer projects={featuredProjects} />
+                    </AnimateOnReveal>
+                </Container>
+                <SquiggleDivider />
+                <Container
+                    animateIn
+                    className='homepage-testimonial__container'
+                    paddingTop
+                >
+                    <Quote attribution='LinkedIn Recommendation, Manager at Benefits Data Trust'>
+                        <Typography variant='blockquote'>
+                            [Halsey]{' '}
+                            <span className='highlight-u'>
+                                rose to every challenge
+                            </span>{' '}
+                            while we worked together -- building a beautiful
+                            website from scratch for Wyatt, significantly
+                            upgrading the functionality of our organizational
+                            blog, and building a world-class immersive digital
+                            impact report.
+                        </Typography>
+                    </Quote>
+                </Container>
             </SectionLayout>
-            <SquiggleDivider />
-            <SectionLayout>
+            {/* <SectionLayout>
                 <SectionHeader>
                     <Typography variant='h2'>
                         <span className='highlight'>SKILLS</span>{' '}
@@ -138,7 +167,7 @@ const Home = () => {
                         </span>
                     </Typography>
                 </SectionHeader>
-            </SectionLayout>
+            </SectionLayout> */}
         </PageLayout>
     );
 };

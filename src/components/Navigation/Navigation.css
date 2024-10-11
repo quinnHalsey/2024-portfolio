@@ -3,7 +3,7 @@
 .navigation-wrapper {
     background-color: #6f42c1;
     width: 64px;
-    padding: 8px 8px 16px 8px;
+    padding: 8px;
     box-sizing: border-box;
     height: 100%;
     position: fixed;
@@ -12,7 +12,7 @@
     z-index: 100;
     overflow: hidden;
     transition: all 0.75s ease;
-    align-content: end;
+    align-content: center;
 }
 
 .navigation-wrapper:hover {
