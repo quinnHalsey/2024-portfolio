@@ -1,5 +1,5 @@
-import LinkedInIcon from './LinkedInIcon';
 import Crossword from './Crossword';
+import LinkedInIcon from './LinkedInIcon';
 import Arrow from './Arrow';
 import CodeWindowSvg from './CodeWindowSvg';
 import DownloadIcon from './DownloadIcon';
