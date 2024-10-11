@@ -1,6 +1,5 @@
 import { useTheme } from '../../contexts/ThemeContext';
 
-import Typography from '../Typography';
 import ProjectCard from './ProjectCard';
 
 import {
@@ -13,6 +12,8 @@ import {
 } from '../../graphics/images/cards';
 
 import { FeaturedProject } from '../../types';
+
+import './ProjectCard.css';
 
 const ProjectCardContainer = ({
     projects,

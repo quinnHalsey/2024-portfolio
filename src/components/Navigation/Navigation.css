@@ -73,3 +73,25 @@
     position: relative;
     z-index: 1;
 }
+
+@media screen and (max-width: 1024px) {
+    .navigation-wrapper {
+        width: 100%;
+        height: auto;
+        top: auto;
+        bottom: 0;
+    }
+
+    .navigation-wrapper:hover {
+        width: 100%;
+    }
+
+    .navigation-wrapper ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navigation-wrapper li.nav-item__wrapper p {
+        display: none;
+    }
+}
