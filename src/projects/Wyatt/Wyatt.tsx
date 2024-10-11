@@ -8,12 +8,15 @@ import IntroAccordions from 'src/components/IntroAccordions';
 import SquiggleDivider from 'src/components/SquiggleDivider';
 import WyattPhone from 'src/components/WyattPhone';
 import WyattWebchatSection from 'src/components/WyattWebchatSection';
+import CodeWindow from 'src/components/CodeWindow';
 import {
     CustomizableInteractiveText,
     ScalableInteractiveText,
 } from 'src/components/InteractiveText';
 
 import { CodeWindowSvg } from 'src/graphics';
+
+import { CodeFile } from 'src/utils/constants';
 
 import './Wyatt.css';
 
@@ -88,7 +91,7 @@ const Wyatt = () => {
                         </Typography>
                     </div>
                     <div className='opt-in__code-window__wrapper'>
-                        <CodeWindowSvg />
+                        <CodeWindow files={codeFiles} />
                     </div>
                 </Container>
             </SectionLayout>
@@ -114,5 +117,10 @@ const Wyatt = () => {
         </PageLayout>
     );
 };
+
+const codeFiles: CodeFile[] = [
+    { name: 'WyattForm.jsx', content: <div>TEST</div> },
+    { name: 'WyattForm.css', content: <div>TEST 2</div> },
+];
 
 export default Wyatt;

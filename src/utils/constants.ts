@@ -8,7 +8,7 @@ type ProjectMap = {
     [key: string]: Project;
 };
 
-export const featuredProjects: ProjectMap = {
+export const projectMap: ProjectMap = {
     wyatt: {
         key: 'wyatt',
         slug: '/wyatt',
@@ -21,4 +21,9 @@ export const featuredProjects: ProjectMap = {
         videoSrc:
             'https://drive.google.com/file/d/19fkeSLPIO3qFshNow7aK3oIq0vUlreZi/preview',
     },
+};
+
+export type CodeFile = {
+    name: string;
+    content: React.ReactNode;
 };

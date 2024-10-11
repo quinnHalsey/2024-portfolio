@@ -9,6 +9,7 @@ import Container from './components/Container';
 import Typography from './components/Typography';
 import Button from './components/Button';
 import SquiggleDivider from './components/SquiggleDivider';
+import Quote from './components/Quote';
 import { ProjectCardContainer } from './components/ProjectCard';
 
 import { Crossword } from './graphics';
@@ -16,7 +17,6 @@ import { Crossword } from './graphics';
 import { FeaturedProject } from './types';
 
 import './Home.css';
-import Quote from './components/Quote';
 
 //TODO: add timeline section
 //TODO: skills section?

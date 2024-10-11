@@ -29,7 +29,8 @@ a.project-card {
     text-align: center;
 }
 
-.project-card__wrapper:hover::before {
+.project-card__wrapper:hover::before,
+.project-card:focus-visible::before {
     content: '';
     position: absolute;
     top: 50%;

@@ -9,20 +9,17 @@ interface ProjectCardProps {
     project: FeaturedProject;
 }
 
-//TODO: fix card design layout
-
 const ProjectCard = ({ backgroundImage, project }: ProjectCardProps) => {
     const ProjectButton = project.href ? 'a' : 'button';
-    const buttonProps = project.href
-        ? {
-              href: project.href,
-              target: '_blank',
-              'aria-label': project.ariaLabel,
-          }
-        : {
-              onClick: project.callback ? project.callback : undefined,
-              'aria-label': project.ariaLabel,
-          };
+
+    const buttonProps = {
+        ...(project.href
+            ? // Add href/target or onClick attributes depending if <button> or <a> card
+              { href: project.href, target: '_blank' }
+            : { onClick: project.callback }),
+        // Add aria-label to both <button> and <a> cards
+        'aria-label': project.ariaLabel,
+    };
 
     return (
         <div className='project-card__wrapper'>
