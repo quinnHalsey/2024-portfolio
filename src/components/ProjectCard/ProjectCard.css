@@ -1,0 +1,112 @@
+.project-card__container {
+    display: flex;
+    gap: 32px;
+    min-height: 400px;
+    justify-content: center;
+}
+
+.project-card__container > * {
+    flex: 1;
+}
+
+.project-card__wrapper {
+    min-height: 400px;
+    height: 400px;
+    max-width: 400px;
+    border-radius: 50px;
+    z-index: 1;
+}
+
+button.project-card,
+a.project-card {
+    height: 400px;
+    min-height: 100%;
+    cursor: pointer;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 32px 24px;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+}
+
+.project-card__wrapper:hover::before,
+.project-card:focus-visible::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    width: 90%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: var(--bg-color-yellow);
+    transform: translate(-50%, -50%) rotate(1deg);
+}
+
+.project-card__content {
+    height: 100%;
+    position: relative;
+}
+
+.project-card__title-description {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 64px;
+}
+
+.project-card h3 {
+    line-height: 40px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card p.project-card__description {
+    font-weight: 400;
+}
+
+.project-card__technologies {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.project-card__technologies p {
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    .project-card__container {
+        gap: 16px;
+    }
+
+    .project-card__title-description {
+        padding-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .project-card__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card__container > *:nth-child(3n + 1) {
+        align-self: flex-end;
+    }
+
+    .project-card__container > *:nth-child(3n + 2) {
+        align-self: flex-start;
+    }
+
+    .project-card__container > *:nth-child(3n) {
+        align-self: flex-end;
+    }
+}

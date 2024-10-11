@@ -2,18 +2,24 @@ import PageLayout from 'src/components/PageLayout';
 import SectionLayout from 'src/components/SectionLayout';
 import Container from 'src/components/Container';
 import Typography from 'src/components/Typography';
-import IntroAccordions from 'src/components/IntroAccordions';
+import SectionHeader from 'src/components/SectionHeader';
 import Quote from 'src/components/Quote';
+import IntroAccordions from 'src/components/IntroAccordions';
 import SquiggleDivider from 'src/components/SquiggleDivider';
 import WyattPhone from 'src/components/WyattPhone';
-import SectionHeader from 'src/components/SectionHeader';
+import WyattWebchatSection from 'src/components/WyattWebchatSection';
+import CodeWindow from 'src/components/CodeWindow';
 import {
     CustomizableInteractiveText,
     ScalableInteractiveText,
 } from 'src/components/InteractiveText';
-import WyattWebchatSection from 'src/components/WyattWebchatSection';
+import {
+    stepOneCode,
+    questionNameCode,
+    formGroupTextCode,
+} from './WyattCodeSamples';
 
-import { CodeWindowSvg } from 'src/graphics';
+import { CodeFile } from 'src/utils/constants';
 
 import './Wyatt.css';
 
@@ -87,8 +93,8 @@ const Wyatt = () => {
                             matter of minutes.
                         </Typography>
                     </div>
-                    <div>
-                        <CodeWindowSvg />
+                    <div className='opt-in__code-window__wrapper'>
+                        <CodeWindow files={codeFiles} />
                     </div>
                 </Container>
             </SectionLayout>
@@ -114,5 +120,14 @@ const Wyatt = () => {
         </PageLayout>
     );
 };
+
+const codeFiles: CodeFile[] = [
+    {
+        name: 'StepOne.js',
+        content: stepOneCode,
+    },
+    { name: 'QuestionName.js', content: questionNameCode },
+    { name: 'FormGroupText.js', content: formGroupTextCode },
+];
 
 export default Wyatt;

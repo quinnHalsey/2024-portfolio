@@ -34,3 +34,9 @@ svg #wonky-wyatt {
 svg #wonky-wyatt .svg-filled {
     fill: #242424;
 }
+
+@media only screen and (max-width: 1024px) {
+    .phone__wrapper {
+        width: 120%;
+    }
+}

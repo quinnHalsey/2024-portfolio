@@ -1,11 +1,19 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getProjectFromPath } from 'src/utils';
+import { useTheme } from 'src/contexts/ThemeContext';
 
 import NavButton from './NavButton';
 import VideoLightbox from '../VideoLightbox';
 
-import { PlayIcon, HomeIcon, ToggleMoon, ToggleSun } from 'src/graphics';
+import {
+    PlayIcon,
+    HomeIcon,
+    ToggleMoon,
+    ToggleSun,
+    DownloadIcon,
+    LinkedInIcon,
+} from 'src/graphics';
 
 import './Navigation.css';
 
@@ -14,8 +22,8 @@ import './Navigation.css';
 const Navigation = () => {
     const navigate = useNavigate();
     const location = useLocation();
+    const { theme, setTheme } = useTheme();
 
-    const [theme, setTheme] = useState('theme-dark');
     const [videoOpen, setVideoOpen] = useState(false);
     const [videoSrc, setVideoSrc] = useState('');
 
@@ -33,6 +41,8 @@ const Navigation = () => {
                 ? getProjectFromPath(location.pathname)
                 : null;
         setVideoSrc(currProj?.videoSrc || '');
+
+        window.scrollTo(0, 0);
     }, [location.pathname]);
 
     return (
@@ -58,6 +68,20 @@ const Navigation = () => {
                             <PlayIcon />
                         </NavButton>
                     )}
+                    <NavButton
+                        href='/Halsey-Quinn_Resume-2024_4.1.pdf'
+                        label='Resume'
+                        ariaLabel='Download Resume'
+                    >
+                        <DownloadIcon />
+                    </NavButton>
+                    <NavButton
+                        href='https://www.linkedin.com/in/halseyq/'
+                        label='LinkedIn'
+                        ariaLabel='Go to LinkedIn profile'
+                    >
+                        <LinkedInIcon />
+                    </NavButton>
                     <NavButton
                         onClick={handleThemeChange}
                         label='Theme'

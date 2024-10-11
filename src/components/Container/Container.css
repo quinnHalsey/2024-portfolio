@@ -25,3 +25,13 @@
     transform: translateY(0);
     opacity: 1;
 }
+
+@media only screen and (max-width: 1024px) {
+    .container.flex {
+        flex-direction: column;
+    }
+
+    .container.flex > * {
+        width: 100%;
+    }
+}

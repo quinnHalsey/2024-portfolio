@@ -3,7 +3,7 @@
 .navigation-wrapper {
     background-color: #6f42c1;
     width: 64px;
-    padding: 8px 8px 16px 8px;
+    padding: 8px;
     box-sizing: border-box;
     height: 100%;
     position: fixed;
@@ -12,7 +12,7 @@
     z-index: 100;
     overflow: hidden;
     transition: all 0.75s ease;
-    align-content: end;
+    align-content: center;
 }
 
 .navigation-wrapper:hover {
@@ -30,7 +30,11 @@
     gap: 8px;
 }
 
-.navigation-wrapper li.nav-item__wrapper button {
+.navigation-wrapper a {
+    text-decoration: none;
+}
+
+.navigation-wrapper li.nav-item__wrapper .navigation-button {
     background: none;
     outline: none;
     border: none;
@@ -44,7 +48,7 @@
     transition: font-weight 0.75s ease;
 }
 
-.navigation-wrapper button svg {
+.navigation-wrapper .navigation-button svg {
     stroke-width: 10;
     stroke: #f5f5f5;
     min-width: 48px;
@@ -52,20 +56,42 @@
     transition: rotate 0.5s ease;
 }
 
-.navigation-wrapper li.nav-item__wrapper button:hover p {
+.navigation-wrapper li.nav-item__wrapper .navigation-button:hover p {
     font-weight: 500;
 }
 
-.navigation-wrapper li.nav-item__wrapper button:hover svg {
+.navigation-wrapper li.nav-item__wrapper .navigation-button:hover svg {
     rotate: 20deg;
     transition: rotate 0.5s ease;
 }
 
-.navigation-wrapper button:focus-visible svg {
+.navigation-wrapper .navigation-button:focus-visible svg {
     outline: #cdb1ff 2px dashed;
     outline-offset: 2px;
     border-radius: 50%;
     rotate: 0deg;
     position: relative;
     z-index: 1;
+}
+
+@media screen and (max-width: 1024px) {
+    .navigation-wrapper {
+        width: 100%;
+        height: auto;
+        top: auto;
+        bottom: 0;
+    }
+
+    .navigation-wrapper:hover {
+        width: 100%;
+    }
+
+    .navigation-wrapper ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navigation-wrapper li.nav-item__wrapper p {
+        display: none;
+    }
 }

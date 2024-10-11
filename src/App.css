@@ -8,6 +8,7 @@
     --color-yellow: #ffc107;
     --color-purple: #af83ff;
     --color-pink: #ff4888;
+    --bg-color-yellow: #ffa412;
 }
 
 .theme-light {
@@ -16,13 +17,13 @@
     --color-purple: #6f42c1;
     --color-yellow: #ffa412;
     --color-pink: #ff0059;
+    --bg-color-yellow: #ffc107;
 }
 
 body {
     margin: 0;
     background-color: var(--color-bg);
     color: var(--color-fg);
-    transition: background-color 0.75s ease, color 0.75s ease;
 }
 
 body svg {
@@ -30,7 +31,6 @@ body svg {
     stroke-width: 5px;
     stroke-miterlimit: 10;
     fill: none;
-    transition: stroke 0.75s ease;
 }
 
 svg tspan {
@@ -42,8 +42,25 @@ ul {
     margin: 0;
 }
 
-div:focus-visible {
+div:focus-visible,
+button:focus-visible,
+a:focus-visible {
     outline: 2px dashed var(--color-purple);
-    outline-offset: 16px;
-    border-radius: 8px;
+    outline-offset: 8px;
+}
+
+button {
+    background: transparent;
+    outline: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }

@@ -11,6 +11,7 @@ import { Laptop, SpeechBubbles, WebchatUserGrowthChart } from 'src/graphics';
 import './WyattWebchatSection.css';
 
 // TODO: Add blurb about the challenge of maintaining chat history across multiplate pages of an SSG site
+// TODO: replace paragraphs 2/3 graphic with gif/video of chatbot screen recording
 
 interface ParagraphData {
     graphic: React.ReactNode;
@@ -86,9 +87,9 @@ const paragraphData: ParagraphData[] = [
         graphic: <SpeechBubbles />,
         text: (
             <>
-                When implementing the new widget, I collaborated closely with
-                our AI engineer to seamlessly integrate it with our middleware
-                in between the front-end and the OpenAI API. I integrated Google
+                When implementing the new widget, I collaborated with the AI
+                engineer to seamlessly integrate it with our middleware
+                connecting the front-end to the OpenAI API. I integrated Google
                 Analytics 4 (GA4), sending event data for comprehensive usage
                 tracking, providing critical information for our product team to
                 analyze and optimize user engagement.
@@ -101,10 +102,10 @@ const paragraphData: ParagraphData[] = [
             <>
                 The outcome of our cross-functional collaboration was
                 remarkable. The new widget not only enhanced the user experience
-                but also significantly increased user engagement. We observed{' '}
+                but also significantly increased user engagement. We witnessed{' '}
                 <strong>
-                    a staggering increase in webchat usage, from 431 to 2,270
-                    unique users per month
+                    a surge in webchat usage, with monthly active users
+                    skyrocketing from 431 in March to 4,374 in May
                 </strong>{' '}
                 - a testament to the power of thoughtful and seamless design.
             </>

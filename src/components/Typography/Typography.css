@@ -34,29 +34,26 @@ blockquote {
 
 h1 {
     font-size: 152px;
-    line-height: 124px;
+    line-height: 142px;
     letter-spacing: 20px;
+    margin-bottom: 40px;
 }
 
 h2 {
     font-size: 64px;
-}
-
-.section-header h2 {
-    font-family: var(--font-dazzle-unicase);
+    line-height: 60px;
     line-height: 72px;
-    padding-bottom: 80px;
-    max-width: 1024px;
-}
-
-.section-header.right-align h2 {
-    text-align: right;
-    margin-left: auto;
 }
 
 h3 {
     font-size: 38px;
     line-height: 34px;
+}
+
+pre {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 0;
 }
 
 p {
@@ -81,6 +78,21 @@ cite {
     font-style: normal;
 }
 
+.section-header h2 {
+    font-family: var(--font-dazzle-unicase);
+    padding-bottom: 80px;
+    max-width: 1024px;
+}
+
+.section-header.right-align h2 {
+    text-align: right;
+    margin-left: auto;
+}
+
+.theme-light p {
+    font-weight: 300;
+}
+
 span.highlight-y {
     color: var(--color-yellow);
 }
@@ -97,6 +109,31 @@ span.highlight-u {
     color: var(--color-purple);
 }
 
-span[class^='highlight-'] {
+span[class^='highlight'] {
     font-weight: 700;
+}
+
+@media only screen and (max-width: 1224px) {
+    h1 {
+        font-size: 124px;
+        line-height: 116px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 90px;
+        line-height: 84px;
+    }
+    h2 {
+        font-size: 48px;
+        line-height: 44px;
+    }
+    h3 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    blockquote {
+        font-size: 26px;
+    }
 }

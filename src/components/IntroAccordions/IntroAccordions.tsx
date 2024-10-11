@@ -1,5 +1,8 @@
 import { useState } from 'react';
+
 import Typography from '../Typography';
+
+import { Arrow } from '../../graphics';
 
 import './IntroAccordions.css';
 
@@ -40,12 +43,17 @@ const IntroAccordions = () => {
                                 className='accordion-title-wrapper'
                                 onClick={() => toggleAccordion(i)}
                             >
-                                <Typography
-                                    variant='h3'
-                                    className='accordion-title'
-                                >
-                                    {title}
-                                </Typography>
+                                <div>
+                                    <Typography
+                                        variant='h3'
+                                        className='accordion-title'
+                                    >
+                                        {title}
+                                    </Typography>
+                                </div>
+                                <div className='accordion-icon__wrapper'>
+                                    <Arrow />
+                                </div>
                             </div>
                             <div className='accordion-content'>
                                 {description}

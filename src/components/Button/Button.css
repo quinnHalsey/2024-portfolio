@@ -1,0 +1,31 @@
+.button:hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    width: 110%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: var(--bg-color-yellow);
+    transform: translate(-50%, -50%) rotate(-2deg);
+}
+
+button.button {
+    position: relative; /* Add this line */
+    background: transparent;
+    padding: 8px 16px;
+    border: 3px solid var(--color-fg);
+    color: var(--color-fg);
+    border-top-left-radius: 30px 20px;
+    border-top-right-radius: 25px 28px;
+    border-bottom-right-radius: 28px 18px;
+    border-bottom-left-radius: 22px 26px;
+    cursor: pointer;
+}
+
+button.button p {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}

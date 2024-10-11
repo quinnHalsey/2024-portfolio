@@ -1,8 +1,20 @@
 .page-layout {
     padding: 128px 64px;
-    padding-left: 164px;
+    padding-left: 128px;
     display: flex;
     flex-direction: column;
     max-width: 1312px;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    .page-layout {
+        padding: 80px 32px 144px 32px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .page-layout {
+        padding: 64px 24px 124px 24px;
+    }
 }
