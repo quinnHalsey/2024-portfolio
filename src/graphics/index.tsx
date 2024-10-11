@@ -1,3 +1,4 @@
+import LinkedInIcon from './LinkedInIcon';
 import Crossword from './Crossword';
 import Arrow from './Arrow';
 import CodeWindowSvg from './CodeWindowSvg';
@@ -31,5 +32,6 @@ export {
     ToggleSun,
     WebchatUserGrowthChart,
     WonkyWyatt,
-    Crossword
+    Crossword,
+    LinkedInIcon,
 };

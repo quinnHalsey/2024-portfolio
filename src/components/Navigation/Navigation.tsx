@@ -12,6 +12,7 @@ import {
     ToggleMoon,
     ToggleSun,
     DownloadIcon,
+    LinkedInIcon,
 } from 'src/graphics';
 
 import './Navigation.css';
@@ -73,6 +74,13 @@ const Navigation = () => {
                         ariaLabel='Download Resume'
                     >
                         <DownloadIcon />
+                    </NavButton>
+                    <NavButton
+                        href='https://www.linkedin.com/in/halseyq/'
+                        label='LinkedIn'
+                        ariaLabel='Go to LinkedIn profile'
+                    >
+                        <LinkedInIcon />
                     </NavButton>
                     <NavButton
                         onClick={handleThemeChange}
