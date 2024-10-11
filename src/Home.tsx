@@ -100,10 +100,6 @@ const Home = () => {
                             to deepen my cloud computing skills.
                         </Typography>
                         <Typography variant='p'>
-                            For the last two years, front-end web engineer at
-                            non-profit Benefits Data Trust, a non-profit
-                        </Typography>
-                        <Typography variant='p'>
                             With a background in motion graphics design,{' '}
                             <span className='highlight-b'>
                                 I bring a creative edge to front-end development
@@ -132,7 +128,7 @@ const Home = () => {
                         <span className='highlight'>FEATURED PROJECTS</span>
                     </Typography>
                 </SectionHeader>
-                <Container paddingBottom>
+                <Container>
                     <AnimateOnReveal className='homepage-featured-work__project-container'>
                         <ProjectCardContainer projects={featuredProjects} />
                     </AnimateOnReveal>
@@ -141,7 +137,6 @@ const Home = () => {
                 <Container
                     animateIn
                     className='homepage-testimonial__container'
-                    paddingTop
                 >
                     <Quote attribution='LinkedIn Recommendation, Manager at Benefits Data Trust'>
                         <Typography variant='blockquote'>
