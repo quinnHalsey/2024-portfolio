@@ -60,3 +60,7 @@
 .theme-light .code-window pre .highlight-b {
     color: var(--color-yellow);
 }
+
+pre.code-sample {
+    width: fit-content;
+}

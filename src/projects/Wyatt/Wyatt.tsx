@@ -93,7 +93,7 @@ const Wyatt = () => {
                             matter of minutes.
                         </Typography>
                     </div>
-                    <div className='opt-in__code-window__wrapper'>
+                    <div className='wyatt__code-window__wrapper'>
                         <CodeWindow files={codeFiles} />
                     </div>
                 </Container>

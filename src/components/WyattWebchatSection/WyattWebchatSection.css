@@ -151,3 +151,27 @@
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
 }
+
+@media only screen and (max-width: 1024px) {
+    .webchat-container .webchat-section__text {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .webchat-container
+        .webchat-section__text
+        div.webchat-section__paragraph-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
+    .webchat-container
+        .webchat-section__text
+        div.webchat-section__paragraph-wrapper
+        p {
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 24px;
+        border-radius: 16px;
+    }
+}
