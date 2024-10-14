@@ -71,3 +71,13 @@
 .accordion-item.highlight-p.open .accordion-title {
     color: var(--color-pink);
 }
+
+@media only screen and (max-width: 432px) {
+    .accordion-title-wrapper {
+        gap: 8px;
+    }
+    .accordion-icon__wrapper svg {
+        width: 16px;
+        height: 16px;
+    }
+}
