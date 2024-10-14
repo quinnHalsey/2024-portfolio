@@ -72,6 +72,12 @@
     color: var(--color-pink);
 }
 
+@media only screen and (max-width: 768px) {
+    .accordion-section {
+        min-height: 0;
+    }
+}
+
 @media only screen and (max-width: 432px) {
     .accordion-title-wrapper {
         gap: 8px;

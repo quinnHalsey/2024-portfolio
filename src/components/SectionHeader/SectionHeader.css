@@ -1,7 +1,7 @@
 .section-header {
     opacity: 0;
     transform: translateX(-200px);
-    transition: transform 1s ease opacity 1s ease;
+    transition: transform 1s ease, opacity 1s ease;
 }
 
 .section-header.right-align {
@@ -13,4 +13,13 @@
     opacity: 1;
     transform: translateX(0);
     transition: transform 1s ease;
+}
+
+@media only screen and (max-width: 432px) {
+    .section-header {
+        transform: translateX(-100px);
+    }
+    .section-header.right-align {
+        transform: translateX(100px);
+    }
 }

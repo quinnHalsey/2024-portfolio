@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
+import { useScreenWidth } from 'src/utils';
+
 interface AnimateOnRevealProps {
     children: React.ReactNode;
     className?: string;
@@ -16,12 +18,12 @@ const AnimateOnReveal = ({
     handleVisibilityChange,
 }: AnimateOnRevealProps) => {
     const [isVisible, setIsVisible] = useState(false);
+    const screenWidth = useScreenWidth();
     const animateRef = useRef(null);
 
     useEffect(() => {
-        if (typeof window === 'undefined') {
-            return;
-        }
+        if (typeof window === 'undefined') return;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (reverse) {
@@ -36,7 +38,7 @@ const AnimateOnReveal = ({
             {
                 root: null,
                 rootMargin: '0px',
-                threshold: threshold,
+                threshold: screenWidth < 432 ? 0.5 : threshold,
             }
         );
 
@@ -49,7 +51,7 @@ const AnimateOnReveal = ({
                 observer.unobserve(animateRef.current);
             }
         };
-    }, [animateRef]);
+    }, [animateRef, screenWidth, reverse, handleVisibilityChange, threshold]);
 
     return (
         <div

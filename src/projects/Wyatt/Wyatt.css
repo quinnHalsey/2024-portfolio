@@ -33,4 +33,40 @@
     .opt-in__section.container.flex {
         gap: 48px;
     }
+    .project-intro__section .container.flex {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .project-intro__right-col {
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .project-intro__section .container.flex {
+        flex-direction: column-reverse;
+    }
+
+    .project-intro__right-col .phone-wrapper {
+        height: 400px;
+        overflow: hidden;
+        transform: rotate(0deg);
+        border-bottom: 2px var(--color-fg) solid;
+    }
+
+    .project-intro__right-col .phone-wrapper svg {
+        max-width: 250px;
+        display: block;
+        margin: 0 auto;
+        margin-right: 15%;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (max-width: 432px) {
+    .project-intro__right-col .phone-wrapper svg {
+        margin-right: auto;
+    }
 }

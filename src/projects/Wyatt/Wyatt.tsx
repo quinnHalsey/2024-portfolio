@@ -1,3 +1,5 @@
+import { useScreenWidth } from 'src/utils';
+
 import PageLayout from 'src/components/PageLayout';
 import SectionLayout from 'src/components/SectionLayout';
 import Container from 'src/components/Container';
@@ -24,26 +26,38 @@ import { CodeFile } from 'src/utils/constants';
 import './Wyatt.css';
 
 const Wyatt = () => {
+    const screenWidth = useScreenWidth();
+
+    const isSmallScreen = screenWidth <= 768;
+
     return (
         <PageLayout>
-            <SectionLayout className='project-intro__section' flex>
-                <div className='project-intro__wrapper'>
-                    <div>
-                        <Typography variant='h1'>Wyatt</Typography>
-                        <Typography
-                            variant='h2'
-                            className='project-intro__subtitle'
-                        >
-                            An AI-powered Chatbot Helping Students Complete the
-                            FAFSA
-                        </Typography>
+            <SectionLayout className='project-intro__section'>
+                <Container flex>
+                    <div className='project-intro__wrapper'>
+                        <div>
+                            <Typography variant='h1'>Wyatt</Typography>
+                            <Typography
+                                variant='h2'
+                                className='project-intro__subtitle'
+                            >
+                                An AI-powered Chatbot Helping Students Complete
+                                the FAFSA
+                            </Typography>
+                        </div>
+                        {!isSmallScreen && <IntroAccordions />}
                     </div>
-                    <IntroAccordions />
-                </div>
-                <div className='project-intro__right-col'>
-                    <WyattPhone />
-                </div>
+                    <div className='project-intro__right-col'>
+                        <WyattPhone />
+                    </div>
+                </Container>
+                {isSmallScreen && (
+                    <Container>
+                        <IntroAccordions />
+                    </Container>
+                )}
             </SectionLayout>
+
             <WyattWebchatSection />
             <SectionLayout>
                 <Container animateIn>

@@ -42,7 +42,6 @@ const ProjectCardContainer = ({
                     <AnimateOnReveal
                         key={`${project.title}-${i}`}
                         className='project-card__animation-wrapper'
-                        threshold={1}
                     >
                         <ProjectCard
                             key={`${project.title}-${i}`}
