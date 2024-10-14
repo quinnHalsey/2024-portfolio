@@ -59,6 +59,7 @@ pre {
 p {
     font-size: 20px;
     line-height: 28px;
+    font-weight: 300;
     margin: 0;
     padding-bottom: 16px;
 }
@@ -87,10 +88,6 @@ cite {
 .section-header.right-align h2 {
     text-align: right;
     margin-left: auto;
-}
-
-.theme-light p {
-    font-weight: 300;
 }
 
 span.highlight-y {
@@ -135,16 +132,15 @@ span[class^='highlight'] {
     }
     blockquote {
         font-size: 26px;
+        font-weight: 300;
     }
-}
-
-@media only screen and (max-width: 768px) {
 }
 
 @media only screen and (max-width: 432px) {
     h1 {
         font-size: 48px;
         line-height: 52px;
+        letter-spacing: 10px;
     }
     h2 {
         font-size: 32px;

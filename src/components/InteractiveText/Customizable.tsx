@@ -33,6 +33,7 @@ const Customizable = () => {
                 type='color'
                 onChange={(e) => handleColorChange(e.target.value)}
                 value={fontColor}
+                aria-label='Change color of "CUSTOMIZABLE" text'
             />
         </div>
     );

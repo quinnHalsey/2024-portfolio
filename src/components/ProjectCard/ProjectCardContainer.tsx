@@ -1,5 +1,6 @@
 import { useTheme } from '../../contexts/ThemeContext';
 
+import AnimateOnReveal from '../AnimateOnReveal';
 import ProjectCard from './ProjectCard';
 
 import {
@@ -38,11 +39,17 @@ const ProjectCardContainer = ({
                     ];
 
                 return (
-                    <ProjectCard
+                    <AnimateOnReveal
                         key={`${project.title}-${i}`}
-                        backgroundImage={cardBackground}
-                        project={project}
-                    />
+                        className='project-card__animation-wrapper'
+                        threshold={1}
+                    >
+                        <ProjectCard
+                            key={`${project.title}-${i}`}
+                            backgroundImage={cardBackground}
+                            project={project}
+                        />
+                    </AnimateOnReveal>
                 );
             })}
         </div>

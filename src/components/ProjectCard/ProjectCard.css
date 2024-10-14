@@ -9,7 +9,7 @@
     flex: 1;
 }
 
-.project-card__wrapper {
+.project-card__animation-wrapper {
     min-height: 400px;
     height: 400px;
     max-width: 400px;
@@ -22,7 +22,7 @@ a.project-card {
     height: 400px;
     min-height: 100%;
     cursor: pointer;
-    width: 100%;
+    min-width: 100%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -82,6 +82,30 @@ a.project-card {
     margin: 0 auto;
 }
 
+.project-card__container .project-card__animation-wrapper {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1),
+        transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.project-card__container .project-card__animation-wrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card__container .project-card__animation-wrapper:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.project-card__container .project-card__animation-wrapper:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.project-card__container .project-card__animation-wrapper:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
 @media only screen and (max-width: 1024px) {
     .project-card__container {
         gap: 16px;
@@ -96,6 +120,8 @@ a.project-card {
     .project-card__container {
         flex-direction: column;
         align-items: center;
+        max-width: 500px;
+        margin: 0 auto;
     }
 
     .project-card__container > *:nth-child(3n + 1) {
@@ -108,5 +134,19 @@ a.project-card {
 
     .project-card__container > *:nth-child(3n) {
         align-self: flex-end;
+    }
+
+    .project-card__container .project-card__animation-wrapper {
+        transition-delay: 0s !important;
+    }
+
+    .project-card {
+        max-width: 300px;
+    }
+}
+
+@media only screen and (max-width: 432px) {
+    .project-card__animation-wrapper {
+        min-width: 100%;
     }
 }

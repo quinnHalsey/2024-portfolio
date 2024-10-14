@@ -22,32 +22,30 @@ const ProjectCard = ({ backgroundImage, project }: ProjectCardProps) => {
     };
 
     return (
-        <div className='project-card__wrapper'>
-            <ProjectButton
-                className='project-card'
-                style={{
-                    backgroundImage: `url(${backgroundImage})`,
-                }}
-                {...buttonProps}
-            >
-                <div className='project-card__content'>
-                    <div className='project-card__title-description'>
-                        <Typography variant='h3'>{project.title}</Typography>
-                        <Typography
-                            variant='p'
-                            className='project-card__description'
-                        >
-                            {project.description}
-                        </Typography>
-                    </div>
-                    <div className='project-card__technologies'>
-                        <Typography variant='p'>
-                            {project.tech.join(' – ')}
-                        </Typography>
-                    </div>
+        <ProjectButton
+            className='project-card'
+            style={{
+                backgroundImage: `url(${backgroundImage})`,
+            }}
+            {...buttonProps}
+        >
+            <div className='project-card__content'>
+                <div className='project-card__title-description'>
+                    <Typography variant='h3'>{project.title}</Typography>
+                    <Typography
+                        variant='p'
+                        className='project-card__description'
+                    >
+                        {project.description}
+                    </Typography>
                 </div>
-            </ProjectButton>
-        </div>
+                <div className='project-card__technologies'>
+                    <Typography variant='p'>
+                        {project.tech.join(' – ')}
+                    </Typography>
+                </div>
+            </div>
+        </ProjectButton>
     );
 };
 

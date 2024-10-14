@@ -128,10 +128,8 @@ const Home = () => {
                         <span className='highlight'>FEATURED PROJECTS</span>
                     </Typography>
                 </SectionHeader>
-                <Container>
-                    <AnimateOnReveal className='homepage-featured-work__project-container'>
-                        <ProjectCardContainer projects={featuredProjects} />
-                    </AnimateOnReveal>
+                <Container className='homepage-featured-work__project-container'>
+                    <ProjectCardContainer projects={featuredProjects} />
                 </Container>
                 <SquiggleDivider />
                 <Container

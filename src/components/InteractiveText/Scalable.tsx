@@ -32,6 +32,7 @@ const Scalable = () => {
                     max={82}
                     min={64}
                     value={fontSize}
+                    aria-label='Adjust font size of "SCALABLE" text'
                 />
             </div>
         </div>

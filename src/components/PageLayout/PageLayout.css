@@ -18,3 +18,9 @@
         padding: 64px 24px 124px 24px;
     }
 }
+
+@media only screen and (max-width: 640px) {
+    .page-layout {
+        overflow: hidden;
+    }
+}
