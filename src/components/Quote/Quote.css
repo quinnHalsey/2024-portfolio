@@ -42,7 +42,7 @@
 @media only screen and (max-width: 432px) {
     .quote__wrapper {
         width: 100%;
-        gap: 16px;
+        gap: 8px;
     }
 
     .quote-text__wrapper {

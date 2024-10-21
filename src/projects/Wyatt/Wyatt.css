@@ -24,8 +24,9 @@
     .opt-in__section.container.flex {
         flex-direction: column;
     }
+
     .wyatt__code-window__wrapper {
-        width: 100%;
+        min-width: 0px;
     }
 }
 

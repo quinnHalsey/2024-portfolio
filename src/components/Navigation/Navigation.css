@@ -74,6 +74,11 @@
     z-index: 1;
 }
 
+.navigation__divider-line {
+    height: 100%;
+    background-color: var(--color-fg);
+}
+
 @media screen and (max-width: 1024px) {
     .navigation-wrapper {
         width: 100%;

@@ -52,6 +52,21 @@ const Navigation = () => {
             )}
             <nav className='navigation-wrapper'>
                 <ul>
+                    {videoSrc && (
+                        <>
+                            <NavButton
+                                onClick={() => setVideoOpen(!videoOpen)}
+                                ariaLabel='Open project video clip'
+                                label='View Video'
+                            >
+                                <PlayIcon />
+                            </NavButton>
+                            <div
+                                className='navigation__divider-line'
+                                aria-hidden
+                            />
+                        </>
+                    )}
                     <NavButton
                         onClick={() => navigate('/')}
                         ariaLabel='Go to home page'
@@ -59,15 +74,6 @@ const Navigation = () => {
                     >
                         <HomeIcon />
                     </NavButton>
-                    {videoSrc && (
-                        <NavButton
-                            onClick={() => setVideoOpen(!videoOpen)}
-                            ariaLabel='Open project video clip'
-                            label='View Video'
-                        >
-                            <PlayIcon />
-                        </NavButton>
-                    )}
                     <NavButton
                         href='/Halsey-Quinn_Resume-2024_4.1.pdf'
                         label='Resume'

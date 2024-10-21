@@ -51,7 +51,6 @@
 
 .homepage-about-me__more-about.visible {
     margin-top: 16px;
-    /* TODO: responsivity */
     max-height: 300px;
 }
 
@@ -78,6 +77,10 @@
     .crossword__wrapper svg {
         top: 10%;
     }
+
+    .homepage-about-me__more-about.visible {
+        max-height: 400px;
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -103,5 +106,15 @@
         left: 0;
         background: var(--color-bg);
         opacity: 0.85;
+    }
+
+    .homepage-about-me__more-about.visible {
+        max-height: 500px;
+    }
+}
+
+@media only screen and (max-width: 432px) {
+    .homepage-about-me__more-about.visible {
+        max-height: 700px;
     }
 }
