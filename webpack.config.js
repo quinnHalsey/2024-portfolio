@@ -33,7 +33,15 @@ module.exports = {
             template: './public/index.html',
         }),
         new CopyWebpackPlugin({
-            patterns: [{ from: 'public', to: '.' }],
+            patterns: [
+                {
+                    from: 'public',
+                    to: '.',
+                    globOptions: {
+                        ignore: ['**/index.html'],
+                    },
+                },
+            ],
         }),
     ],
     output: {
