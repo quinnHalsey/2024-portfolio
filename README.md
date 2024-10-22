@@ -5,8 +5,9 @@ This repository contains the source code for my personal portfolio website. View
 ## Features
 
 -   **Responsive Design**: Optimized for various screen sizes and devices.
--   **Project Showcase**: Presentations of my work and projects.
+-   **Project Showcase**: Presentations of my work and projects. View videos of featured projects.
 -   **Dark/Light Mode**: Toggle between dark and light themes for comfortable viewing.
+-   **Additional Resources**: Download my latest resume or navigate to my LinkedIn profile.
 
 ## Projects
 
