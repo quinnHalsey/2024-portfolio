@@ -1,3 +1,10 @@
 {
-    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+    "redirects": [
+        {
+            "source": "/bdt-impact-report",
+            "destination": "https://drive.google.com/file/d/19-TT6i9onud3NU4xXmJ2k3yiFeeUD1R8/view?usp=drive_link",
+            "permanent": false
+        }
+    ]
 }
