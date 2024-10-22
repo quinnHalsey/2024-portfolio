@@ -38,6 +38,7 @@
     text-align: center;
     border: 2px solid var(--color-fg);
     cursor: pointer;
+    scrollbar-width: 0px;
 }
 
 .code-window__tab__container::after {

@@ -8,6 +8,8 @@ import Typography from 'src/components/Typography';
 
 import { Laptop, SpeechBubbles, WebchatUserGrowthChart } from 'src/graphics';
 
+import { useScreenWidth } from 'src/utils';
+
 import './WyattWebchatSection.css';
 
 // TODO: Add blurb about the challenge of maintaining chat history across multiplate pages of an SSG site
@@ -21,6 +23,7 @@ interface ParagraphData {
 const WyattWebchatSection = () => {
     const visibilityThreshold = 0.7;
     const [currParagraph, setCurrParagraph] = useState<number>(0);
+    const screenWidth = useScreenWidth();
 
     const handleVisibilityChange = (i: number) => (isVisible: boolean) => {
         if (isVisible) setCurrParagraph(i);
@@ -39,17 +42,25 @@ const WyattWebchatSection = () => {
                     <Laptop display={paragraphData[currParagraph].graphic} />
                 </div>
                 <div className='webchat-section__text'>
-                    {paragraphData.map((data, i) => (
-                        <AnimateOnReveal
-                            key={i}
-                            className='webchat-section__paragraph-wrapper'
-                            threshold={visibilityThreshold}
-                            reverse
-                            handleVisibilityChange={handleVisibilityChange(i)}
-                        >
-                            <Typography variant='p'>{data.text}</Typography>
-                        </AnimateOnReveal>
-                    ))}
+                    {paragraphData.map((data, i) =>
+                        screenWidth > 640 ? (
+                            <AnimateOnReveal
+                                key={i}
+                                className='webchat-section__paragraph-wrapper'
+                                threshold={visibilityThreshold}
+                                reverse
+                                handleVisibilityChange={handleVisibilityChange(
+                                    i
+                                )}
+                            >
+                                <Typography variant='p'>{data.text}</Typography>
+                            </AnimateOnReveal>
+                        ) : (
+                            <Typography key={i} variant='p'>
+                                {data.text}
+                            </Typography>
+                        )
+                    )}
                 </div>
             </Container>
         </SectionLayout>

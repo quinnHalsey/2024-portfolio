@@ -184,5 +184,15 @@
 @media only screen and (max-width: 640px) {
     .laptop__wrapper {
         position: static;
+        height: fit-content;
+        margin-top: 24px;
+    }
+
+    .webchat-container .webchat-section__text {
+        width: 100%;
+    }
+
+    .webchat-section__text::after {
+        height: 0;
     }
 }

@@ -1,11 +1,22 @@
-import { useState } from 'react';
-import { useHover } from 'src/utils';
+import { useState, useEffect } from 'react';
+import { useHover, useScreenWidth } from 'src/utils';
 
 //TODO: make themed SVG slider
 const Scalable = () => {
     const { hovered, handleMouseEnter, handleMouseLeave } = useHover();
+    const screenWidth = useScreenWidth();
 
-    const [fontSize, setFontSize] = useState(64);
+    const getInitialFontSize = () => {
+        if (screenWidth > 1024) return 64;
+        if (screenWidth < 432) return 32;
+        return 48;
+    };
+
+    const [fontSize, setFontSize] = useState(getInitialFontSize());
+
+    useEffect(() => {
+        setFontSize(getInitialFontSize());
+    }, [screenWidth]);
 
     const handleScale = (size: number) => {
         setFontSize(size);

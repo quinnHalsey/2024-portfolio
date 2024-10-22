@@ -78,6 +78,14 @@
     }
 }
 
+@media only screen and (max-width: 640px) {
+    .accordion-item.open .accordion-content,
+    .accordion-item:focus-visible .accordion-content {
+        max-height: 350px;
+        margin-top: 16px;
+    }
+}
+
 @media only screen and (max-width: 432px) {
     .accordion-title-wrapper {
         gap: 8px;
@@ -85,5 +93,12 @@
     .accordion-icon__wrapper svg {
         width: 16px;
         height: 16px;
+    }
+    .accordion-item {
+        margin-bottom: 16px;
+    }
+    .accordion-item.open .accordion-content,
+    .accordion-item:focus-visible .accordion-content {
+        max-height: 400px;
     }
 }

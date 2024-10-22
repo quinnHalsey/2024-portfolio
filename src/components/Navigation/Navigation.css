@@ -75,14 +75,16 @@
 }
 
 .navigation__divider-line {
-    height: 100%;
-    background-color: var(--color-fg);
+    height: 2px;
+    width: 90%;
+    margin: 4px auto;
+    background-color: #f5f5f5;
 }
 
 @media screen and (max-width: 1024px) {
     .navigation-wrapper {
         width: 100%;
-        height: auto;
+        height: 64px;
         top: auto;
         bottom: 0;
     }
@@ -94,9 +96,20 @@
     .navigation-wrapper ul {
         flex-direction: row;
         justify-content: center;
+        height: 100%;
+    }
+
+    .navigation-wrapper li.nav-item__wrapper .navigation-button {
+        gap: 0;
     }
 
     .navigation-wrapper li.nav-item__wrapper p {
         display: none;
+    }
+
+    .navigation__divider-line {
+        height: 90%;
+        width: 2px;
+        margin: auto 4px;
     }
 }
