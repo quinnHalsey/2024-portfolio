@@ -27,6 +27,7 @@
 
     .wyatt__code-window__wrapper {
         min-width: 0px;
+        width: initial;
     }
 }
 
