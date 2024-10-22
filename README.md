@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This repository contains the source code for my personal portfolio website. It showcases my projects as a developer.
+This repository contains the source code for my personal portfolio website. View the live site [here](https://halseyquinn.com)
 
 ## Features
 
