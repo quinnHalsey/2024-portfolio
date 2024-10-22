@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -25,23 +26,14 @@ module.exports = {
                 exclude: /node_modules/,
                 use: ['file-loader'],
             },
-            {
-                test: /\.ico$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: 'favicon.ico',
-                            outputPath: '/',
-                        },
-                    },
-                ],
-            },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './public/index.html',
+        }),
+        new CopyWebpackPlugin({
+            patterns: [{ from: 'public', to: '.' }],
         }),
     ],
     output: {
