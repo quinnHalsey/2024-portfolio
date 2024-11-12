@@ -6,3 +6,9 @@ export type FeaturedProject = {
     href?: string;
     callback?: () => void;
 };
+
+export interface AccordionItem {
+    title: string;
+    highlight: 'y' | 'b' | 'p';
+    description: JSX.Element;
+}

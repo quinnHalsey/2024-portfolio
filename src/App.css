@@ -64,3 +64,16 @@ a {
     cursor: pointer;
     outline: inherit;
 }
+
+.project-intro__wrapper {
+    flex: 2;
+}
+
+.project-intro__right-col {
+    flex: 1;
+    padding-left: 64px;
+}
+
+.project-intro__subtitle {
+    margin-top: 32px;
+}
