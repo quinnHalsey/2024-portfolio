@@ -1,5 +1,6 @@
 :root {
     --color-blue: #007bff;
+    interpolate-size: allow-keywords;
 }
 
 .theme-dark {
