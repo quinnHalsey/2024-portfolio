@@ -1,6 +1,7 @@
 .phone-wrapper {
     --animation-speed: 0.5s;
 }
+
 .phone-wrapper {
     transform: rotate(5deg);
     transform-origin: center;

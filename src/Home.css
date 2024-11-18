@@ -49,6 +49,12 @@
         margin-top 0.75s cubic-bezier(0.25, 0.1, 0.25, 0.95);
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .homepage-about-me__more-about {
+        transition: none;
+    }
+}
+
 .homepage-about-me__more-about.visible {
     margin-top: 16px;
     height: auto;
@@ -71,6 +77,14 @@
 .section-header.visible .homepage-skills__subtitle {
     opacity: 1;
     transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section-header .homepage-skills__subtitle {
+        opacity: 1;
+        transform: translateX(0);
+        transition: none;
+    }
 }
 
 @media only screen and (max-width: 768px) {

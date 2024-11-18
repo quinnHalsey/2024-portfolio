@@ -15,6 +15,14 @@
     transition: transform 1s ease;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .section-header.visible,
+    .section-header.right-align.visible {
+        transition: none;
+        transform: translateX(0);
+    }
+}
+
 @media only screen and (max-width: 432px) {
     .section-header {
         transform: translateX(-100px);
