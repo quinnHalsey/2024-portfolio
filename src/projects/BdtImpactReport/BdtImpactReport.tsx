@@ -10,8 +10,6 @@ import { AccordionItem } from 'src/types';
 
 import './BdtImpactReport.css';
 
-//TODO: create project page and remove conditionals in Nav
-
 const BdtImpactReport = () => {
     const screenWidth = useScreenWidth();
 
@@ -19,7 +17,7 @@ const BdtImpactReport = () => {
 
     return (
         <PageLayout>
-            <SectionLayout className='project-intro__section'>
+            <SectionLayout className='project-intro__section impact__project-intro'>
                 <Container flex>
                     <div className='project-intro__wrapper'>
                         <div>
@@ -28,9 +26,8 @@ const BdtImpactReport = () => {
                                 variant='h2'
                                 className='project-intro__subtitle'
                             >
-                                Immersive digital report for a non-profit "leaps
-                                and bounds beyond" what the organization had
-                                ever produced
+                                An immersive, engaging digital report showcasing
+                                a non-profit's impact
                             </Typography>
                         </div>
                         {!isSmallScreen && (
@@ -56,21 +53,28 @@ const accordionItems: AccordionItem[] = [
         description: (
             <>
                 <Typography variant='p' className='accordion-description'>
-                    In my recent role at the nonprofit Benefits Data Trust
-                    (BDT), our team transformed the impact report from a static
-                    PDF in 2023 to an interactive digital experience in 2024,
-                    achieving a 206% increase in engagement. The 2024 report
-                    showcased dynamic features like an interactive SVG map
-                    highlighting BDT’s work across 14 U.S. states, a
-                    horizontally scrolling timeline of a client’s journey, and a
-                    visually engaging animated scroll experience throughout.
+                    In my recent role at nonprofit Benefits Data Trust (BDT),
+                    our team reimagined the non-profit's impact report. While
+                    2023's report was a static PDF, we created an{' '}
+                    <strong>interactive digital experience</strong> for 2024,
+                    achieving a <strong>206% increase in engagement</strong>.
+                    This year's report showcased dynamic features like a
+                    clickable SVG map, a horizontally scrolling timeline of a
+                    client’s journey, and a visually engaging animated scroll
+                    experience throughout.
                 </Typography>
                 <Typography variant='p' className='accordion-description'>
                     I played a key role throughout the project lifecycle, from
                     providing input during content planning to collaborating in
                     the design phase to shape the UX and assess the technical
                     feasibility of ideas. As the sole developer, I completed the
-                    entire build in just three weeks.
+                    entire build in just three weeks. The final product exceeded
+                    stakeholder expectations with one describing it as "{' '}
+                    <strong>
+                        leaps and bounds beyond anything [BDT had] produced for
+                        the donor market before{' '}
+                    </strong>
+                    ."
                 </Typography>
             </>
         ),
@@ -82,34 +86,27 @@ const accordionItems: AccordionItem[] = [
             <ul className='accordion-description'>
                 <li>
                     <Typography variant='p'>
-                        An interactive <strong>SVG map</strong> showcasing BDT’s
+                        An <strong>interactive SVG map</strong> showcasing BDT’s
                         initiatives across 14 U.S. states, with clickable
                         regions for detailed insights.
                     </Typography>
                 </li>
                 <li>
                     <Typography variant='p'>
-                        A horizontally scrolling <strong>timeline</strong>{' '}
-                        illustrating a BDT client’s journey from initial contact
-                        to benefits received.
+                        A horizontally scrolling{' '}
+                        <strong>
+                            timeline illustrating a BDT client’s journey
+                        </strong>{' '}
+                        from initial contact to benefits received.
                     </Typography>
                 </li>
                 <li>
-                    <li>
-                        <Typography variant='p'>
-                            A <strong>responsive design</strong> that provided a
-                            seamless experience across all devices, screen
-                            sizes, and browsers.
-                        </Typography>
-                    </li>
-                    <li>
-                        <Typography variant='p'>
-                            An <strong>accessible UX</strong>, including
-                            alternative versions of highly interactive or visual
-                            components, maintaining full compliance with WCAG
-                            standards.
-                        </Typography>
-                    </li>
+                    <Typography variant='p'>
+                        <strong>Responsive and accessible design</strong>{' '}
+                        ensuring a seamless experience across all devices,
+                        screen sizes, and browsers, with mobile-optimized
+                        alternatives for highly-interactive components.
+                    </Typography>
                 </li>
             </ul>
         ),
@@ -122,13 +119,13 @@ const accordionItems: AccordionItem[] = [
                 <li>
                     <Typography variant='p'>
                         <strong>Codebase:</strong> JavaScript • React •
-                        Interaction Observer API • SVGs • Forms
+                        Interaction Observer API • Hubspot API • SVG • Lottie{' '}
                     </Typography>
                 </li>
                 <li>
                     <Typography variant='p'>
                         <strong>Tools:</strong> Netlify • Browserstack • Google
-                        Analytics 4 • Hotjar
+                        Analytics 4
                     </Typography>
                 </li>
             </ul>
