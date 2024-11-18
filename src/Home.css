@@ -43,15 +43,15 @@
 }
 
 .homepage-about-me__more-about {
-    max-height: 0;
+    height: 0;
     overflow: hidden;
-    transition: max-height 0.75s cubic-bezier(0.25, 0.1, 0.25, 0.95),
+    transition: height 0.75s cubic-bezier(0.25, 0.1, 0.25, 0.95),
         margin-top 0.75s cubic-bezier(0.25, 0.1, 0.25, 0.95);
 }
 
 .homepage-about-me__more-about.visible {
     margin-top: 16px;
-    max-height: 300px;
+    height: auto;
 }
 
 .homepage-about-me__container button.button {
@@ -76,10 +76,6 @@
 @media only screen and (max-width: 768px) {
     .crossword__wrapper svg {
         top: 10%;
-    }
-
-    .homepage-about-me__more-about.visible {
-        max-height: 400px;
     }
 }
 
@@ -106,15 +102,5 @@
         left: 0;
         background: var(--color-bg);
         opacity: 0.85;
-    }
-
-    .homepage-about-me__more-about.visible {
-        max-height: 500px;
-    }
-}
-
-@media only screen and (max-width: 432px) {
-    .homepage-about-me__more-about.visible {
-        max-height: 700px;
     }
 }
