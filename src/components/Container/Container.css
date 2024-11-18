@@ -26,6 +26,15 @@
     opacity: 1;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    /* Disable scroll-triggered animations for reduced motion */
+    .container__animated {
+        transform: translateY(0);
+        opacity: 1;
+        transition: none;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     .container.flex {
         flex-direction: column;

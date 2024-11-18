@@ -29,6 +29,12 @@
     transition: rotate 0.5s ease-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .accordion-icon__wrapper svg {
+        transition: none;
+    }
+}
+
 .accordion-item:nth-child(even) .accordion-icon__wrapper svg {
     transform: scaleY(-1);
 }
@@ -48,6 +54,12 @@
 .accordion-item:focus-visible .accordion-content {
     margin-top: 24px;
     height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .accordion-content {
+        transition: none;
+    }
 }
 
 /* HIGHLIGHT COLORS */

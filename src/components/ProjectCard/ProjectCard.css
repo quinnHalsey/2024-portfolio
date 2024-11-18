@@ -94,6 +94,14 @@ a.project-card {
     transform: translateY(0);
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .project-card__container .project-card__animation-wrapper {
+        transition: none;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .project-card__container .project-card__animation-wrapper:nth-child(1) {
     transition-delay: 0s;
 }
