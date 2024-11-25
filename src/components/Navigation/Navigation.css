@@ -115,3 +115,13 @@
         margin: auto 4px;
     }
 }
+
+@media screen and (max-width: 432px) {
+    .navigation-wrapper {
+        height: 48px;
+    }
+    .navigation-wrapper .navigation-button svg {
+        min-width: 0;
+        width: 32px;
+    }
+}

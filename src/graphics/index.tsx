@@ -1,10 +1,11 @@
-import Crossword from './Crossword';
-import LinkedInIcon from './LinkedInIcon';
 import Arrow from './Arrow';
 import CodeWindowSvg from './CodeWindowSvg';
+import Crossword from './Crossword';
 import DownloadIcon from './DownloadIcon';
+import GithubIcon from './GithubIcon';
 import HomeIcon from './HomeIcon';
 import Laptop from './Laptop';
+import LinkedInIcon from './LinkedInIcon';
 import mobileGetFafsaHelp from './images/mobile-get-fafsa-help.png';
 import PhoneSvg from './PhoneSvg';
 import PlayIcon from './PlayIcon';
@@ -19,19 +20,20 @@ import WonkyWyatt from './WonkyWyatt';
 export {
     Arrow,
     CodeWindowSvg,
+    Crossword,
     DownloadIcon,
+    GithubIcon,
     HomeIcon,
     Laptop,
-    mobileGetFafsaHelp,
+    LinkedInIcon,
     PhoneSvg,
     PlayIcon,
     QuotationMark,
-    Squiggle,
     SpeechBubbles,
+    Squiggle,
     ToggleMoon,
     ToggleSun,
     WebchatUserGrowthChart,
     WonkyWyatt,
-    Crossword,
-    LinkedInIcon,
+    mobileGetFafsaHelp,
 };
