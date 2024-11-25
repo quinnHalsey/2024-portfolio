@@ -10,6 +10,12 @@ div.interactive-text {
     transition: top 0.75s ease, bottom 0.75s ease, opacity 0.75s ease;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .interactive-text .interactive-text__control {
+        transition: none;
+    }
+}
+
 .scale-slider {
     top: 0px;
 }

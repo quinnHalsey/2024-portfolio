@@ -120,6 +120,14 @@
         alternate infinite;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .speech-bubble__right,
+    .speech-bubble__left {
+        animation: none;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+}
+
 #bubble1 {
     animation-delay: 0s;
 }
