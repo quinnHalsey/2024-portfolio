@@ -13,6 +13,7 @@ import {
     ToggleSun,
     DownloadIcon,
     LinkedInIcon,
+    GithubIcon,
 } from 'src/graphics';
 
 import './Navigation.css';
@@ -80,6 +81,13 @@ const Navigation = () => {
                         ariaLabel='Download Resume'
                     >
                         <DownloadIcon />
+                    </NavButton>
+                    <NavButton
+                        href='https://github.com/quinnHalsey'
+                        label='GitHub'
+                        ariaLabel='Go to GitHub profile'
+                    >
+                        <GithubIcon />
                     </NavButton>
                     <NavButton
                         href='https://www.linkedin.com/in/halseyq/'
