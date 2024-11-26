@@ -15,6 +15,10 @@
     align-content: center;
 }
 
+.mobile__navigation-wrapper {
+    display: none;
+}
+
 .navigation-wrapper ul {
     padding: 0;
     margin: 0;
@@ -117,11 +121,54 @@
 }
 
 @media screen and (max-width: 432px) {
-    .navigation-wrapper {
+    .mobile__navigation-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: fit-content;
+    }
+
+    .mobile__navigation-wrapper.navigation-wrapper ul {
+        flex-direction: column;
+        gap: 8px;
+        height: 0;
+        transition: height 0.75s ease;
+    }
+
+    .mobile__navigation-wrapper.open ul {
+        height: fit-content;
+        transition: height 0.75s ease;
+    }
+
+    .mobile__navigation-content {
+        align-self: center;
+    }
+
+    .mobile__navigation-content .navigation-button svg {
+        display: none;
+    }
+
+    .mobile__navigation-content .navigation-button .navigation-button__label {
+        width: fit-content;
         height: 48px;
     }
-    .navigation-wrapper .navigation-button svg {
-        min-width: 0;
-        width: 32px;
+
+    .mobile__navigation-wrapper li.nav-item__wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .mobile__navigation-wrapper li.nav-item__wrapper p {
+        display: block;
+        text-align: center;
+    }
+
+    .desktop__navigation-wrapper {
+        display: none;
+    }
+    button.hamburger-button {
+        cursor: pointer;
+        height: fit-content;
+        align-self: flex-end;
     }
 }

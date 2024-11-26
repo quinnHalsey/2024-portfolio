@@ -25,7 +25,7 @@ const NavButton = ({
                     rel='noopener noreferrer'
                 >
                     {children}
-                    <div>
+                    <div className='navigation-button__label'>
                         <Typography variant='p'>{label}</Typography>
                     </div>
                 </a>
@@ -36,7 +36,7 @@ const NavButton = ({
                     aria-label={ariaLabel}
                 >
                     {children}
-                    <div>
+                    <div className='navigation-button__label'>
                         <Typography variant='p'>{label}</Typography>
                     </div>
                 </button>
