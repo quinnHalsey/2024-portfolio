@@ -63,3 +63,9 @@
         width: 80%;
     }
 }
+
+@media only screen and (max-width: 432px) {
+    .video-lightbox__overlay {
+        height: calc(100% - 48px);
+    }
+}
