@@ -29,6 +29,12 @@
     transition: rotate 0.5s ease-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .accordion-icon__wrapper svg {
+        transition: none;
+    }
+}
+
 .accordion-item:nth-child(even) .accordion-icon__wrapper svg {
     transform: scaleY(-1);
 }
@@ -39,16 +45,21 @@
 
 /* ACCORDION CONTENT */
 .accordion-content {
-    max-height: 0;
+    height: 0;
     overflow: hidden;
-    transition: max-height 0.75s ease-out, margin-top 0.75s ease-out;
+    transition: height 0.75s ease-out, margin-top 0.75s ease-out;
 }
 
 .accordion-item.open .accordion-content,
 .accordion-item:focus-visible .accordion-content {
     margin-top: 24px;
-    max-height: 200px;
-    transition: max-height 0.75s ease-out, margin-top 0.75s ease-out;
+    height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .accordion-content {
+        transition: none;
+    }
 }
 
 /* HIGHLIGHT COLORS */
@@ -81,7 +92,6 @@
 @media only screen and (max-width: 640px) {
     .accordion-item.open .accordion-content,
     .accordion-item:focus-visible .accordion-content {
-        max-height: 350px;
         margin-top: 16px;
     }
 }
@@ -96,9 +106,5 @@
     }
     .accordion-item {
         margin-bottom: 16px;
-    }
-    .accordion-item.open .accordion-content,
-    .accordion-item:focus-visible .accordion-content {
-        max-height: 400px;
     }
 }
