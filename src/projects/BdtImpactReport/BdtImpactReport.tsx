@@ -1,9 +1,11 @@
 import PageLayout from 'src/components/PageLayout';
 import SectionLayout from 'src/components/SectionLayout';
 import Container from 'src/components/Container';
+import SectionHeader from 'src/components/SectionHeader';
 import Typography from 'src/components/Typography';
 import IntroAccordions from 'src/components/IntroAccordions';
-
+import Quote from 'src/components/Quote';
+import SquiggleDivider from 'src/components/SquiggleDivider';
 import { useScreenWidth } from 'src/utils';
 
 import { AccordionItem } from 'src/types';
@@ -41,6 +43,27 @@ const BdtImpactReport = () => {
                         <IntroAccordions items={accordionItems} />
                     </Container>
                 )}
+            </SectionLayout>
+            <SectionLayout paddingTop>
+                <SectionHeader rightAlign>
+                    <Typography variant='h2'>THE PROJECT</Typography>
+                </SectionHeader>
+            </SectionLayout>
+            <SquiggleDivider />
+            <SectionLayout paddingTop>
+                <Container animateIn>
+                    <Quote attribution='Product Manager' direction='right'>
+                        <Typography variant='blockquote'>
+                            You have been so wonderful to work with -{' '}
+                            <span className='highlight-u'>
+                                organized, diplomatic, professional, and kind
+                            </span>
+                            . Thank you for all of the work you’ve done to
+                            improve Wyatt and for your dedication to doing the
+                            work well.
+                        </Typography>
+                    </Quote>
+                </Container>
             </SectionLayout>
         </PageLayout>
     );

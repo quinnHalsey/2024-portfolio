@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import Typography from 'src/components/Typography';
 
 import { FeaturedProject } from 'src/types';
@@ -10,13 +12,14 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ backgroundImage, project }: ProjectCardProps) => {
+    const navigate = useNavigate();
     const ProjectButton = project.href ? 'a' : 'button';
 
     const buttonProps = {
         ...(project.href
             ? // Add href/target or onClick attributes depending if <button> or <a> card
               { href: project.href, target: '_blank' }
-            : { onClick: project.callback }),
+            : { onClick: () => navigate(project?.slug || '') }),
         // Add aria-label to both <button> and <a> cards
         'aria-label': project.ariaLabel,
     };

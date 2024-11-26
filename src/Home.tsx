@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 import PageLayout from './components/PageLayout';
 import SectionLayout from './components/SectionLayout';
@@ -12,7 +11,7 @@ import Quote from './components/Quote';
 import { ProjectCardContainer } from './components/ProjectCard';
 
 import { Crossword } from './graphics';
-import { FeaturedProject } from './types';
+import { featuredProjects } from './utils/constants';
 
 import './Home.css';
 
@@ -22,36 +21,7 @@ import './Home.css';
 //TODO: make to pay the bills an easter egg
 
 const Home = () => {
-    const navigate = useNavigate();
     const [showMoreAbout, setShowMoreAbout] = useState(false);
-
-    const featuredProjects: FeaturedProject[] = [
-        {
-            title: 'Wyatt',
-            description:
-                'AI-powered chatbot and marketing site to assist students with the FAFSA',
-            tech: ['React', 'JavaScript', 'OpenAI API'],
-            callback: () => navigate('/wyatt'),
-            ariaLabel: 'View Wyatt project page',
-        },
-        {
-            title: 'Impact Report',
-            description: 'Immersive digital report for non-profit organization',
-            tech: ['React', 'JavaScript', 'Gatsby'],
-            //TODO: TEMP HREF before project page is built; reinstate callback
-            // href: 'https://drive.google.com/file/d/19-TT6i9onud3NU4xXmJ2k3yiFeeUD1R8/view',
-            // ariaLabel: 'Watch screen recording of Impact Report',
-            callback: () => navigate('/bdt-impact-report'),
-            ariaLabel: 'View Impact Report project page',
-        },
-        {
-            title: 'Asteroids',
-            description: `Interactive visualization of the closest and largest asteroids to Earth on any given day`,
-            tech: ['React', 'Redux', 'Three.js'],
-            href: 'https://asteroids-ghp.vercel.app/',
-            ariaLabel: 'Open Asteroids project in new tab',
-        },
-    ];
 
     return (
         <PageLayout>

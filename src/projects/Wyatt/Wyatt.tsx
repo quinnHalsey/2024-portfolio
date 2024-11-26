@@ -21,8 +21,7 @@ import {
     formGroupTextCode,
 } from './WyattCodeSamples';
 
-import { CodeFile } from 'src/utils/constants';
-import { AccordionItem } from 'src/types';
+import { AccordionItem, CodeFile } from 'src/types';
 
 import './Wyatt.css';
 
