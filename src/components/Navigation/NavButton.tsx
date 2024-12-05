@@ -15,7 +15,7 @@ const NavButton = ({
     href,
 }: NavButtonProps) => {
     return (
-        <li className='nav-item__wrapper'>
+        <>
             {href ? (
                 <a
                     className='navigation-button'
@@ -25,7 +25,7 @@ const NavButton = ({
                     rel='noopener noreferrer'
                 >
                     {children}
-                    <div>
+                    <div className='navigation-button__label'>
                         <Typography variant='p'>{label}</Typography>
                     </div>
                 </a>
@@ -36,12 +36,12 @@ const NavButton = ({
                     aria-label={ariaLabel}
                 >
                     {children}
-                    <div>
+                    <div className='navigation-button__label'>
                         <Typography variant='p'>{label}</Typography>
                     </div>
                 </button>
             )}
-        </li>
+        </>
     );
 };
 

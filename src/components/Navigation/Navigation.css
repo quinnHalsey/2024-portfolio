@@ -15,6 +15,10 @@
     align-content: center;
 }
 
+.mobile__navigation-wrapper {
+    display: none;
+}
+
 .navigation-wrapper ul {
     padding: 0;
     margin: 0;
@@ -60,13 +64,6 @@
     z-index: 1;
 }
 
-.navigation__divider-line {
-    height: 2px;
-    width: 90%;
-    margin: 4px auto;
-    background-color: #f5f5f5;
-}
-
 @media only screen and (hover: hover) {
     .navigation-wrapper:hover {
         width: 180px;
@@ -92,6 +89,10 @@
     }
 
     .navigation-wrapper:hover {
+        box-shadow: none;
+    }
+
+    .navigation-wrapper:hover {
         width: 100%;
     }
 
@@ -108,20 +109,72 @@
     .navigation-wrapper li.nav-item__wrapper p {
         display: none;
     }
-
-    .navigation__divider-line {
-        height: 90%;
-        width: 2px;
-        margin: auto 4px;
-    }
 }
 
 @media screen and (max-width: 432px) {
-    .navigation-wrapper {
+    .mobile__navigation-wrapper {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 64px;
+        transition: height 0.75s ease;
+    }
+
+    .mobile__navigation-wrapper.open {
+        height: fit-content;
+        transition: height 0.75s ease;
+    }
+
+    .mobile__navigation-wrapper.navigation-wrapper ul {
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 48px;
+        opacity: 0;
+        transition: opacity 0.75s ease;
+    }
+
+    .mobile__navigation-wrapper.open.navigation-wrapper ul {
+        opacity: 1;
+    }
+
+    .mobile__navigation-wrapper li.nav-item__wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mobile__navigation-wrapper li.nav-item__wrapper p {
+        display: block;
+        text-align: center;
+    }
+
+    .mobile__navigation-content {
+        width: 100%;
+    }
+
+    .mobile__navigation-content .navigation-button svg {
+        display: none;
+    }
+
+    .mobile__navigation-content .navigation-button .navigation-button__label {
+        width: fit-content;
+        display: flex;
+        align-items: center;
         height: 48px;
     }
-    .navigation-wrapper .navigation-button svg {
-        min-width: 0;
-        width: 32px;
+
+    .desktop__navigation-wrapper {
+        display: none;
+    }
+
+    button.hamburger-button {
+        position: absolute;
+        top: 8px;
+        align-self: flex-end;
+        cursor: pointer;
+        height: fit-content;
+        z-index: 5;
     }
 }
