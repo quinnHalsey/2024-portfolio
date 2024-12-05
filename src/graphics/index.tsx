@@ -1,3 +1,4 @@
+import { Hamburger, HamburgerClose } from './Hamburger';
 import Arrow from './Arrow';
 import CodeWindowSvg from './CodeWindowSvg';
 import Crossword from './Crossword';
@@ -36,4 +37,6 @@ export {
     WebchatUserGrowthChart,
     WonkyWyatt,
     mobileGetFafsaHelp,
+    Hamburger,
+    HamburgerClose,
 };

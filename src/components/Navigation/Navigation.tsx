@@ -5,6 +5,7 @@ import { useTheme } from 'src/contexts/ThemeContext';
 
 import NavButton from './NavButton';
 import VideoLightbox from '../VideoLightbox';
+import MobileNavigation from './MobileNavigation';
 
 import {
     PlayIcon,
@@ -36,6 +37,57 @@ const Navigation = () => {
         document.documentElement.className = newTheme;
     };
 
+    const navItems: JSX.Element[] = [
+        <>
+            {videoSrc && (
+                <>
+                    <NavButton
+                        onClick={() => setVideoOpen(!videoOpen)}
+                        ariaLabel='Open project video clip'
+                        label='View Video'
+                    >
+                        <PlayIcon />
+                    </NavButton>
+                </>
+            )}
+        </>,
+        <NavButton
+            onClick={() => navigate('/')}
+            ariaLabel='Go to home page'
+            label='Home'
+        >
+            <HomeIcon />
+        </NavButton>,
+        <NavButton
+            href='/Halsey-Quinn_Resume-2024_4.1.pdf'
+            label='Resume'
+            ariaLabel='Download Resume'
+        >
+            <DownloadIcon />
+        </NavButton>,
+        <NavButton
+            href='https://github.com/quinnHalsey'
+            label='GitHub'
+            ariaLabel='Go to GitHub profile'
+        >
+            <GithubIcon />
+        </NavButton>,
+        <NavButton
+            href='https://www.linkedin.com/in/halseyq/'
+            label='LinkedIn'
+            ariaLabel='Go to LinkedIn profile'
+        >
+            <LinkedInIcon />
+        </NavButton>,
+        <NavButton
+            onClick={handleThemeChange}
+            label='Theme'
+            ariaLabel='Change Theme'
+        >
+            {theme === 'theme-dark' ? <ToggleSun /> : <ToggleMoon />}
+        </NavButton>,
+    ];
+
     useEffect(() => {
         const currProj =
             location.pathname !== '/'
@@ -51,62 +103,16 @@ const Navigation = () => {
             {videoOpen && videoSrc && (
                 <VideoLightbox src={videoSrc} onClose={handleCloseVideo} />
             )}
-            <nav className='navigation-wrapper'>
+            <MobileNavigation navItems={navItems} />
+            <nav className='navigation-wrapper desktop__navigation-wrapper'>
                 <ul>
-                    {videoSrc && (
-                        <>
-                            <NavButton
-                                onClick={() => setVideoOpen(!videoOpen)}
-                                ariaLabel='Open project video clip'
-                                label='View Video'
-                            >
-                                <PlayIcon />
-                            </NavButton>
-                            <div
-                                className='navigation__divider-line'
-                                aria-hidden
-                            />
-                        </>
-                    )}
-                    <NavButton
-                        onClick={() => navigate('/')}
-                        ariaLabel='Go to home page'
-                        label='Home'
-                    >
-                        <HomeIcon />
-                    </NavButton>
-                    <NavButton
-                        href='/Halsey-Quinn_Resume-2024_4.1.pdf'
-                        label='Resume'
-                        ariaLabel='Download Resume'
-                    >
-                        <DownloadIcon />
-                    </NavButton>
-                    <NavButton
-                        href='https://github.com/quinnHalsey'
-                        label='GitHub'
-                        ariaLabel='Go to GitHub profile'
-                    >
-                        <GithubIcon />
-                    </NavButton>
-                    <NavButton
-                        href='https://www.linkedin.com/in/halseyq/'
-                        label='LinkedIn'
-                        ariaLabel='Go to LinkedIn profile'
-                    >
-                        <LinkedInIcon />
-                    </NavButton>
-                    <NavButton
-                        onClick={handleThemeChange}
-                        label='Theme'
-                        ariaLabel='Change Theme'
-                    >
-                        {theme === 'theme-dark' ? (
-                            <ToggleSun />
-                        ) : (
-                            <ToggleMoon />
-                        )}
-                    </NavButton>
+                    {navItems.map((item, i) => {
+                        return (
+                            <li className='nav-item__wrapper' key={i}>
+                                {item}
+                            </li>
+                        );
+                    })}
                 </ul>
             </nav>
         </>
