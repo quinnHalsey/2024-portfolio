@@ -15,7 +15,7 @@ const NavButton = ({
     href,
 }: NavButtonProps) => {
     return (
-        <li className='nav-item__wrapper'>
+        <>
             {href ? (
                 <a
                     className='navigation-button'
@@ -41,7 +41,7 @@ const NavButton = ({
                     </div>
                 </button>
             )}
-        </li>
+        </>
     );
 };
 

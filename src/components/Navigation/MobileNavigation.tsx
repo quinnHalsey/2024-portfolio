@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
-import NavButton from './NavButton';
-
 import { Hamburger, HamburgerClose } from 'src/graphics';
 
 const MobileNavigation = ({ navItems }: { navItems: JSX.Element[] }) => {
@@ -19,13 +17,18 @@ const MobileNavigation = ({ navItems }: { navItems: JSX.Element[] }) => {
             >
                 {open ? <HamburgerClose /> : <Hamburger />}
             </button>
-            {open && (
-                <ul className='mobile__navigation-content'>
-                    {navItems.map((item: JSX.Element, i: number) => {
-                        return item;
-                    })}
-                </ul>
-            )}
+            <ul
+                className='mobile__navigation-content'
+                onClick={() => setOpen(false)}
+            >
+                {navItems.map((item: JSX.Element, i: number) => {
+                    return (
+                        <li className='nav-item__wrapper' key={i}>
+                            {item}
+                        </li>
+                    );
+                })}
+            </ul>
         </nav>
     );
 };

@@ -48,7 +48,6 @@ const Navigation = () => {
                     >
                         <PlayIcon />
                     </NavButton>
-                    <div className='navigation__divider-line' aria-hidden />
                 </>
             )}
         </>,
@@ -70,7 +69,6 @@ const Navigation = () => {
             href='https://github.com/quinnHalsey'
             label='GitHub'
             ariaLabel='Go to GitHub profile'
-            key='github'
         >
             <GithubIcon />
         </NavButton>,
@@ -109,7 +107,11 @@ const Navigation = () => {
             <nav className='navigation-wrapper desktop__navigation-wrapper'>
                 <ul>
                     {navItems.map((item, i) => {
-                        return <div key={i}>{item}</div>;
+                        return (
+                            <li className='nav-item__wrapper' key={i}>
+                                {item}
+                            </li>
+                        );
                     })}
                 </ul>
             </nav>
