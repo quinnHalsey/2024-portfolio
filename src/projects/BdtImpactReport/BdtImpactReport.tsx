@@ -50,17 +50,25 @@ const BdtImpactReport = () => {
                 </SectionHeader>
             </SectionLayout>
             <SquiggleDivider />
-            <SectionLayout paddingTop>
+            <SectionLayout>
                 <Container animateIn>
-                    <Quote attribution='Product Manager' direction='right'>
+                    <Quote
+                        attribution='LinkedIn Recommendation, Manager at Benefits Data Trust'
+                        direction='right'
+                    >
                         <Typography variant='blockquote'>
-                            You have been so wonderful to work with -{' '}
-                            <span className='highlight-u'>
-                                organized, diplomatic, professional, and kind
+                            Halsey has more talent some web developers I've
+                            known who are many years her senior. She{' '}
+                            <span className='highlight-b'>
+                                rose to every challenge
+                            </span>{' '}
+                            while we worked together, [including] building a
+                            world-class immersive digital impact report.
+                            (Seriously,{' '}
+                            <span className='highlight-y'>
+                                it's a wonder to behold
                             </span>
-                            . Thank you for all of the work you’ve done to
-                            improve Wyatt and for your dedication to doing the
-                            work well.
+                            .)
                         </Typography>
                     </Quote>
                 </Container>
