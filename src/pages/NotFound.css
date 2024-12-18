@@ -1,0 +1,55 @@
+.not-found-page {
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.not-found-section.section-layout {
+    height: 100%;
+    gap: 80px;
+    align-items: center;
+}
+
+.not-found-text {
+    flex: 1;
+}
+
+.not-found-text .not-found__home-button {
+    margin-top: 24px;
+}
+
+.ghost-wrapper {
+    height: auto;
+    flex: 1;
+    animation: float 5s ease-in-out infinite;
+    transform: scaleX(-1);
+}
+
+.ghost-wrapper svg {
+    fill: var(--color-fg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ghost-wrapper {
+        animation: none;
+    }
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translate(0);
+    }
+    50% {
+        transform: translate(7px, -15px);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .not-found-section {
+        flex-direction: column-reverse;
+    }
+
+    .ghost-wrapper {
+        width: 300px;
+    }
+}

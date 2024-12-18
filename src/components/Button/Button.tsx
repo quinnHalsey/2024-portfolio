@@ -3,11 +3,12 @@ import './Button.css';
 interface ButtonProps {
     children: React.ReactNode;
     onClick: () => void;
+    className?: string;
 }
 
-const Button = ({ children, onClick }: ButtonProps) => {
+const Button = ({ children, onClick, className = '' }: ButtonProps) => {
     return (
-        <button className='button' onClick={onClick}>
+        <button className={`button ${className}`} onClick={onClick}>
             {children}
         </button>
     );

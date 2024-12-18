@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import PageLayout from './components/PageLayout';
 import SectionLayout from './components/SectionLayout';
 import SectionHeader from './components/SectionHeader';
-import AnimateOnReveal from './components/AnimateOnReveal';
 import Container from './components/Container';
 import Typography from './components/Typography';
 import Button from './components/Button';
@@ -41,10 +40,10 @@ const Home = () => {
             description: 'Immersive digital report for non-profit organization',
             tech: ['React', 'JavaScript', 'Gatsby'],
             //TODO: TEMP HREF before project page is built; reinstate callback
-            href: 'https://drive.google.com/file/d/19-TT6i9onud3NU4xXmJ2k3yiFeeUD1R8/view',
-            ariaLabel: 'Watch screen recording of Impact Report',
-            // callback: () => navigate('/bdt-impact-report'),
-            // ariaLabel: 'View Impact Report project page',
+            // href: 'https://drive.google.com/file/d/19-TT6i9onud3NU4xXmJ2k3yiFeeUD1R8/view',
+            // ariaLabel: 'Watch screen recording of Impact Report',
+            callback: () => navigate('/bdt-impact-report'),
+            ariaLabel: 'View Impact Report project page',
         },
         {
             title: 'Asteroids',
