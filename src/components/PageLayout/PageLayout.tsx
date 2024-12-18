@@ -1,7 +1,13 @@
 import './PageLayout.css';
 
-const PageLayout = ({ children }: { children: React.ReactNode }) => {
-    return <main className='page-layout'>{children}</main>;
+const PageLayout = ({
+    children,
+    className,
+}: {
+    children: React.ReactNode;
+    className?: string;
+}) => {
+    return <main className={`page-layout ${className}`}>{children}</main>;
 };
 
 export default PageLayout;

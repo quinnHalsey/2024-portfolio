@@ -27,7 +27,6 @@ export const getProjectFromPath = (pathname: string) => {
     if (project && project.slug === pathname) {
         return project;
     } else {
-        console.error(`Invalid project URL ${pathname}`);
         return null;
     }
 };

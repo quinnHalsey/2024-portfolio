@@ -1,8 +1,9 @@
-import { Hamburger, HamburgerClose } from './Hamburger';
 import Arrow from './Arrow';
 import CodeWindowSvg from './CodeWindowSvg';
 import Crossword from './Crossword';
 import DownloadIcon from './DownloadIcon';
+import Ghost from './Ghost';
+import { Hamburger, HamburgerClose } from './Hamburger';
 import GithubIcon from './GithubIcon';
 import HomeIcon from './HomeIcon';
 import Laptop from './Laptop';
@@ -23,7 +24,10 @@ export {
     CodeWindowSvg,
     Crossword,
     DownloadIcon,
+    Ghost,
     GithubIcon,
+    Hamburger,
+    HamburgerClose,
     HomeIcon,
     Laptop,
     LinkedInIcon,
@@ -37,6 +41,4 @@ export {
     WebchatUserGrowthChart,
     WonkyWyatt,
     mobileGetFafsaHelp,
-    Hamburger,
-    HamburgerClose,
 };
