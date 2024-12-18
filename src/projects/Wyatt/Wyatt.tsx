@@ -11,6 +11,7 @@ import SquiggleDivider from 'src/components/SquiggleDivider';
 import WyattPhone from 'src/components/WyattPhone';
 import WyattWebchatSection from 'src/components/WyattWebchatSection';
 import CodeWindow from 'src/components/CodeWindow';
+import PlayVideoButton from 'src/components/PlayVideoButton';
 import {
     CustomizableInteractiveText,
     ScalableInteractiveText,
@@ -32,6 +33,7 @@ const Wyatt = () => {
 
     return (
         <PageLayout>
+            <PlayVideoButton />
             <SectionLayout className='project-intro__section'>
                 <Container flex>
                     <div className='project-intro__wrapper'>

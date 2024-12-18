@@ -1,0 +1,40 @@
+.play-video-button__wrapper {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 80px;
+    height: 80px;
+    padding: 0px 4px 0px 16px;
+    border-radius: 48px;
+    background-color: #6f42c1;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    transition: width 0.75s ease;
+    z-index: 10;
+}
+
+.play-video-button__content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-wrap: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.play-video-button__icon-wrapper {
+    width: 72px;
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 1px;
+}
+
+.play-video-button__wrapper:hover,
+.play-video-button__wrapper:focus-visible {
+    width: fit-content;
+}
