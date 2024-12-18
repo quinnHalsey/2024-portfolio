@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import PageLayout from 'src/components/PageLayout';
 import SectionLayout from 'src/components/SectionLayout';
 import Typography from 'src/components/Typography';
+import Button from 'src/components/Button';
 
 import { Ghost } from '../graphics';
 
 import './NotFound.css';
-import Button from 'src/components/Button';
 
 const NotFound = () => {
     const navigate = useNavigate();
