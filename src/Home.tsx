@@ -60,7 +60,7 @@ const Home = () => {
                 <Container className='homepage-title__text'>
                     <Typography variant='h1'>Halsey Quinn</Typography>
                     <Typography variant='h2'>
-                        Full-stack Software Engineer
+                        Web Designer & Developer
                     </Typography>
                 </Container>
                 <Container className='crossword__wrapper'>
@@ -74,10 +74,10 @@ const Home = () => {
             >
                 <Container className='homepage-about-me__container'>
                     <Typography variant='p'>
-                        Hi! I'm Halsey, a self-starting and organized software
-                        engineer with strong proficiency in{' '}
+                        Hi! I'm Halsey, a self-starting and organized developer
+                        with strong proficiency in{' '}
                         <span className='highlight-p'>
-                            React and JavaScript
+                            React and TypeScript
                         </span>
                         . I focus on building engaging, meaningful user
                         experiences. I excel at bringing ideas to life across
@@ -103,12 +103,12 @@ const Home = () => {
                             <span className='highlight-b'>
                                 I bring a creative edge to front-end development
                             </span>{' '}
-                            , while my love for data, puzzles, and
-                            problem-solving drives my work on the back end.
-                            Whether I'm designing user interfaces or diving into
-                            complex systems, I'm always focused on creating
-                            intuitive, effective products that make a difference
-                            in people's lives.
+                            . while my love for puzzles, and problem-solving
+                            drives my work beyond the aesthetics. Whether I'm
+                            designing user interfaces or diving into complex
+                            systems, I'm always focused on creating intuitive,
+                            effective products that make a difference in
+                            people's lives.
                         </Typography>
                     </Container>
                     <Button onClick={() => setShowMoreAbout(!showMoreAbout)}>
