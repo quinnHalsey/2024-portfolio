@@ -21,9 +21,9 @@
         "strictNullChecks": true,
         "strictPropertyInitialization": true,
         "useUnknownInCatchVariables": true,
-        "baseUrl": "./",
+        // "baseUrl": "./",
         "module": "ES2022",
-        "moduleResolution": "node",
+        // "moduleResolution": "node",
         // JavaScript Support Configuration
         "allowSyntheticDefaultImports": true,
         "jsx": "react-jsx",
