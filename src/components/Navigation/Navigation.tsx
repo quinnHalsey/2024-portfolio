@@ -59,7 +59,7 @@ const Navigation = () => {
             <HomeIcon />
         </NavButton>,
         <NavButton
-            href='/Halsey-Quinn_Resume-2024_4.1.pdf'
+            href='/Halsey-Quinn_Resume_Frontend-Developer.pdf'
             label='Resume'
             ariaLabel='Download Resume'
         >
