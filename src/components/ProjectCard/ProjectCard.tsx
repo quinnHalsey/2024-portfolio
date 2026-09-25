@@ -1,6 +1,6 @@
-import Typography from 'src/components/Typography';
+import Typography from '../../components/Typography';
 
-import { FeaturedProject } from 'src/types';
+import type { FeaturedProject } from '../../types';
 
 import './ProjectCard.css';
 

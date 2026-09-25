@@ -13,7 +13,7 @@ import { ProjectCardContainer } from './components/ProjectCard';
 
 import { Crossword } from './graphics';
 
-import { FeaturedProject } from './types';
+import type { FeaturedProject } from './types';
 
 import './Home.css';
 

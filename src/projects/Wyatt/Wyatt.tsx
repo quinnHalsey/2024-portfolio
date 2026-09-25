@@ -1,27 +1,27 @@
-import { useScreenWidth } from 'src/utils';
+import { useScreenWidth } from '../../utils';
 
-import PageLayout from 'src/components/PageLayout';
-import SectionLayout from 'src/components/SectionLayout';
-import Container from 'src/components/Container';
-import Typography from 'src/components/Typography';
-import SectionHeader from 'src/components/SectionHeader';
-import Quote from 'src/components/Quote';
-import IntroAccordions from 'src/components/IntroAccordions';
-import SquiggleDivider from 'src/components/SquiggleDivider';
-import WyattPhone from 'src/components/WyattPhone';
-import WyattWebchatSection from 'src/components/WyattWebchatSection';
-import CodeWindow from 'src/components/CodeWindow';
+import PageLayout from '../../components/PageLayout';
+import SectionLayout from '../../components/SectionLayout';
+import Container from '../../components/Container';
+import Typography from '../../components/Typography';
+import SectionHeader from '../../components/SectionHeader';
+import Quote from '../../components/Quote';
+import IntroAccordions from '../../components/IntroAccordions';
+import SquiggleDivider from '../../components/SquiggleDivider';
+import WyattPhone from '../../components/WyattPhone';
+import WyattWebchatSection from '../../components/WyattWebchatSection';
+import CodeWindow from '../../components/CodeWindow';
 import {
     CustomizableInteractiveText,
     ScalableInteractiveText,
-} from 'src/components/InteractiveText';
+} from '../../components/InteractiveText';
 import {
     stepOneCode,
     questionNameCode,
     formGroupTextCode,
 } from './WyattCodeSamples';
 
-import { CodeFile } from 'src/utils/constants';
+import type { CodeFile } from '../../utils/constants';
 
 import './Wyatt.css';
 

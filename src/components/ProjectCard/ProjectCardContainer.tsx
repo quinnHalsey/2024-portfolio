@@ -12,7 +12,7 @@ import {
     card3Light,
 } from '../../graphics/images/cards';
 
-import { FeaturedProject } from '../../types';
+import type { FeaturedProject } from '../../types';
 
 import './ProjectCard.css';
 

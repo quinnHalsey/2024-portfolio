@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { useScreenWidth } from 'src/utils';
+import { useScreenWidth } from '../../utils';
 
 interface AnimateOnRevealProps {
     children: React.ReactNode;
@@ -39,7 +39,7 @@ const AnimateOnReveal = ({
                 root: null,
                 rootMargin: '0px',
                 threshold: screenWidth < 432 ? 0.5 : threshold,
-            }
+            },
         );
 
         if (animateRef.current) {

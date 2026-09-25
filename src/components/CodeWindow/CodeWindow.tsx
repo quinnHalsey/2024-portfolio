@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Typography from '../Typography/Typography';
 
-import { CodeFile } from 'src/utils/constants';
+import type { CodeFile } from '../../utils/constants';
 
 import './CodeWindow.css';
 

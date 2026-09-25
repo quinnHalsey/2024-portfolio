@@ -21,7 +21,6 @@
         "strictNullChecks": true,
         "strictPropertyInitialization": true,
         "useUnknownInCatchVariables": true,
-        // "baseUrl": "./",
         "module": "ES2022",
         // "moduleResolution": "node",
         // JavaScript Support Configuration
@@ -30,6 +29,6 @@
         "allowJs": true,
         "checkJs": true
     },
-    "include": ["src", "images.d.ts"],
+    "include": ["src", "images.d.ts", "global.d.ts"],
     "exclude": ["node_modules"]
 }
