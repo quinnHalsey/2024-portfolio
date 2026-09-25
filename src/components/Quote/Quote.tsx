@@ -1,7 +1,7 @@
 import AnimateOnReveal from '../AnimateOnReveal';
 import Typography from '../Typography';
 
-import { QuotationMark } from 'src/graphics';
+import { QuotationMark } from '../../graphics';
 
 import './Quote.css';
 

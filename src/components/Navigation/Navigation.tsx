@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { getProjectFromPath } from 'src/utils';
-import { useTheme } from 'src/contexts/ThemeContext';
+import { getProjectFromPath } from '../../utils';
+import { useTheme } from '../../contexts/ThemeContext';
 
 import NavButton from './NavButton';
 import VideoLightbox from '../VideoLightbox';
@@ -15,7 +15,7 @@ import {
     DownloadIcon,
     LinkedInIcon,
     GithubIcon,
-} from 'src/graphics';
+} from '../../graphics';
 
 import './Navigation.css';
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { mobileGetFafsaHelp, PhoneSvg, WonkyWyatt } from 'src/graphics';
+import { mobileGetFafsaHelp, PhoneSvg, WonkyWyatt } from '../../graphics';
 
 import './WyattPhone.css';
 

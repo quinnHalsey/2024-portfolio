@@ -2,8 +2,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
-//TODO: code splitting - https://webpack.js.org/guides/code-splitting/
-
 module.exports = {
     entry: './src/index.tsx',
     // mode: 'development',
@@ -50,6 +48,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist/'),
         publicPath: '/',
         filename: 'bundle.js',
+        chunkFilename: '[name].[contenthash].js',
     },
     devServer: {
         static: {

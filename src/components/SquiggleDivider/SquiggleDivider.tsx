@@ -1,7 +1,7 @@
 import SectionLayout from '../SectionLayout';
 import AnimateOnReveal from '../AnimateOnReveal';
 
-import { Squiggle } from 'src/graphics';
+import { Squiggle } from '../../graphics';
 
 import './SquiggleDivider.css';
 

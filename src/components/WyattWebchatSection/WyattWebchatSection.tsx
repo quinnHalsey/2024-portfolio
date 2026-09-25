@@ -1,14 +1,14 @@
 import { useState } from 'react';
 
 import AnimateOnReveal from '../AnimateOnReveal';
-import Container from 'src/components/Container';
-import SectionHeader from 'src/components/SectionHeader';
-import SectionLayout from 'src/components/SectionLayout';
-import Typography from 'src/components/Typography';
+import Container from '../../components/Container';
+import SectionHeader from '../../components/SectionHeader';
+import SectionLayout from '../../components/SectionLayout';
+import Typography from '../../components/Typography';
 
-import { Laptop, SpeechBubbles, WebchatUserGrowthChart } from 'src/graphics';
+import { Laptop, SpeechBubbles, WebchatUserGrowthChart } from '../../graphics';
 
-import { useScreenWidth } from 'src/utils';
+import { useScreenWidth } from '../../utils';
 
 import './WyattWebchatSection.css';
 
@@ -50,7 +50,7 @@ const WyattWebchatSection = () => {
                                 threshold={visibilityThreshold}
                                 reverse
                                 handleVisibilityChange={handleVisibilityChange(
-                                    i
+                                    i,
                                 )}
                             >
                                 <Typography variant='p'>{data.text}</Typography>
@@ -59,7 +59,7 @@ const WyattWebchatSection = () => {
                             <Typography key={i} variant='p'>
                                 {data.text}
                             </Typography>
-                        )
+                        ),
                     )}
                 </div>
             </Container>

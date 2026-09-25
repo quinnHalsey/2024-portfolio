@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 
-import PageLayout from 'src/components/PageLayout';
-import SectionLayout from 'src/components/SectionLayout';
-import Typography from 'src/components/Typography';
-import Button from 'src/components/Button';
+import PageLayout from '../components/PageLayout';
+import SectionLayout from '../components/SectionLayout';
+import Typography from '../components/Typography';
+import Button from '../components/Button';
 
 import { Ghost } from '../graphics';
 
