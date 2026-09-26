@@ -7,13 +7,9 @@ import LoadingAnimation from './components/LoadingAnimation';
 
 import './App.css';
 
-const Home = lazy(() => import(/* webpackChunkName: "home" */ './Home'));
-const Wyatt = lazy(
-    () => import(/* webpackChunkName: "wyatt" */ './projects/Wyatt')
-);
-const NotFound = lazy(
-    () => import(/* webpackChunkName: "not-found" */ './pages/NotFound')
-);
+const Home = lazy(() => import('./Home'));
+const Wyatt = lazy(() => import('./projects/Wyatt'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 const App = () => {
     return (

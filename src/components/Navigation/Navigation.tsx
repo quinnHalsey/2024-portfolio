@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type JSX } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getProjectFromPath } from '../../utils';
 import { useTheme } from '../../contexts/ThemeContext';

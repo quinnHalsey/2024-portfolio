@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, type JSX } from 'react';
 
 import { Hamburger, HamburgerClose } from '../../graphics';
 
-const MobileNavigation = ({ navItems }: { navItems: React.JSX.Element[] }) => {
+const MobileNavigation = ({ navItems }: { navItems: JSX.Element[] }) => {
     const [open, setOpen] = useState(false);
     return (
         <nav

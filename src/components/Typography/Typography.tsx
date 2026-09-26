@@ -1,4 +1,5 @@
 import './Typography.css';
+import type { JSX } from 'react';
 
 type TypographyVariant =
     | 'h1'
