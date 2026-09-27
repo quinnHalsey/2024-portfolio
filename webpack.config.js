@@ -9,6 +9,9 @@ module.exports = {
         modules: [__dirname, 'src', 'node_modules'],
         extensions: ['*', '.js', '.jsx', '.tsx', '.ts'],
     },
+    optimization: {
+        runtimeChunk: 'single',
+    },
     module: {
         rules: [
             {
