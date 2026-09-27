@@ -52,13 +52,6 @@ const Navigation = () => {
             )}
         </>,
         <NavButton
-            onClick={() => navigate('/')}
-            ariaLabel='Go to home page'
-            label='Home'
-        >
-            <HomeIcon />
-        </NavButton>,
-        <NavButton
             href='/Halsey-Quinn_Resume_Frontend-Developer.pdf'
             label='Resume'
             ariaLabel='Download Resume'
@@ -79,13 +72,6 @@ const Navigation = () => {
         >
             <LinkedInIcon />
         </NavButton>,
-        <NavButton
-            onClick={handleThemeChange}
-            label='Theme'
-            ariaLabel='Change Theme'
-        >
-            {theme === 'theme-dark' ? <ToggleSun /> : <ToggleMoon />}
-        </NavButton>,
     ];
 
     useEffect(() => {
@@ -105,6 +91,32 @@ const Navigation = () => {
             )}
             <MobileNavigation navItems={navItems} />
             <nav className='navigation-wrapper desktop__navigation-wrapper'>
+                <ul className='navigation-tabs'>
+                    <li className='nav-item__wrapper'>
+                        <NavButton
+                            onClick={() => navigate('/')}
+                            ariaLabel='Go to home page'
+                            label='Home'
+                            variant='tab'
+                        >
+                            <HomeIcon />
+                        </NavButton>
+                    </li>
+                    <li className='nav-item__wrapper'>
+                        <NavButton
+                            onClick={handleThemeChange}
+                            label='Theme'
+                            ariaLabel='Change Theme'
+                            variant='tab'
+                        >
+                            {theme === 'theme-dark' ? (
+                                <ToggleSun />
+                            ) : (
+                                <ToggleMoon />
+                            )}
+                        </NavButton>
+                    </li>
+                </ul>
                 <ul>
                     {navItems.map((item, i) => {
                         return (

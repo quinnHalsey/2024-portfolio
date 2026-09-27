@@ -6,6 +6,7 @@ interface NavButtonProps {
     label: string;
     onClick?: () => void;
     href?: string;
+    variant?: 'tab' | 'button';
 }
 const NavButton = ({
     ariaLabel = '',
@@ -13,12 +14,13 @@ const NavButton = ({
     label,
     onClick,
     href,
+    variant,
 }: NavButtonProps) => {
     return (
         <>
             {href ? (
                 <a
-                    className='navigation-button'
+                    className={`navigation-button ${variant === 'tab' && ' navigation-button--tab'}`}
                     href={href}
                     aria-label={ariaLabel}
                     target='_blank'
