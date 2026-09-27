@@ -104,6 +104,8 @@
         height: 64px;
         top: auto;
         bottom: 0;
+        flex-direction: row;
+        padding: 8px 16px;
     }
 
     .navigation-wrapper:hover {

@@ -37,6 +37,25 @@ const Navigation = () => {
         document.documentElement.className = newTheme;
     };
 
+    const tabNavItems: JSX.Element[] = [
+        <NavButton
+            onClick={() => navigate('/')}
+            ariaLabel='Go to home page'
+            label='Home'
+            variant='tab'
+        >
+            <HomeIcon />
+        </NavButton>,
+        <NavButton
+            onClick={handleThemeChange}
+            label='Theme'
+            ariaLabel='Change Theme'
+            variant='tab'
+        >
+            {theme === 'theme-dark' ? <ToggleSun /> : <ToggleMoon />}
+        </NavButton>,
+    ];
+
     const navItems: JSX.Element[] = [
         <>
             {videoSrc && (
@@ -89,33 +108,16 @@ const Navigation = () => {
             {videoOpen && videoSrc && (
                 <VideoLightbox src={videoSrc} onClose={handleCloseVideo} />
             )}
-            <MobileNavigation navItems={navItems} />
+            <MobileNavigation navItems={tabNavItems.concat(navItems)} />
             <nav className='navigation-wrapper desktop__navigation-wrapper'>
                 <ul className='navigation-tabs'>
-                    <li className='nav-item__wrapper'>
-                        <NavButton
-                            onClick={() => navigate('/')}
-                            ariaLabel='Go to home page'
-                            label='Home'
-                            variant='tab'
-                        >
-                            <HomeIcon />
-                        </NavButton>
-                    </li>
-                    <li className='nav-item__wrapper'>
-                        <NavButton
-                            onClick={handleThemeChange}
-                            label='Theme'
-                            ariaLabel='Change Theme'
-                            variant='tab'
-                        >
-                            {theme === 'theme-dark' ? (
-                                <ToggleSun />
-                            ) : (
-                                <ToggleMoon />
-                            )}
-                        </NavButton>
-                    </li>
+                    {tabNavItems.map((item, i) => {
+                        return (
+                            <li className='nav-item__wrapper' key={i}>
+                                {item}
+                            </li>
+                        );
+                    })}
                 </ul>
                 <ul>
                     {navItems.map((item, i) => {
