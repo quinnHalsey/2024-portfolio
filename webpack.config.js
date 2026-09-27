@@ -50,7 +50,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist/'),
         publicPath: '/',
-        filename: 'bundle.js',
+        filename: (pathData) =>
+            pathData.chunk.name === 'main' ? 'bundle.js' : '[name].js',
         chunkFilename: '[name].[contenthash].js',
     },
     devServer: {
